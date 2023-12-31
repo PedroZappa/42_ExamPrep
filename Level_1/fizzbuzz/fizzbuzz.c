@@ -10,7 +10,15 @@ int main(void)
 	while (n <= 100)
 	{
 		if ((n % 3 == 0) && (n % 5 == 0))
-			write(1, "FizzBuzz ", 10);
+			write(1, "fizzbuzz ", 10);
+		else if ((n % 3) == 0)
+			write(1, "fizz ", 5);
+		else if ((n % 5) == 0)
+			write(1, "buzz ", 5);
+		else
+			print_n(n);
+		write(1, "\n", 1);
+		n++;
 
 	}
 }
