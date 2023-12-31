@@ -1,0 +1,327 @@
+Temporary breakpoint 1 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out 
+[New Thread 0x2603 of process 15408]
+[New Thread 0x1a03 of process 15408]
+[Thread 0x2603 of process 15408 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 1, main (argc=0x1, argv=0x7ff7bfeff568) at main.c:8
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out 
+[New Thread 0x2517 of process 28227]
+[New Thread 0x2303 of process 28227]
+[Thread 0x2517 of process 28227 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x1, argv=0x7ff7bfeff568) at main.c:8
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Pedro 42"
+[New Thread 0x264b of process 35561]
+[New Thread 0x2203 of process 35561]
+[Thread 0x264b of process 35561 exited]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 35561) exited with code 01]
+The program is not being run.
+Temporary breakpoint 3 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Pedro 42"
+[New Thread 0x2653 of process 36782]
+[New Thread 0x2103 of process 36782]
+[Thread 0x2653 of process 36782 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 3, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+Undefined command: "".  Try "help".
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+[New Thread 0x2603 of process 83294]
+[New Thread 0x2303 of process 83294]
+[Thread 0x2603 of process 83294 exited]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 83294) exited with code 01]
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out 
+[New Thread 0x260b of process 86109]
+[New Thread 0x2203 of process 86109]
+[Thread 0x260b of process 86109 exited]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 86109) exited with code 01]
+The program is not being run.
+The program is not being run.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out 
+[New Thread 0x2613 of process 86491]
+[New Thread 0x2103 of process 86491]
+[Thread 0x2613 of process 86491 exited]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 86491) exited with code 01]
+No source file specified.
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+[New Thread 0x1903 of process 89759]
+[Thread 0x1903 of process 89759 exited]
+[New Thread 0x2503 of process 89759]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 89759) exited with code 01]
+List of info subcommands:
+
+info address -- Describe where symbol SYM is stored.
+info all-registers -- List of all registers and their contents, for selected stack frame.
+info args -- All argument variables of current stack frame or those matching REGEXPs.
+info auto-load -- Print current status of auto-loaded files.
+info auxv -- Display the inferior's auxiliary vector.
+info bookmarks -- Status of user-settable bookmarks.
+info breakpoints, info b -- Status of specified breakpoints (all user-settable breakpoints if no argument).
+info classes -- All Objective-C classes, or those matching REGEXP.
+info common -- Print out the values contained in a Fortran COMMON block.
+info connections -- Target connections in use.
+info copying -- Conditions for redistributing copies of GDB.
+info dcache -- Print information on the dcache performance.
+info display -- Expressions to display when program stops, with code numbers.
+info exceptions -- List all Ada exception names.
+info extensions -- All filename extensions associated with a source language.
+info files -- Names of targets and files being debugged.
+info float -- Print the status of the floating point unit.
+info frame, info f -- All about the selected stack frame.
+info frame-filter -- List all registered Python frame-filters.
+info functions -- All function names or those matching REGEXPs.
+info guile, info gu -- Prefix command for Guile info displays.
+info inferiors -- Print a list of inferiors being managed.
+info io_registers -- Query remote AVR target for I/O space register values.
+info line -- Core addresses of the code for a source line.
+info locals -- All local variables of current stack frame or those matching REGEXPs.
+info mach-exceptions -- Disp mach exceptions.
+info mach-port -- Get info on a specific port.
+info mach-ports -- Get list of ports in a task.
+info mach-region -- Get information on mach region at given address.
+info mach-regions -- Get information on all mach region for the task.
+info mach-regions-rec -- Get information on all mach sub region for the task.
+info mach-task -- Get info on a specific task.
+info mach-tasks -- Get list of tasks in system.
+info mach-thread -- Get info on a specific thread.
+info mach-threads -- Get list of threads in a task.
+info macro -- Show the definition of MACRO, and it's source location.
+info macros -- Show the definitions of all macros at LINESPEC, or the current source location.
+info main -- Get main symbol to identify entry point into program.
+info mem -- Memory region attributes.
+info module -- Print information about modules.
+info modules -- All module names, or those matching REGEXP.
+info os -- Show OS data ARG.
+info pretty-printer -- GDB command to list all registered pretty-printers.
+info probes -- Show available static probes.
+info proc -- Show additional information about a process.
+info program -- Execution status of the program.
+info record, info rec -- Info record options.
+info registers, info r -- List of integer registers and their contents, for selected stack frame.
+info scope -- List the variables local to a scope.
+info selectors -- All Objective-C selectors, or those matching REGEXP.
+info sharedlibrary, info dll -- Status of loaded shared object libraries.
+info signals, info handle -- What debugger does when program gets various signals.
+info skip -- Display the status of skips.
+info source -- Information about the current source file.
+info sources -- All source files in the program or those matching REGEXP.
+info stack, info s -- Backtrace of the stack, or innermost COUNT frames.
+info static-tracepoint-markers -- List target static tracepoints markers.
+info symbol -- Describe what symbol is at location ADDR.
+info target -- Names of targets and files being debugged.
+info tasks -- Provide information about all known Ada tasks.
+info terminal -- Print inferior's saved terminal status.
+info threads -- Display currently known threads.
+info tracepoints, info tp -- Status of specified tracepoints (all tracepoints if no argument).
+info tvariables -- Status of trace state variables and their values.
+info type-printers -- GDB command to list all registered type-printers.
+info types -- All type names, or those matching REGEXP.
+info unwinder -- GDB command to list unwinders.
+info variables -- All global and static variable names or those matching REGEXPs.
+info vector -- Print the status of the vector unit.
+info vtbl -- Show the virtual function table for a C++ object.
+info w32 -- Print information specific to Win32 debugging.
+info warranty -- Various kinds of warranty you do not have.
+info watchpoints -- Status of specified watchpoints (all watchpoints if no argument).
+info win -- List of all displayed windows.
+info xmethod -- GDB command to list registered xmethod matchers.
+
+Type "help info" followed by info subcommand name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Type "apropos -v word" for full documentation of commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+[New Thread 0x2703 of process 2230]
+[New Thread 0x1b03 of process 2230]
+[Thread 0x2703 of process 2230 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x1, argv=0x7ff7bfeff568) at main.c:8
+0x000000010001552e in ?? ()
+Temporary breakpoint 3 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out 
+[New Thread 0x2647 of process 6816]
+[New Thread 0x2403 of process 6816]
+[Thread 0x2647 of process 6816 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 3, main (argc=0x1, argv=0x7ff7bfeff568) at main.c:8
+Temporary breakpoint 4 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out 
+[New Thread 0x2773 of process 10713]
+[New Thread 0x1d03 of process 10713]
+[Thread 0x2773 of process 10713 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 4, main (argc=0x1, argv=0x7ff7bfeff568) at main.c:8
+Temporary breakpoint 5 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Pedro 42"
+[New Thread 0x267f of process 13508]
+[New Thread 0x1e03 of process 13508]
+[Thread 0x267f of process 13508 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 5, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+0x000000010001552e in ?? ()
+Cannot find bounds of current function
+Temporary breakpoint 6 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Pedro 42"
+[New Thread 0x2707 of process 16722]
+[New Thread 0x2003 of process 16722]
+[Thread 0x2707 of process 16722 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 6, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+[New Thread 0x2703 of process 29436]
+[New Thread 0x2503 of process 29436]
+[Thread 0x2703 of process 29436 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+0x000000010001552e in ?? ()
+No source file specified.
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+[New Thread 0x1a03 of process 58540]
+[Thread 0x1a03 of process 58540 exited]
+[New Thread 0x2703 of process 58540]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 58540) exited with code 01]
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+[New Thread 0x1a0b of process 58541]
+[Thread 0x1a0b of process 58541 exited]
+[New Thread 0x2503 of process 58541]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+[New Thread 0x2503 of process 21099]
+[New Thread 0x2303 of process 21099]
+[Thread 0x2503 of process 21099 exited]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 21099) exited with code 01]
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+[New Thread 0x250b of process 21100]
+[New Thread 0x2103 of process 21100]
+[Thread 0x250b of process 21100 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+Temporary breakpoint 3 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Zedro 42"
+[New Thread 0x2413 of process 27489]
+[New Thread 0x1f03 of process 27489]
+[Thread 0x2413 of process 27489 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 3, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Zedro 42"
+[New Thread 0x2403 of process 60601]
+[New Thread 0x1703 of process 60601]
+[Thread 0x2403 of process 60601 exited]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 60601) exited with code 01]
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+The program is not being run.
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Zedro 42"
+[New Thread 0x2603 of process 68501]
+[New Thread 0x2303 of process 68501]
+[Thread 0x2603 of process 68501 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+Undefined command: "refrsh".  Try "help".
+.gdbinit:11: Error in sourced command file:
+No symbol table is loaded.  Use the "file" command.
+.gdbinit:11: Error in sourced command file:
+No symbol table is loaded.  Use the "file" command.
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+The program is not being run.
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out 
+[New Thread 0x2503 of process 1042]
+[New Thread 0x2303 of process 1042]
+[Thread 0x2503 of process 1042 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x1, argv=0x7ff7bfeff568) at main.c:8
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+[New Thread 0x1903 of process 29126]
+[Thread 0x1903 of process 29126 exited]
+[New Thread 0x2503 of process 29126]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 29126) exited with code 01]
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+[New Thread 0x2603 of process 44695]
+[New Thread 0x2503 of process 44695]
+[Thread 0x2603 of process 44695 exited]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 44695) exited with code 01]
+The program is not being run.
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Zedro 42"
+[New Thread 0x260b of process 46790]
+[New Thread 0x2303 of process 46790]
+[Thread 0x260b of process 46790 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+0x000000010001552e in ?? ()
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+[New Thread 0x2703 of process 73773]
+[New Thread 0x2603 of process 73773]
+[Thread 0x2703 of process 73773 exited]
+warning: unhandled dyld version (17)
+[Inferior 1 (process 73773) exited with code 01]
+The program is not being run.
+Temporary breakpoint 2 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out "Zedro 42"
+[New Thread 0x270b of process 92510]
+[New Thread 0x2403 of process 92510]
+[Thread 0x270b of process 92510 exited]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 2, main (argc=0x3, argv=0x7ff7bfeff550) at main.c:8
+0x000000010001552e in ?? ()
+Temporary breakpoint 3 at 0x100003f06: file main.c, line 8.
+Starting program: /Users/zedro/C0D3/42/exam-prep/My42ExamPractice/Level_1/ft_strcpy/a.out Zedro
+[New Thread 0x1a0f of process 97995]
+[Thread 0x1a0f of process 97995 exited]
+[New Thread 0x2303 of process 97995]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Temporary breakpoint 3, main (argc=0x2, argv=0x7ff7bfeff560) at main.c:8
+
+Thread 2 hit Breakpoint 1, main (argc=0x2, argv=0x7ff7bfeff560) at main.c:15
+Breakpoint 1 at 0x100003f39: file main.c, line 15.
+[New Thread 0x1b03 of process 9271]
+[Thread 0x1b03 of process 9271 exited]
+[New Thread 0x1d03 of process 9271]
+warning: unhandled dyld version (17)
+
+Thread 2 hit Breakpoint 1, main (argc=0x2, argv=0x7ff7bfeff560) at main.c:15
+ft_strcpy (s1=0x0, s2=0x7ff7bfeff7e0 "Zedro") at ./ft_strcpy.c:3
+1: s1 = 0x0
+2: s2 = 0x7ff7bfeff7e0 "Zedro"
+
+Thread 2 received signal SIGSEGV, Segmentation fault.
+0x0000000100003ec8 in ft_strcpy (s1=0x0, s2=0x7ff7bfeff7e0 "Zedro") at ./ft_strcpy.c:7
+1: s1 = 0x0
+2: s2 = 0x7ff7bfeff7e0 "Zedro"
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
