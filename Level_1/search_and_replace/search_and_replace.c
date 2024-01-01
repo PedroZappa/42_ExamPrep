@@ -1,5 +1,4 @@
 #include <unistd.h> /* write() */
-#include <stdlib.h> /* exit() */
 
 int main(int argc, char *argv[])
 {
