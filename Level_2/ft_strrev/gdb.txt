@@ -1424,3 +1424,5 @@ ft_strrev (str=0x402004 "Zedro 42") at ./ft_strrev.c:10
 4: temp[len] = 0x32
 5: /d len = 7
 6: /d i = 0
+Error detected on fd 0
+error detected on stdin
