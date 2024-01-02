@@ -922,3 +922,5 @@ ft_strspn (s=0x402004 "Zedro 420", accept=0x40200e "Zedro") at ./ft_strspn.c:9
 5: /d len = 1
 6: /d n = 0
 7: /d i = 0
+Error detected on fd 0
+error detected on stdin
