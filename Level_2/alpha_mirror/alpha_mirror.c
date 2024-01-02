@@ -9,9 +9,9 @@ int main(int argc, char **argv)
 		str = argv[1];
 		while (*str)
 		{
-			if (*str >= 'a' && *str <= 'z')
+			if ((*str >= 'a') && (*str <= 'z'))
 				*str = 'z' - *str + 'a';
-			else if (*str >= 'A' && *str <= 'Z')
+			else if ((*str >= 'A') && (*str <= 'Z'))
 				*str = 'Z' - *str + 'A';
 			write(1, str, 1);
 			++str;
