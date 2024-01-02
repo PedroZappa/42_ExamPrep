@@ -54,3 +54,4 @@ dkms.conf
 # Temp Files
 .DS_Store
 */.DS_Store
+.nfs*
