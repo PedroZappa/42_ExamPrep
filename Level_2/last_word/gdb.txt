@@ -1,0 +1,27 @@
+Breakpoint 1 at 0x401156: file last_word.c, line 9.
+
+Breakpoint 1, main (argc=0x1, argv=0x7fffffffdee8) at last_word.c:9
+1: str = 0x0
+2: ret = 0x0
+3: /d record = 0
+1: str = 0x0
+2: ret = 0x0
+3: /d record = 0
+Breakpoint 1 at 0x401156: file last_word.c, line 9.
+.gdbinit:10: Error in sourced command file:
+can't handle command-line argument containing whitespace
+The program is not being run.
+Breakpoint 1 at 0x401156: file last_word.c, line 9.
+.gdbinit:10: Error in sourced command file:
+can't handle command-line argument containing whitespace
+Breakpoint 1 at 0x401156: file last_word.c, line 9.
+.gdbinit:10: Error in sourced command file:
+No symbol "str" in current context.
+Breakpoint 1 at 0x401156: file last_word.c, line 9.
+Temporary breakpoint 2 at 0x401146: file last_word.c, line 5.
+.gdbinit:10: Error in sourced command file:
+can't handle command-line argument containing whitespace
+Breakpoint 1 at 0x401156: file last_word.c, line 9.
+Temporary breakpoint 2 at 0x401146: file last_word.c, line 5.
+.gdbinit:10: Error in sourced command file:
+can't handle command-line argument containing whitespace

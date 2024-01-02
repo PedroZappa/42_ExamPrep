@@ -13,3 +13,5 @@ warning: Source file is more recent than executable.
 2: /d i = 4
 1: /d n = 4
 2: /d i = 4
+Error detected on fd 0
+error detected on stdin
