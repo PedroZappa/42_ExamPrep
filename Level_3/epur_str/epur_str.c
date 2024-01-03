@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 		{
 			while (ft_isspace(str))
 				++str;
-			while (*str && (*str != ' ') && (*str != '\t'))
+			while (*str && !ft_isspace(str))
 			{
 				space_flag = 0;
 				write(1, str++, 1);
