@@ -4,8 +4,15 @@
 
 int main(int argc, char **argv)
 {
+	int num;
+	int base;
+
 	(void) argc;
+	if (argc != 3)
+		return (1);
 	printf("%s\n", argv[1]);
-	printf("%d\n", ft_atoi_base(argv[1], atoi(argv[2])));
+	base = atoi(argv[2]);
+	num = ft_atoi_base(argv[1], base);
+	printf("%d\n", num);
 	return (0);
 }

@@ -1,0 +1,378 @@
+Breakpoint 1 at 0x12ef: file main.c, line 15.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=0x3, argv=0x7fffffffdf78) at main.c:15
+Note: breakpoint 1 also set at pc 0x5555555552ef.
+Breakpoint 2 at 0x5555555552ef: file main.c, line 15.
+ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+Breakpoint 1 at 0x12ef: file main.c, line 15.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=0x3, argv=0x7fffffffdf78) at main.c:15
+ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+.gdbinit:14: Error in sourced command file:
+No symbol "base" in current context.
+Breakpoint 1 at 0x12ef: file main.c, line 15.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=0x3, argv=0x7fffffffdf78) at main.c:15
+ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: /d digit = 32767
+4: /d num = 32767
+5: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: /d digit = 0
+4: /d num = 32767
+5: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: /d digit = 0
+4: /d num = 0
+5: /d neg = 1
+Breakpoint 1 at 0x119c: file /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c, line 12.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: /d digit = 0
+4: /d num = 32767
+5: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: /d digit = 0
+4: /d num = 0
+5: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: /d digit = 0
+4: /d num = 0
+5: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: /d digit = -1
+4: /d num = 0
+5: /d neg = 1
+Focus set to cmd window.
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: /d digit = -1
+4: /d num = 0
+5: /d neg = 1
+main (argc=0x3, argv=0x7fffffffdf78) at main.c:16
+List of maintenance subcommands:
+
+maintenance agent -- Translate an expression into remote agent bytecode for tracing.
+maintenance agent-eval -- Translate an expression into remote agent bytecode for evaluation.
+maintenance agent-printf -- Translate an expression into remote agent bytecode for evaluation and display the bytecodes.
+maintenance btrace -- Branch tracing maintenance commands.
+maintenance check -- Commands for checking internal gdb state.
+maintenance check-psymtabs -- Check consistency of currently expanded psymtabs versus symtabs.
+maintenance check-symtabs -- Check consistency of currently expanded symtabs.
+maintenance cplus, maintenance cp -- C++ maintenance commands.
+maintenance demangler-warning -- Give GDB a demangler warning.
+maintenance deprecate -- Deprecate a command (for testing purposes).
+maintenance dump-me -- Get fatal error; make debugger dump its core.
+maintenance expand-symtabs -- Expand symbol tables.
+maintenance flush -- Maintenance command for flushing GDB internal caches.
+maintenance info, maintenance i -- Commands for showing internal info about the program being debugged.
+maintenance internal-error -- Give GDB an internal error.
+maintenance internal-warning -- Give GDB an internal warning.
+maintenance packet -- Send an arbitrary packet to a remote target.
+maintenance print -- Maintenance command for printing GDB internal state.
+maintenance selftest -- Run gdb's unit tests.
+maintenance set -- Set GDB internal variables used by the GDB maintainer.
+maintenance show -- Show GDB internal variables used by the GDB maintainer.
+maintenance space -- Set the display of space usage.
+maintenance test-options -- Generic command for testing the options infrastructure.
+maintenance time -- Set the display of time usage.
+maintenance translate-address -- Translate a section name and address to a symbol.
+maintenance undeprecate -- Undeprecate a command (for testing purposes).
+maintenance with -- Like "with", but works with "maintenance set" variables.
+
+Type "help maintenance" followed by maintenance subcommand name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Type "apropos -v word" for full documentation of commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+Breakpoint 1 at 0x119c: file /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c, line 12.
+Focus set to cmd window.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+Breakpoint 1 at 0x119c: file /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c, line 12.
+Focus set to cmd window.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+Breakpoint 1 at 0x119c: file /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c, line 12.
+Focus set to cmd window.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 32767
+7: /d neg = 1
+Breakpoint 1 at 0x119c: file /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c, line 12.
+Focus set to cmd window.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 32767
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+to_lower (c=0x32) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:49
+Breakpoint 1 at 0x119c: file /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c, line 12.
+Focus set to cmd window.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 32767
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = -1
+6: /d num = 0
+7: /d neg = 1
+Starting program: /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/a.out 2F 16
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 32767
+6: /d num = 32767
+7: /d neg = -138135980
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 32767
+6: /d num = 32767
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 32767
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+to_lower (c=0x32) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:49
+No symbol "tlwr" in current context.
+8: /c c = 0x32
+Breakpoint 1 at 0x119c: file /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c, line 12.
+Focus set to cmd window.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 32767
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+to_lower (c=0x32) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:49
+8: /c c = 0x32
+8: /c c = 0x32
+ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:21
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+get_digit (c=0x32, base_len=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:34
+9: /c c = 0x32
+10: /d base_len = 16
+11: /d n_digit = 50
+9: /c c = 0x32
+10: /d base_len = 16
+11: /d n_digit = -91
+9: /c c = 0x32
+10: /d base_len = 16
+11: /d n_digit = -91
+9: /c c = 0x32
+10: /d base_len = 16
+11: /d n_digit = -91
+9: /c c = 0x32
+10: /d base_len = 16
+11: /d n_digit = -91
+ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:28
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = -1
+6: /d num = 0
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = -1
+6: /d num = 0
+7: /d neg = 1
+Starting program: /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/a.out 2F 16
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:12
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 32767
+6: /d num = 32767
+7: /d neg = -138135980
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 32767
+6: /d num = 32767
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 32767
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+to_lower (c=0x32) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:49
+8: /c c = 0x32
+8: /c c = 0x32
+8: /c c = 0x32
+ft_atoi_base (str=0x7fffffffe403 "2F", str_base=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:21
+1: x/s str  0x7fffffffe403:	"2F"
+2: /d str_base = 16
+3: x/s str  0x7fffffffe403:	"2F"
+4: /d str_base = 16
+5: /d digit = 0
+6: /d num = 0
+7: /d neg = 1
+get_digit (c=0x32, base_len=0x10) at /home/zedr0/C0D3/42/ExamPractice/Level_3/ft_atoi_base/ft_atoi_base.c:34
+9: /c c = 0x32
+10: /d base_len = 16
+11: /d n_digit = 50
+9: /c c = 0x32
+10: /d base_len = 16
+11: /d n_digit = 50
+9: /c c = 0x32
+10: /d base_len = 16
+11: /d n_digit = -91
+warning: Error detected on fd 0
+error detected on stdin
