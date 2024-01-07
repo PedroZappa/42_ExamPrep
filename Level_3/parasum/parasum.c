@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <limits.h>
-#include <stdio.h>
 
 void ft_putchar(char c);
 void ft_putnbr(int nb);
@@ -33,7 +32,7 @@ void ft_putnbr(int nb)
 	if (nb > 9)
 	{
 		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putchar((nb % 10) + '0');
 	}
 	else
 		ft_putchar(nb + '0');
