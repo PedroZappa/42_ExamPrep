@@ -1,35 +1,51 @@
 #include <unistd.h>
 
+int ft_strlen(char *str);
+int ft_isspace(char c);
+
 int main(int argc, char *argv[])
 {
 	char	*str = NULL;
-	char	*ret = NULL;
-	int		record;
+	int		len;
+	int		word_start;
+	int		word_end;
 
 	if (argc == 2)
 	{
 		str = argv[1];
-
-		record = 0;
-		while (*str)
+		len = ft_strlen(str);
+		if (str)
 		{
-			if (*str && *str != ' ' && *str != '\t' && !record)
-			{
-				record = 1;
-				ret = str;
-			}
-			else if (*str == ' ' || *str == '\t')
-				record = 0;
-			++str;
+			while (ft_isspace(str[len]))
+				--len;
+			word_end = (len - 1);
+			while (!ft_isspace(str[len]))
+				--len;
+			word_start = (len + 1);
 		}
-		
-	}
-	while (ret && *ret && (*ret != ' ') && (*ret != '\t'))
-	{
-		write(1, &ret, 1);
-		++ret;
+		while (word_start <= word_end)
+			write(1, &str[word_start++], 1);
 	}
 	write(1, "\n", 1);
 	return (0);
 }
 
+int ft_strlen(char *str)
+{
+	int len;
+
+	len = 0;
+	while (str[len])
+		++len;
+	return (len);
+}
+
+int ft_isspace(char c)
+{
+	return ((c == ' ') || (c == '\t'));
+}
+
+// int ft_printable(char c)
+// {
+// 	return (());
+// }

@@ -25,3 +25,152 @@ Breakpoint 1 at 0x401156: file last_word.c, line 9.
 Temporary breakpoint 2 at 0x401146: file last_word.c, line 5.
 .gdbinit:10: Error in sourced command file:
 can't handle command-line argument containing whitespace
+Breakpoint 1 at 0x1164: file last_word.c, line 13.
+Temporary breakpoint 2 at 0x115c: file last_word.c, line 8.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffdef8) at last_word.c:8
+8		char	*str = NULL;
+.gdbinit:11: Error in sourced command file:
+No symbol "ret" in current context.
+Breakpoint 1 at 0x1164: file last_word.c, line 13.
+Temporary breakpoint 2 at 0x115c: file last_word.c, line 8.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffdef8) at last_word.c:8
+8		char	*str = NULL;
+Breakpoint 1 at 0x1164: file last_word.c, line 13.
+Temporary breakpoint 2 at 0x115c: file last_word.c, line 8.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffdef8) at last_word.c:8
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffdef8) at last_word.c:13
+1: str = 0x0
+2: len = 0
+3: word_start = 4096
+4: word_end = 0
+1: str = 0x0
+2: len = 0
+3: word_start = 4096
+4: word_end = 0
+Breakpoint 1 at 0x1164: file last_word.c, line 13.
+Temporary breakpoint 2 at 0x115c: file last_word.c, line 8.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffdef8) at last_word.c:8
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffdef8) at last_word.c:13
+1: argc = 2
+2: str = 0x0
+3: len = 0
+4: word_start = 4096
+5: word_end = 0
+1: argc = 2
+2: str = 0x0
+3: len = 0
+4: word_start = 4096
+5: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: len = 0
+4: word_start = 4096
+5: word_end = 0
+Breakpoint 1 at 0x1164: file last_word.c, line 13.
+Temporary breakpoint 2 at 0x115c: file last_word.c, line 8.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffdef8) at last_word.c:8
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffdef8) at last_word.c:13
+1: argc = 2
+2: str = 0x0
+3: str[len] = <error: Cannot access memory at address 0x0>
+4: len = 0
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x0
+3: str[len] = <error: Cannot access memory at address 0x0>
+4: len = 0
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 90 'Z'
+4: len = 0
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 0 '\000'
+4: len = 13
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 0 '\000'
+4: len = 13
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 0 '\000'
+4: len = 13
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 0 '\000'
+4: len = 13
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 0 '\000'
+4: len = 13
+5: word_start = 4096
+6: word_end = 0
+Breakpoint 1 at 0x1164: file last_word.c, line 13.
+Temporary breakpoint 2 at 0x115c: file last_word.c, line 8.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffdef8) at last_word.c:8
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffdef8) at last_word.c:13
+1: argc = 2
+2: str = 0x0
+3: str[len] = <error: Cannot access memory at address 0x0>
+4: len = 0
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x0
+3: str[len] = <error: Cannot access memory at address 0x0>
+4: len = 0
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 90 'Z'
+4: len = 0
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 0 '\000'
+4: len = 13
+5: word_start = 4096
+6: word_end = 0
+1: argc = 2
+2: str = 0x7fffffffe36e "Zedro 42 Root"
+3: str[len] = 0 '\000'
+4: len = 13
+5: word_start = 4096
+6: word_end = 0

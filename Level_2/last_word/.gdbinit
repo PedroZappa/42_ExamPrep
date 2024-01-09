@@ -1,11 +1,19 @@
-define last_word
+define rfr
+	refresh
+end
+
+define main
+	display argc
 	display str
-	display ret
-	display /d record
+	display str[len]
+	display len
+	display word_start
+	display word_end
 end
 
 # Start
 set logging on
-b 9
-start
-last_word
+break 13
+start "Zedro 42 Root"
+main
+next
