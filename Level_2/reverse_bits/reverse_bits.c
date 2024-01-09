@@ -6,6 +6,7 @@
  *		Perform bitwise OR: (rev |= (octet & 1));
  *			Adding the bit to the LSB of 'rev'
  *		Right-shift 'octet' by 1: (octet >>= 1);
+ *			Gets the next bit to process in the next loop iteration
  *	Return 'rev';
  *	*/
 unsigned char	reverse_bits(unsigned char octet)
@@ -21,4 +22,3 @@ unsigned char	reverse_bits(unsigned char octet)
 	}
 	return (rev);
 }
-
