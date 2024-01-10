@@ -51,6 +51,16 @@ int ft_atoi(char *str)
 	return (num * neg);
 }
 
+/*	Checks if 'n' is prime
+ *
+ *	If 'n' is is smaller than 2, it is not prime
+ *	Loop throught 'i' while: ((i * i) <= n)
+ *		// this condtion is used instead of checking all the way 
+ *		// up to 'n' because if 'n' is not a prime number, it must 
+ *		// have a factor less than or equal to its square root.
+ *		If 'n' is divisible by i, it is not prime
+ *	Returns 1 if 'n' is prime, 0 otherwise
+ *	*/
 int is_prime(int n)
 {
 	int i = 2;
