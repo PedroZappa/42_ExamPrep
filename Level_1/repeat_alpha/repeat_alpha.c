@@ -2,6 +2,8 @@
 
 void	putnchar(char c, int n);
 void	repeat_alpha(char *str);
+int		ft_islower(int c);
+int		ft_isupper(int c);
 
 int	main(int argc, char **argv)
 {
@@ -10,14 +12,6 @@ int	main(int argc, char **argv)
 
 	write(1, "\n", 1);
 	return (0);
-}
-
-/* Print n characters to stdout.
- * */
-void	putnchar(char c, int n)
-{
-	while (n-- > 0)
-		write(1, &c, 1);
 }
 
 /* Parse string and print each alphabetic character as 
@@ -30,12 +24,30 @@ void	repeat_alpha(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			putnchar(str[i], str[i] - 'a' + 1);
-		else if (str[i] >= 'A' && str[i] <= 'Z')
-			putnchar(str[i], str[i] - 'A' + 1);
+		if (ft_islower(str[i]))
+			putnchar(str[i], (str[i] - 'a'));
+		else if (ft_isupper(str[i]))
+			putnchar(str[i], (str[i] - 'A'));
 		else
 			putnchar(str[i], 1);
 		++i;
 	}
+}
+
+/* Print n characters to stdout.
+ * */
+void	putnchar(char c, int n)
+{
+	while (n-- >= 0)
+		write(1, &c, 1);
+}
+
+int ft_islower(int c)
+{
+	return ((c >= 'a') && (c <= 'z'));
+}
+
+int ft_isupper(int c)
+{
+	return ((c >= 'A') && (c <= 'Z'));
 }
