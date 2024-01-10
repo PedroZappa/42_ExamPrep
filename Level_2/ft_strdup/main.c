@@ -7,7 +7,7 @@ int main(void)
 	char *dup;
 
 	dup = ft_strdup(str);
-	printf("str : %s\n", str);
+	printf("      str : %s\n", str);
 	printf("ft_strdup : %s\n", dup);
 
 	return (0);
