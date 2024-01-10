@@ -5,7 +5,7 @@
 int main(void)
 {
 	char *str = "Zedr0";
-	char *reject = "+-*/o";
+	char *reject = "+-*/od";
 
 	printf("ft_strcspn: %ld\n", ft_strcspn(str, reject));
 	printf("strcspn: %ld\n", strcspn(str, reject));
