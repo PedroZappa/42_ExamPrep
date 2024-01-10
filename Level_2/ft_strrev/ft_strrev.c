@@ -1,25 +1,23 @@
-#include <stdlib.h>
-#include <stdio.h>
-
 char    *ft_strrev(char *str)
 {
-	char	temp[100];
-	int		len;
+	char	temp;
 	int		i;
+	int		len;
 
+	if (!str)
+		return (0);
 	len = 0;
 	while (str[len])
-	{
-		temp[len] = str[len];
 		++len;
-	}
 	--len;
 	i = 0;
-	while (len >= 0)
+	while (i < len)
 	{
-		str[i] = temp[len];
-		--len;
+		temp = str[i];
+		str[i] = str[len];
+		str[len] = temp;
 		++i;
+		--len;
 	}
 	return (str);
 }
