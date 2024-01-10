@@ -1,27 +1,34 @@
 
 #include <unistd.h>
-#include <stdlib.h>
+
+int ft_isupper(int c);
 
 int main(int argc, char *argv[]) 
 {
 	char	*str;
-	int		i;
+	int		c;
 
 	if (argc == 2)
 	{
 		str = argv[1];
-		i = 0;
+		c = 0;
 		while (*str)
 		{
-			if ((*str >= 'A') && (*str <= 'Z') && (i != 0))
+			if (ft_isupper(str[c]) && (c == 0))
+				*str = *str + 32;
+			if (ft_isupper(*str) && (c != 0))
 			{
 				write(1, "_", 1);
 				*str = *str + 32;
 			}
-			write(1, str, 1);
-			++str;
-			++i;
+			write(1, str++, 1);
+			++c;
 		}
 	}
 	return (write(1, "\n", 1));
+}
+
+int ft_isupper(int c)
+{
+	return ((c >= 'A') && (c <= 'Z'));
 }
