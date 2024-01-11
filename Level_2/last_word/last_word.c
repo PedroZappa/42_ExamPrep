@@ -16,12 +16,12 @@ int main(int argc, char *argv[])
 		len = ft_strlen(str);
 		if (str)
 		{
-			while (ft_isspace(str[len]))
-				--len;
-			word_end = (len - 1);
-			while (!ft_isspace(str[len]))
-				--len;
-			word_start = (len + 1);
+			while (ft_isspace(str[len--]))
+				;
+			word_end = len;
+			while (!ft_isspace(str[len--]))
+				;
+			word_start = (len + 2);
 		}
 		while (word_start <= word_end)
 			write(1, &str[word_start++], 1);
