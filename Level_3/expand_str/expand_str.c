@@ -22,6 +22,7 @@ int main(int argc, char **argv)
 				if (*str == '\0')
 					break;
 			}
+			end = 0;
 			if (ft_ispace(*str))
 			{
 				while (ft_ispace(*str))
