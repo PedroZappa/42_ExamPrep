@@ -2,7 +2,7 @@
 
 /*	Initialize 'n' to 8 to print the 8 bits in a byte;
  *	Declare 'bit' to store current bit;
- *	Loop 'n' times through input octet:
+ *	Loop 'n' times through input octet (Left to right):
  *		Isolate the 'n'-th bit:
  *			Right-shift 'octet's bits 'n' times; (octet >> n) 
  *			Mask all bits expect the LSB with a bitwise AND operation; (& 1)
