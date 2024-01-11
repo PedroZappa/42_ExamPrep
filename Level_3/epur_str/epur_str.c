@@ -6,10 +6,14 @@ int main(int argc, char **argv)
 {
 	char	*str;
 	int		space_flag = 0;
+	int		len;
 
 	if (argc == 2)
 	{
 		str = argv[1];
+		len = 0;
+		while (str[len])
+			++len;
 		while (*str)
 		{
 			while (ft_isspace(str))
@@ -22,7 +26,7 @@ int main(int argc, char **argv)
 			if (*str && ft_isspace(str) && !space_flag)
 			{
 				space_flag = 1;
-				if (*(++str) == '\0')
+				if (*(str + 1) == '\0')
 					break;
 				write(1, " ", 1);
 			}
