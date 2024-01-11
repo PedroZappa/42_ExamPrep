@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 char *ft_strchr(const char *str, char c);
 
