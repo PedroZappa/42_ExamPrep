@@ -5,7 +5,6 @@ static char		*ft_getstr(char *str, unsigned int nbr, long int len);
 
 char	*ft_itoa(int nbr)
 {
-	unsigned int	n;	
 	long int		len;
 	char			*numstr;
 
@@ -16,14 +15,12 @@ char	*ft_itoa(int nbr)
 	numstr[len--] = '\0';
 	if (nbr < 0)
 	{
-		n = -nbr;
 		numstr[0] = '-';
+		nbr = -nbr;
 	}
-	else
-		n = nbr;
 	if (nbr == 0)
 		numstr[0] = '0';
-	numstr = ft_getstr(numstr, n, len);
+	numstr = ft_getstr(numstr, nbr, len);
 	return (numstr);
 }
 
