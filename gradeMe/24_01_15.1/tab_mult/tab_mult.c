@@ -45,7 +45,7 @@ int ft_atoi(char *str)
 	{
 		if (*str == '-')
 			sign = -1;
-		if ((*str + 1) == '-')
+		if (*(str + 1) == '-')
 			return (0);
 		++str;
 	}
