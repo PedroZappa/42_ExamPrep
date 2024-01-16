@@ -9,6 +9,7 @@
  *			Print 'n'.
  *			If 'nbr' is equal to 'n'
  *				Break out of loop.
+ *			Print '*'
  *			Divide 'nbr' by 'n'
  *			Set n back to 2.
  *	Print newline.
