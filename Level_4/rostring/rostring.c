@@ -5,7 +5,7 @@ int ft_isspace(char c);
 
 /*	Display a string after rotating it one word to the left:
  *
- * If argc is larger or equal to 2
+ *	If argc is larger or equal to 2
  *		Skip leading whitespace
  *		Store the beginning of the first word in 'word_start'
  *		Store end of first word in 'word_end'
@@ -17,7 +17,7 @@ int ft_isspace(char c);
  *			print whitespace
  *		Print first word
  *	Print newline
- * */
+ *  */
 int main(int argc, char *argv[])
 {
 	char *str;
