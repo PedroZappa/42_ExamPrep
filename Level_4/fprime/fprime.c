@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*	Display prime factors of a number.
+ *
+ *	If 'n' is one print 1.
+ *	Loop from n = 2 to 'nbr' while 'n' is smaller than 'nbr' 
+ *		If 'nbr' is divisible by 'n' 
+ *			Print 'n'.
+ *			If 'nbr' is equal to 'n'
+ *				Break out of loop.
+ *			Divide 'nbr' by 'n'
+ *			Set n back to 2.
+ *	Print newline.
+ *	*/
 int main(int argc, char *argv[]) 
 {
 	int nbr;
