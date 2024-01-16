@@ -27,10 +27,7 @@ int main(int argc, char **argv)
 			word_start = (len + 1);
 			flag = word_start;
 			while (word_start <= word_end)
-			{
-				write(1, &str[word_start], 1);
-				++word_start;
-			}
+				write(1, &str[word_start++], 1);
 			if (flag != 0)
 				write(1, " ", 1);
 		}
@@ -41,6 +38,6 @@ int main(int argc, char **argv)
 
 int ft_isspace(char c)
 {
-	return (c == ' ' || c == '\t');
+	return ((c == ' ') || ((c >= 9) && (c <= 13)));
 }
 
