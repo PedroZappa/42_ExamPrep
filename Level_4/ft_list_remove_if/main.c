@@ -3,36 +3,30 @@
 #include "ft_list.h"
 
 int		cmp(void *a, void *b);
-t_list	*lst_new(void *data);
+t_list	*create_list(void *data);
+t_list	*add_node(t_list *list, void *data);
 void	ft_printlist(t_list *lst);
 
-int main(void) {
-    // Create a list with some elements
-    t_list *lst = lst_new((void*)1);
-    lst->next = lst_new((void*)2);
-    lst->next->next = lst_new((void*)3);
-    lst->next->next->next = lst_new((void*)2);
-    lst->next->next->next->next = lst_new((void*)4);
+int main(int argc, char *argv[])
+{
+	t_list *lst;
+	// char *to_del = "Zedr0";
+	char *to_del = "42";
+	int n = 1;
 
-    // Print the original list
-    printf("Original list:\n");
-    ft_printlist(lst);
+	printf("Creating List!\n");
+	lst = create_list("Y0!");
+	while (n < argc)
+		 lst = add_node(lst, argv[n++]);
+	printf("List Created!\n");
+	ft_printlist(lst);
 
-    // Remove elements with data equal to (void*)2
-    ft_list_remove_if(&lst, (void*)2, cmp);
+	printf("Removing all instances of '%s'\n", to_del);
+	ft_list_remove_if(&lst, (void*)"Zedr0", cmp);
+	printf("Duplicated data removed\n");
+	ft_printlist(lst);
 
-    // Print the modified list
-    printf("Modified list after removing 2s:\n");
-    ft_printlist(lst);
-
-    // Free the remaining elements of the list
-    while (lst) {
-        t_list *temp = lst;
-        lst = lst->next;
-        free(temp);
-    }
-
-    return 0;
+	return (0);
 }
 
 // Define the comparison function
@@ -42,21 +36,32 @@ int cmp(void *a, void *b)
 }
 
 // Function to create a new list node
-t_list *lst_new(void *data)
+t_list *create_list(void *data)
 {
-    t_list *lst;
+    t_list *new_elem = malloc(sizeof(t_list));
+	if (!new_elem)
+		return (NULL);
+    new_elem->data = data;
+    new_elem->next = NULL;
+    return (new_elem);
+}
 
-	lst = (t_list*)malloc(sizeof(t_list));
-    lst->next = NULL;
-    lst->data = data;
-    return lst;
+t_list	*add_node(t_list *list, void *data)
+{
+	if (!list)
+		return (create_list(data));
+	t_list *curr = list;
+	while (curr->next)
+		curr = curr->next;	
+	curr->next = create_list(data);
+	return (list);
 }
 
 // Function to print the list
 void ft_printlist(t_list *lst)
 {
     while (lst) {
-        printf("data: %p\n", lst->data);
+        printf("data: %s\n", (char *)lst->data);
         lst = lst->next;
     }
 }

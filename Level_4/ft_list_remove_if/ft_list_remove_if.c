@@ -2,7 +2,7 @@
 #include "ft_list.h"
 
 /* Store begin_list in curr;
- * While the current element and the next are not NULL
+ * While the current element is not NULL
  *		Compare node->data with data_ref
  *			If they match: free the next node
  * Handle the case where begin_list is equal to data_ref
@@ -17,7 +17,7 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 	t_list	*curr;		// To traverse through the list
 
 	curr = *begin_list;
-	while (curr && curr->next)
+	while (curr->next)
 	{
 		if ((*cmp)(curr->next->data, data_ref) == 0)
 		{
