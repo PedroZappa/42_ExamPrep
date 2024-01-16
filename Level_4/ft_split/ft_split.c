@@ -3,11 +3,22 @@
 int ft_isspace(char c);
 char *ft_strncpy(char *dest, char *src, unsigned int n);
 
-/* Loop through input string 
- *		Count the number of words contained in the string
- * Allocate memory for an array of pointers to store a pointer to each word
- *
- * */
+/*	Loop through input string 
+ *		Skip whitespace
+ *		When not whitespace count word 
+ *		Skip all non whitespace chars
+ *	Allocate memory for an array of pointers to store a pointer to each word
+ *	Loop through the string again
+ *		Skip whitespace
+ *		When not whitespace save word start index
+ *		Skip all non whitespace chars
+ *		if current index is higher than the start_word index
+ *			Calculate the length of the word
+ *			Allocate memory for the word
+ *			Copy the word
+ *	NULL terminate the array
+ *	Return the array
+ *	*/
 char    **ft_split(char *str)
 {
 	char **strtab;
