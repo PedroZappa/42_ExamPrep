@@ -1,5 +1,11 @@
 #include <stdlib.h>
 
+/*	ft_range - return an array of integers from start to end
+ *	
+ *	If start is smaller than end
+ *		while start is smaller than end
+ *			Increment start_n'
+ *	*/
 int     *ft_range(int start, int end)
 {
 	int	count;
