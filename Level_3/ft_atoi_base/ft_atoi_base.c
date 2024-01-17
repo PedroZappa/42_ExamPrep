@@ -3,6 +3,14 @@ char	to_lower(char c);
 int		is_digit(char c);
 int		is_alpha(char c);
 
+/*	ASCII to integer conversion
+ *
+ *	Handle sign
+ *	While get_digit() returns 0 or positive integer
+ *		Convert to integer:
+ *			Multiply 'num' by base and add 'digit' multiplied by the sign
+ *	return 'num'
+ *	*/
 int	ft_atoi_base(const char *str, int str_base)
 {
 	int digit;
@@ -26,6 +34,20 @@ int	ft_atoi_base(const char *str, int str_base)
 	return (num);
 }
 
+/*	Gets digit from character
+ *
+ *	if 'base_len' smaller or equal to 10:
+ *		set 'n_digit' to (base_len + '0')
+ *	else
+ *		set 'n_digit' to ((base_len - 10) + 'a')
+ *
+ *	if 'c' is a digit AND smaller than 'n_digit':
+ *		return (c - '0')
+ *	else if 'c' is a letter AND smaller than 'n_digit':
+ *		return ((c + 10) - 'a')
+ *	else
+ *		return (-1)
+ *	*/
 int get_digit(char c, int base_len)
 {
 	int n_digit;
