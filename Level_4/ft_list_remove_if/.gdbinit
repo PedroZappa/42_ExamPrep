@@ -27,7 +27,6 @@ define ft_list_remove_if
 	display **begin_list
 	display *begin_list
 	display /s data_ref
-	display *to_del
 	display *curr
 	display /s curr->data
 	display *curr->next
