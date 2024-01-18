@@ -7,7 +7,7 @@ int ft_isdigit(int c);
 
 int main(int argc, char **argv)
 {
-	int *arr;
+	int *arr = NULL;
 	int arrlen;
 	int min;
 	int max;
