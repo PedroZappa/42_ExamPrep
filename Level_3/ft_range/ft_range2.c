@@ -16,7 +16,7 @@ int abs(int n);
  *		else
  *			Decrement 'min'
  *		Increment 'arr'
- *	Set 'arr' to 'min'
+ *	Set the value of 'arr' to 'min'
  *	Return ('arr' - 'n')
  *		This is because the pointer 'arr' has been incremented 'n' times 
  *		so subtracting 'n' brings it back to the start of the range.
