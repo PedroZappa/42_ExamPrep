@@ -32,5 +32,6 @@ void	fill(char **tab, t_point size, t_point curr, char to_fill)
  * */
 int out_of_bounds(t_point curr, t_point size)
 {
-	return ((curr.y < 0) || (curr.y >= size.y) || (curr.x < 0) || (curr.x >= size.x));
+	return ((curr.y < 0) || (curr.y >= size.y) 
+		|| (curr.x < 0) || (curr.x >= size.x));
 }
