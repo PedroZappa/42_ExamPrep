@@ -2,14 +2,15 @@
 #include <stdlib.h>
 #include "ft_list.h"
 
-void print_data(void *data);
-t_list *create_elem(void *data);
-t_list *add_node(t_list *list, void *data);
+void	print_data(void *data);
+t_list	*create_elem(void *data);
+t_list	*add_node(t_list *list, void *data);
 
 int main(int argc, char **argv) 
 {
 	int n;
     t_list *list = create_elem("y0!");
+
 	n = 1;
 	while (n < argc)
 		list = add_node(list, argv[n++]);
@@ -19,7 +20,8 @@ int main(int argc, char **argv)
 
     // Free the list
     t_list *lst_start;
-    while (list) {
+    while (list)
+	{
         lst_start = list;
         list = list->next;
         free(lst_start);
