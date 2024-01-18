@@ -14,6 +14,8 @@ int ft_atoi(const char *str)
 	{
 		if (*str == '-')
 			sign = -1;
+		if (*(str + 1) == '-')
+			return (0);
 		++str;
 	}
 	while (ft_isdigit(*str))
