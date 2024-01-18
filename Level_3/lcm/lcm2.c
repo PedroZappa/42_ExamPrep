@@ -20,8 +20,8 @@ unsigned int    lcm(unsigned int a, unsigned int b)
  *	*/
 unsigned int    gcd(unsigned int a, unsigned int b)
 {
-	if (b == 0)
-		return a;
+	if ((a % b) == 0)
+		return (b);
 	return (gcd(b, (a % b)));
 }
 
