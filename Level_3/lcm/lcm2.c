@@ -13,10 +13,11 @@ unsigned int    lcm(unsigned int a, unsigned int b)
  *		Algorithm's principle : 
  *			the GCD of two numbers also divides their difference. 
  *
- *	If b is zero, it means that a is the GCD : 
- *		the function returns 'a'.
+ *	If 'a' is divisible by 'b' means 'b' is the gcd 
+ *		Returns 'b'.
  *	Else 
- *		Returns itself recursively with 'b' and the remainder of 'a' divided 'b' as arguments.
+ *		Returns itself recursively with 'b' and the remainder of 'a' 
+ *		divided 'b' as arguments.
  *	*/
 unsigned int    gcd(unsigned int a, unsigned int b)
 {
