@@ -14,6 +14,8 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 	t_list	*lst_start;
 	int		to_swap;
 
+	if (!lst)
+		return (0);
 	lst_start = lst;
 	while (lst->next)
 	{
