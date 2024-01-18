@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "ft_atoi3.c"
+#include "ft_atoi.c"
 
 int main(int argc, char	**argv)
 {
