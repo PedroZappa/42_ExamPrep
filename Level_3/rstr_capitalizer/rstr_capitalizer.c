@@ -32,7 +32,7 @@ void rstr_capitalize(char *str)
 	{
 		if (ft_isupper(str[i]))
 			str[i] += 32;
-		if ((ft_islower(str[i]) && ft_isspace(str[i + 1])) || str[i + 1] == '\0')
+		if ((ft_islower(str[i]) && ft_isspace(str[i+1])) || str[i+1] == '\0')
 			str[i] -= 32;
 		write(1, &str[i++], 1);
 	}
