@@ -22,12 +22,8 @@ int	ft_atoi_base(const char *str, int str_base)
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-		{
 			sign = -1;
-			++str;
-		}
-		else
-			++str;
+		++str;
 	}
 	while ((digit = get_digit(to_lower(*str++), str_base)) >= 0)
 		num = ((num * str_base) + (digit * sign));
