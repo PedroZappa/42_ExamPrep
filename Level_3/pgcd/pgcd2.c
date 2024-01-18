@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*	Takes two integers and displays their greatest common divisor.
-*	*/
+
 int pgcd(int a, int b);
 
 int main(int argc, char *argv[])
@@ -17,10 +16,20 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
+/*	Takes two integers and displays their greatest common divisor.
+ *
+ *	Base Case: 
+ *		If 'a' is divisible by 'b' (i.e., (a % b == 0)), 
+ *			'b' is the GCD, the function returns 'b'.
+ *	Recursive Case: 
+ *		Calls itself recursively with 'b' and the remainder of 'a' divided by 'b' as arguments. 
+ *		
+ *		Euclid's algorithm, states that the GCD of two numbers does not change if the larger number is replaced by its difference with the smaller number. 	
+ *	*/
 int pgcd(int a, int b)
 {
 	if (a % b == 0)
 		return b;
 	else
-		return pgcd(b, a % b);
+		return pgcd(b, (a % b));
 }
