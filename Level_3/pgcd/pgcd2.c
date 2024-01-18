@@ -6,7 +6,8 @@ int pgcd(int a, int b);
 
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int a; 
+	int b;
 
 	if (argc == 3)
 	{
@@ -14,13 +15,13 @@ int main(int argc, char *argv[])
 		b = atoi(argv[2]);
 		printf("%d\n", pgcd(a, b));
 	}
-	return 0;
+	return (0);
 }
 
 int pgcd(int a, int b)
 {
-	if (a % b == 0)
-		return b;
+	if ((a % b) == 0)
+		return (b);
 	else
-		return pgcd(b, a % b);
+		return (pgcd(b, (a % b)));
 }
