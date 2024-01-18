@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-/*	ft_range - return an array of integers from start to end
+/*	ft_range - return an array of integers from start to end, inclusive
  *	
  *	Set count to 0
  *	Make a copy of 'start' into 'start_n'
