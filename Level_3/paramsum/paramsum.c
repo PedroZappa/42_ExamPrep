@@ -4,6 +4,8 @@
 void ft_putchar(char c);
 void ft_putnbr(int nb);
 
+/*	Writes the number of command line arguments
+ *	*/
 int main(int argc, char **argv)
 {
 	(void)argv;
