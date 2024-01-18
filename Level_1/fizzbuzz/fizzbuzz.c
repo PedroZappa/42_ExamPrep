@@ -25,10 +25,7 @@ int main(void)
 
 void	print_n(int n)
 {
-	char *digits;
-
-	digits = "0123456789";
 	if (n > 9)
 		print_n(n / 10);
-	write(1, &digits[n % 10], 1);
+	write(1, &"0123456789"[n % 10], 1);
 }
