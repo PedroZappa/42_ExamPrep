@@ -44,8 +44,3 @@ int ft_isspace(char c)
 {
 	return ((c == ' ') || (c == '\t'));
 }
-
-// int ft_printable(char c)
-// {
-// 	return (());
-// }
