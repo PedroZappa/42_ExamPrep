@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 static long int	ft_numlen(int nbr);
-static char		*ft_getstr(char *str, unsigned int nbr, long int len);
+static char		*ft_getnumstr(char *str, unsigned int nbr, long int len);
 
 /*	Converts an integer int oa string of ASCII characters.
  *
@@ -38,7 +38,7 @@ char	*ft_itoa(int nbr)
 		return (numstr);
 	}
 	numstr[len--] = '\0';
-	numstr = ft_getstr(numstr, nbr, len);
+	numstr = ft_getnumstr(numstr, nbr, len);
 	return (numstr);
 }
 
