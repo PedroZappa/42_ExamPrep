@@ -1,6 +1,7 @@
 #include <unistd.h>
 
 int ft_isspace(char c);
+int ft_strlen(char *str);
 
 /*	Print words in string in reverse order
  *
@@ -26,13 +27,10 @@ int main(int argc, char **argv)
 	int		len;
 	int		str_idx;
 
-	len = 0;
-	str_idx = 0;
 	if (argc == 2)
 	{
 		str = argv[1];
-		while (str[len])
-			++len;
+		len = ft_strlen(str);
 		while (len >= 0)
 		{
 			while (!str[len] || ft_isspace(str[len]))
@@ -57,3 +55,10 @@ int ft_isspace(char c)
 	return ((c == ' ') || ((c >= 9) && (c <= 13)));
 }
 
+int ft_strlen(char *str)
+{
+	int len = 0;
+	while (str[len])
+		++len;
+	return (len);
+}
