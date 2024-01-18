@@ -3,7 +3,7 @@
 int ft_isspace(char c);
 char *ft_strncpy(char *dest, char *src, unsigned int n);
 
-/*	Loop through input string 
+/*	Loop through input string, counting words
  *		Skip whitespace
  *		When not whitespace count word 
  *		Skip all non whitespace chars
@@ -75,7 +75,7 @@ char *ft_strncpy(char *dest, char *src, unsigned int n)
 	int i;
 
 	i = -1;
-	while (((unsigned int)++i < n) && (src[i]))
+	while (((unsigned int)++i < n) && src[i])
 		dest[i] = src[i];
 	dest[i] = '\0';
 	return (dest);
