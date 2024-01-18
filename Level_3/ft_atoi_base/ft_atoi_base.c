@@ -15,22 +15,22 @@ int	ft_atoi_base(const char *str, int str_base)
 {
 	int digit;
 	int num;
-	int neg;
+	int sign;
 
-	neg = 1;
+	sign = 1;
 	num = 0;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 		{
-			neg = -1;
+			sign = -1;
 			++str;
 		}
 		else
 			++str;
 	}
 	while ((digit = get_digit(to_lower(*str++), str_base)) >= 0)
-		num = ((num * str_base) + (digit * neg));
+		num = ((num * str_base) + (digit * sign));
 	return (num);
 }
 
