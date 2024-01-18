@@ -9,10 +9,10 @@ int		is_prime(int nb);
  *	If the number of arguments is not 2, 
  *		Print '0'
  *		Return.
- *	Get the input 'n' convert it to int and store it in 'max'
+ *	Get the input 'n' convert it to int and store it in 'num'
  *	Initialize 'curr' to 2
  *	Initialize 'sum' to 0
- *	While 'curr' is less or equal to 'max'
+ *	While 'curr' is less or equal to 'num'
  *		If 'curr' is a prime number
  *			Add 'curr' to 'sum'
  *		Increment 'curr'
@@ -21,7 +21,7 @@ int		is_prime(int nb);
  *	*/
 int main(int argc, char *argv[])
 {
-	int max;
+	int num;
 	int curr;
 	int sum;
 
@@ -30,10 +30,10 @@ int main(int argc, char *argv[])
 		write(1, "0", 1);
 		return (0);	
 	}
-	max = ft_atoi(argv[1]);
+	num = ft_atoi(argv[1]);
 	curr = 2;
 	sum = 0;
-	while (curr <= max)
+	while (curr <= num)
 	{
 		if (is_prime(curr))
 			sum += curr;
