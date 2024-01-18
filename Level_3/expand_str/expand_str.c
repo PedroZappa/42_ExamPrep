@@ -35,14 +35,8 @@ int main(int argc, char **argv)
 			++str;
 		while (*str)
 		{
-			if (*str == '\0')
-				break;
 			while (!ft_ispace(*str))
-			{
 				write(1, str++, 1);
-				if (*str == '\0')
-					break;
-			}
 			end = 0;
 			if (ft_ispace(*str))
 			{
