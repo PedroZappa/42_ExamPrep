@@ -12,7 +12,7 @@ void	flood_fill(char **tab, t_point size, t_point begin)
 }
 
 /* Fill
- *		Check if point is out of bounds
+ *		Check if point is out of bounds or is not equal to 'to_fill'
  *		Set tab's curr point to 'F'
  *		Recursively call fill() with it's neighboring points
  * */
