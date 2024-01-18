@@ -25,14 +25,10 @@ int main(int argc, char **argv)
 {
 	char	*str;
 	int		space_flag;
-	int		len;
 
 	if (argc == 2)
 	{
 		str = argv[1];
-		len = 0;
-		while (str[len])
-			++len;
 		while (*str)
 		{
 			while (ft_isspace(str))
