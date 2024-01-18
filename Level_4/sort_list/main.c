@@ -9,47 +9,6 @@ void ft_printlist(t_list *lst);
 t_list	*create_list(int *data);
 t_list	*add_node(t_list *list, int data);
 
-// Main function to test sort_list
-// int main()
-// {
-//    // Create a list
-//    t_list *lst = malloc(sizeof(t_list));
-//    lst->data = 5;
-//    lst->next = malloc(sizeof(t_list));
-//    lst->next->data = 1;
-//    lst->next->next = malloc(sizeof(t_list));
-//    lst->next->next->data = 3;
-//    lst->next->next->next = malloc(sizeof(t_list));
-//    lst->next->next->next->data = 2;
-//    lst->next->next->next->next = NULL;
-//
-//    // Print original list
-//    printf("Original List: ");
-//    printList(lst);
-//
-//    // Sort list in ascending order
-//    lst = sort_list(lst, ascending);
-//
-//    // Print sorted list
-//    printf("Sorted List (asc): ");
-//    printList(lst);
-//
-//    // Sort list in descending order
-//    lst = sort_list(lst, descending);
-//
-//    // Print sorted list
-//    printf("Sorted List (desc): ");
-//    printList(lst);
-//
-//    // Free the list
-//    free(lst->next->next->next);
-//    free(lst->next->next);
-//    free(lst->next);
-//    free(lst);
-//
-//    return 0;
-// }
-
 int main(int argc, char *argv[])
 {
 	t_list *lst;
