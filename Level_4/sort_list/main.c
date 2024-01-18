@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 
 	printf("Creating List!\n");
 	lst = create_list(&data);
+
 	n = 1;
 	while (n < argc)
 		lst = add_node(lst, atoi(argv[n++]));
@@ -27,6 +28,7 @@ int main(int argc, char *argv[])
 	sort_list(lst, ascending);
 	printf("List Sorted!\n");
 	ft_printlist(lst);
+
 	printf("Ordering List in descending!\n");
 	sort_list(lst, descending);
 	printf("List Sorted!\n");
