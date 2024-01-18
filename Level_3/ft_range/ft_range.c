@@ -1,5 +1,24 @@
 #include <stdlib.h>
 
+/*	ft_range - return an array of integers from start to end, inclusive
+ *	
+ *	Set count to 0
+ *	Make a copy of 'start' into 'start_n'
+ *	If start is smaller than end
+ *		while start is smaller than end
+ *			Increment 'start_n'
+ *			Count number of elements in range between start and end
+ *		Allocate memory for array
+ *		Set count to 0
+ *		Reset 'start_n' to 'start'
+ *	else (if end is larger than start)
+ *		while 'start_n' is larger than end
+ *			Decrement 'start_n'
+ *			Count number of elements in range between start and end
+ *		Allocate memory for array
+ *		Set count to 0
+ *		
+ *	*/
 int     *ft_range(int start, int end)
 {
 	int	count;

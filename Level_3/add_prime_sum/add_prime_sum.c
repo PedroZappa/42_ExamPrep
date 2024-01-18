@@ -4,6 +4,21 @@ int		ft_atoi(char *str);
 void	ft_putnbr(int nb);
 int		is_prime(int nb);
 
+/*	Print the sum of all prime numbers less or equal to 'n'.
+ *
+ *	If the number of arguments is not 2, 
+ *		Print '0'
+ *		Return.
+ *	Get the input 'n' convert it to int and store it in 'max'
+ *	Initialize 'curr' to 2
+ *	Initialize 'sum' to 0
+ *	While 'curr' is less or equal to 'max'
+ *		If 'curr' is a prime number
+ *			Add 'curr' to 'sum'
+ *		Increment 'curr'
+ *	Print 'sum'
+ *	Return
+ *	*/
 int main(int argc, char *argv[])
 {
 	int max;
@@ -65,6 +80,15 @@ void	ft_putnbr(int nb)
 	write(1, &"0123456789"[nb % 10], 1);
 }
 
+/*	Initialize 'i' to 2	
+ *	If 'nb' is less or equal to 1
+ *		Return 0
+ *	While 'i' squared is less or equal to 'nb'
+ *		if 'nb' is divisible by 'i'
+ *			Return 0
+ *		Increment 'i'
+ *	Return 1
+ *	*/
 int	is_prime(int nb)
 {
 	int	i = 2;

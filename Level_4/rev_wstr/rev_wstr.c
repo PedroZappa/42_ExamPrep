@@ -2,6 +2,22 @@
 
 int ft_isspace(char c);
 
+/*	Print words in string in reverse order
+ *
+ *	Get the 'len' of input 'str';
+ *	Loop through 'str' from the end;
+ *		Skip spaces and the NULL character;
+ *		Save 'word_end';
+ *		Skip non-space characters;
+ *		Save 'word_start';
+ *		Set 'flag' to 'word_start';
+ *		Print 'word_start' to 'word_end';
+ *		If flag is not 0 
+ *			Print ' '
+ *	Print '\n'
+ *	Return 	
+ *
+ *	*/
 int main(int argc, char **argv)
 {
 	char	*str;

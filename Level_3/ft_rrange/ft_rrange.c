@@ -2,6 +2,10 @@
 
 int ft_abs(int n);
 
+/*	Returns an array of integers ranging from end to start, inclusive.
+ *
+ *
+ *	*/
 int     *ft_rrange(int start, int end)
 {
 	int *arr;

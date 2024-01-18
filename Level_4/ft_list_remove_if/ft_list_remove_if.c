@@ -13,26 +13,26 @@
  * 		Make the current element point to the next
  * 		Free the current element
  * */
-void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
+void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
-	t_list	*to_del;	// To hold the element to be deleted
-	t_list	*curr;		// To traverse through the list
+	t_list	*to_free;
+	t_list	*current;
 
-	curr = *begin_list;
-	while (curr->next)
+	current = *begin_list;
+	while (current->next)
 	{
-		if ((*cmp)(curr->next->data, data_ref) == 0)
+		if ((*cmp)(current->next->data, data_ref) == 0)
 		{
-			to_del = curr->next;
-			curr->next = curr->next->next;
-			free(to_del);
+			to_free = current->next;
+			current->next = current->next->next;
+			free(to_free);
 		}
-		curr = curr->next;
+		current = current->next;
 	}
-	curr = *begin_list;
-	if (curr && ((*cmp)(curr->data, data_ref) == 0))
+	current = *begin_list;
+	if (current && (*cmp)(current->data, data_ref) == 0)
 	{
-		*begin_list = curr->next;
-		free(curr);
+		*begin_list = current->next;
+		free(current);
 	}
 }

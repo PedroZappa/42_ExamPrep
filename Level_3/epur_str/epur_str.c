@@ -2,6 +2,25 @@
 
 int ft_isspace(char *str);
 
+/*	Displays a string with exactly one space between each word, 
+ *	without leading or trailing blanks.
+ *
+ *	Get the 'len' of 'str'
+ *	Loop through the 'str'
+ *		Skip leading spaces
+ *		Loop while the '*str' is not space
+ *			Set 'space_flag' to 0
+ *			Write the char in '*str'
+ *		If the char is a space and the 'space_flag' is 0
+ *			Set 'space_flag' to 1
+ *			if the next char is '\0'
+ *				break
+ *			Print a space
+ *		else
+ *			break
+ *		Increment the 'str'
+ *	Print a new line
+ *	*/
 int main(int argc, char **argv)
 {
 	char	*str;

@@ -1,13 +1,14 @@
 #include <stdio.h>
-#include "ft_range.c"
+// #include "ft_range.c"
+#include "ft_range2.c"
 
 int ft_atoi(char *str);
 int ft_isspace(int c);
-int ft_isdigit(int c);
+int ft_isdigit(int c);	
 
 int main(int argc, char **argv)
-{
-	int *arr;
+{	
+	int *arr = NULL;
 	int arrlen;
 	int min;
 	int max;

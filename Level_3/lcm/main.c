@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "lcm.c"
+#include "lcm2.c"
 
 int ft_atoi(char *str);
 int ft_isspace(int c);

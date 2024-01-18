@@ -2,6 +2,27 @@
 
 int ft_ispace(char c);
 
+/*	Expands a 'str' with three spaces between each word.
+ *
+ *	Skip leading white blanks
+ *	Loop through the 'str'
+ *		if *str is the NULL char
+ *			break
+ *		While the char is not a space
+ *			Print it
+ *			if *str is the NULL char
+ *				break
+ *		Set end to 0
+ *		If the char in 'str' is a space
+ *			While the char in 'str' is a space
+ *				Increment 'str'
+ *				if *str is the NULL char
+ *					Set end to 1
+ *			If end is 0
+ *				Print three spaces
+ *	Print a new line
+ *	Return 0
+ *	*/
 int main(int argc, char **argv)
 {
 	char	*str;
