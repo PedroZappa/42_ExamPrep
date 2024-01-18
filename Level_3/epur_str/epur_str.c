@@ -24,7 +24,7 @@ int ft_isspace(char *str);
 int main(int argc, char **argv)
 {
 	char	*str;
-	int		space_flag = 0;
+	int		space_flag;
 	int		len;
 
 	if (argc == 2)
@@ -37,16 +37,16 @@ int main(int argc, char **argv)
 		{
 			while (ft_isspace(str))
 				++str;
-			while (*str && !ft_isspace(str))
+			if (*str == '\0')
+				break;
+			while (!ft_isspace(str))
 			{
 				space_flag = 0;
 				write(1, str++, 1);
 			}
-			if (*str && ft_isspace(str) && !space_flag)
+			if (ft_isspace(str) && !space_flag)
 			{
 				space_flag = 1;
-				if (*(str + 1) == '\0')
-					break;
 				write(1, " ", 1);
 			}
 			else
