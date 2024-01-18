@@ -15,11 +15,11 @@ int main(int argc, char *argv[])
 		while (*str)
 		{
 			if (ft_isupper(str[c]) && (c == 0))
-				*str = *str + 32;
+				*str += 32;
 			if (ft_isupper(*str) && (c != 0))
 			{
 				write(1, "_", 1);
-				*str = *str + 32;
+				*str += 32;
 			}
 			write(1, str++, 1);
 			++c;
