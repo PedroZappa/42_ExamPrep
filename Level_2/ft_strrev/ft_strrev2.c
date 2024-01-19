@@ -17,9 +17,8 @@ char    *ft_strrev(char *str)
 
 int     ft_strlen(char *str)
 {
-	int     i = 0;
-	while (str[i])
-		++i;
+	int i = -1;
+	while (str[++i]);
 	return (i);
 }
 
