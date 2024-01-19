@@ -6,7 +6,7 @@
  *		Isolate the 'n'-th bit:
  *			Right-shift 'octet's bits 'n' times; (octet >> n) 
  *			Mask all bits expect the LSB with a bitwise AND operation; (& 1)
- *			Convert result to ASCII by addibng '0' to it;
+ *			Convert result to ASCII by adding '0' to it;
  *		Write the isolated bit to stdout;
  *
  *	*/
