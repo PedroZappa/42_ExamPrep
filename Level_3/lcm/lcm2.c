@@ -1,7 +1,7 @@
 unsigned int    gcd(unsigned int a, unsigned int b);
 
 /*	Takes two unsigned integers and returns their least common multiple
- *
+ *		using the Euclidean Algorithm.
  *
  *	*/
 unsigned int    lcm(unsigned int a, unsigned int b)
@@ -27,5 +27,5 @@ unsigned int    gcd(unsigned int a, unsigned int b)
 }
 
 /*	Euclidian Algorithm's principle :
- *		https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html#:~:text=The%20Euclidean%20algorithm%20is%20a,%3D1%C2%B730%2B15.
+ *		https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
  *	*/
