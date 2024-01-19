@@ -2,7 +2,6 @@ unsigned int    gcd(unsigned int a, unsigned int b);
 
 /*	Takes two unsigned integers and returns their least common multiple
  *		using the Euclidean Algorithm.
- *
  *	*/
 unsigned int    lcm(unsigned int a, unsigned int b)
 {
