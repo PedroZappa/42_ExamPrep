@@ -72,9 +72,7 @@ int ft_isspace(char c)
 
 char *ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int i;
-
-	i = -1;
+	int i = -1;
 	while (((unsigned int)++i < n) && src[i])
 		dest[i] = src[i];
 	dest[i] = '\0';
