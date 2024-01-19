@@ -4,11 +4,7 @@ int abs(int n);
 
 /*	ft_range - return an array of integers from start to end, inclusive
  *
- *	Set 'range' with the absolute value of ints in array:
- *		if 'max' is greater than 'min'
- *			Set 'range' to ('max' - 'min')
- *		else
- *			Set 'range' to ('min' - 'max')
+ *	Set 'range' to the absolute value of ints in array:
  *	Allocate memory for 'arr':
  *	While 'max' is not equal to 'min'
  *		If 'max' is greater than 'min'
