@@ -6,12 +6,13 @@ int abs(int n);
  *
  *	Set 'range' to the absolute value of ints in array:
  *	Allocate memory for 'arr':
+ *		Protect memory allocation
  *	While 'max' is not equal to 'min'
  *		If 'max' is greater than 'min'
  *			Increment 'max'
  *		else
  *			Decrement 'min'
- *		Increment 'arr'
+ *		Increment 'arr''s value'
  *	Set the value of the last address pf 'arr' to 'min'
  *	Return ('arr' - 'range')
  *		This is because the pointer 'arr' has been incremented 'range' times 
