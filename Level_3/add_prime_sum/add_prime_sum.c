@@ -95,9 +95,9 @@ int	is_prime(int nb)
 
 	if (nb <= 1)
 		return (0);
-	while (i * i <= nb)
+	while ((i * i) <= nb)
 	{
-		if (nb % i == 0)
+		if ((nb % i) == 0)
 			return (0);
 		i++;
 	}
