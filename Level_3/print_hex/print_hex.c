@@ -1,9 +1,11 @@
 #include <unistd.h>
 
-int ft_atoi(char *str);
+int		ft_atoi(char *str);
+int		ft_isdigit(int c);
+int		ft_isspace(int c);
 void	print_hex(int n);
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	if (argc == 2)
 		print_hex(ft_atoi(argv[1]));
@@ -18,19 +20,29 @@ void	print_hex(int n)
 	write(1, &"0123456789ABCDEF"[n % 16], 1);
 }
 
-int ft_atoi(char *str)
+int		ft_atoi(char *str)
 {
 	int num = 0;
-	int neg = 1;
+	int sign = 1;
 
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
+	while (ft_isspace(*str))
 		++str;
 	if (*str == '-')
 	{
-		neg = -1;
+		sign = -1;
 		++str;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 		num = (num * 10) + (*str++ - '0');
-	return (num * neg);
+	return (num * sign);
+}
+
+int ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+int ft_isspace(int c)
+{
+	return (c == ' ' || (c >= 9 && c <= 13));
 }
