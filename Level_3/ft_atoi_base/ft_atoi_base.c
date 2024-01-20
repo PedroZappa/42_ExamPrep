@@ -49,9 +49,9 @@ int get_digit(char c, int base_len)
 	int base_ascii;
 
 	if (base_len <= 10)
-		base_ascii = base_len + '0';
+		base_ascii = (base_len + '0');
 	else
-		base_ascii = (base_len - 10) + 'a';
+		base_ascii = ((base_len - 10) + 'a');
 
 	if (is_digit(c) && (c <= base_ascii))
 		return (c - '0');
