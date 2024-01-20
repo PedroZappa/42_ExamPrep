@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
-#include "sort_list.c"
+// #include "sort_list.c"
+#include "sort_list2.c"
 
 int ascending(int a, int b);
 int descending(int a, int b);
@@ -24,12 +25,12 @@ int main(int argc, char *argv[])
 	printf("List Created!\n");
 	ft_printlist(lst);
 
-	printf("Ordering List in ascending!\n");
+	printf("Ordering List in ascending order!\n");
 	sort_list(lst, ascending);
 	printf("List Sorted!\n");
 	ft_printlist(lst);
 
-	printf("Ordering List in descending!\n");
+	printf("Ordering List in descending order!\n");
 	sort_list(lst, descending);
 	printf("List Sorted!\n");
 	ft_printlist(lst);
@@ -74,7 +75,7 @@ int descending(int a, int b)
 // Utility function to print the list
 void ft_printlist(t_list *lst)
 {
-   while (lst != NULL)
+   while (lst)
    {
        printf("%d ", (int)lst->data);
        lst = lst->next;
