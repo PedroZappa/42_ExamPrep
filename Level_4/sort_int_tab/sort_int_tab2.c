@@ -15,7 +15,6 @@ void sort_int_tab(int *tab, unsigned int size)
 		else
 			++n;
 	}
-
 }
 
 void ft_swap(int *a, int *b)
