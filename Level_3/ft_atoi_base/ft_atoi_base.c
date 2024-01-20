@@ -32,11 +32,13 @@ int	ft_atoi_base(const char *str, int str_base)
 
 /*	Gets digit from character
  *
+ *  Set 'base_ascii'
  *	if 'base_len' smaller or equal to 10:
  *		set 'base_ascii' to (base_len + '0')
  *	else
  *		set 'base_ascii' to ((base_len - 10) + 'a')
  *
+ *  Check if 'c' is digit or letter
  *	if 'c' is a digit AND smaller than 'base_ascii':
  *		return (c - '0')
  *	else if 'c' is a letter AND smaller than 'base_ascii':

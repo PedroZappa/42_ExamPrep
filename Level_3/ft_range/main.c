@@ -1,6 +1,6 @@
 #include <stdio.h>
-// #include "ft_range.c"
-#include "ft_range2.c"
+#include "ft_range.c"
+// #include "ft_range2.c"
 
 int ft_atoi(char *str);
 int ft_isspace(int c);
