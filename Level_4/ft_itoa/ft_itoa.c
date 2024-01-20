@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 static int		ft_numlen(int nbr);
-static char		*ft_getnumstr(char *str, unsigned int nbr, int len);
+static char		*ft_getnumstr(char *str, unsigned nbr, int len);
 
 /*	Converts an integer int oa string of ASCII characters.
  *
@@ -20,8 +20,8 @@ static char		*ft_getnumstr(char *str, unsigned int nbr, int len);
  *	*/
 char	*ft_itoa(int nbr)
 {
+	char	*numstr;
 	int		len;
-	char			*numstr;
 
 	len = ft_numlen(nbr);
 	numstr = malloc(sizeof(char) * (len + 1));
@@ -76,7 +76,7 @@ static int	ft_numlen(int nbr)
  *		Divide 'nbr' by 10
  *	Return 'numstr'
  *	*/
-static char		*ft_getnumstr(char *numstr, unsigned int nbr, int len)
+static char		*ft_getnumstr(char *numstr, unsigned nbr, int len)
 {
 	while (nbr > 0)
 	{
