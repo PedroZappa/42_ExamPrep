@@ -31,24 +31,21 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		str = argv[1];
+		end = 0;
 		while (ft_ispace(*str))
 			++str;
 		while (*str)
 		{
 			while (!ft_ispace(*str))
 				write(1, str++, 1);
-			end = 0;
-			if (ft_ispace(*str))
+			while (ft_ispace(*str))
 			{
-				while (ft_ispace(*str))
-				{
-					++str;
-					if (*str == '\0')
-						end = 1;
-				}
-				if (!end)
-					write(1, "   ", 3);
+				++str;
+				if (*str == '\0')
+					end = 1;
 			}
+			if (!end)
+				write(1, "   ", 3);
 		}
 		write(1, "\n", 1);
 	}
@@ -60,5 +57,5 @@ int main(int argc, char **argv)
 
 int ft_ispace(char c)
 {
-	return ((c == ' ') || (c == '\t'));
+	return ((c == ' ') || ((c >= 9) && (c <= 13)));
 }
