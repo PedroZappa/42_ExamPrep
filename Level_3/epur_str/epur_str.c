@@ -1,64 +1,59 @@
 #include <unistd.h>
 
-int ft_isspace(char *str);
+int ft_isspace(char c);
+int ft_strlen(char *str);
 
 /*	Displays a string with exactly one space between each word, 
  *	without leading or trailing blanks.
  *
- *	Get the 'len' of 'str'
- *	Loop through the 'str'
- *		Skip leading spaces
- *		Loop while the '*str' is not space
- *			Set 'space_flag' to 0
- *			Write the char in '*str'
- *		If the char is a space and the 'space_flag' is 0
- *			Set 'space_flag' to 1
- *			if the next char is '\0'
- *				break
- *			Print a space
- *		else
- *			break
- *		Increment the 'str'
- *	Print a new line
  *	*/
 int main(int argc, char **argv)
 {
-	char	*str;
-	int		space_flag;
+	char *str;
+	int space_flag;
+	int len;
+	int i;
 
 	if (argc == 2)
 	{
 		str = argv[1];
+		len = ft_strlen(str);
+		i = 0;
 		while (*str)
 		{
-			while (ft_isspace(str))
-				++str;
-			if (*str == '\0')
-				break;
-			while (!ft_isspace(str))
+			while (ft_isspace(str[i]) && str[i])
+				++i;
+			while (!ft_isspace(str[i]) && str[i])
 			{
 				space_flag = 0;
-				write(1, str++, 1);
+				write(1, &str[i++], 1);
 			}
-			if (ft_isspace(str) && !space_flag)
+			if (ft_isspace(str[i]) && !space_flag)
 			{
 				space_flag = 1;
-				write(1, " ", 1);
+				if (i != (len - 1))
+					write(1, " ", 1);
 			}
 			else
 				break;
-			++str;
+			++i;
+			if (str[i] == '\0')
+				break;
 		}
-		write(1, "\n", 1);
 	}
-	else
-		write(1, "\n", 1);
+	write(1, "\n", 1);
 	return (0);
 }
 
-int ft_isspace(char *str)
+int ft_isspace(char c)
 {
-	if (*str == ' ' || *str == '\t')
-		return (1);
-	return (0);
+	return (c == ' ' || (c >= 9 && c <= 13));
+}
+
+int ft_strlen(char *str)
+{
+	int i = 0;
+	while (str[i])
+		++i;
+	return (i);
 }
