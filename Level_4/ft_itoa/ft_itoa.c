@@ -24,8 +24,7 @@ char	*ft_itoa(int nbr)
 	int		len;
 
 	len = ft_numlen(nbr);
-	numstr = malloc(sizeof(char) * (len + 1));
-	if (!numstr)
+	if (!(numstr = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	if (nbr < 0)
 	{
@@ -33,10 +32,7 @@ char	*ft_itoa(int nbr)
 		nbr = -nbr;
 	}
 	if (nbr == 0)
-	{
-		numstr[0] = '0';
-		return (numstr);
-	}
+			numstr[0] = '0';
 	numstr[len--] = '\0';
 	numstr = ft_getnumstr(numstr, nbr, len);
 	return (numstr);
@@ -57,7 +53,7 @@ static int	ft_numlen(int nbr)
 	int	len;
 
 	len = 0;
-	if (nbr < 0)
+	if (nbr <= 0)
 		len = 1;
 	while (nbr)
 	{
