@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 static int		ft_numlen(int nbr);
 static char		*ft_getnumstr(char *str, unsigned nbr, int len);
@@ -20,21 +21,25 @@ static char		*ft_getnumstr(char *str, unsigned nbr, int len);
  *	*/
 char	*ft_itoa(int nbr)
 {
-	char	*numstr;
-	int		len;
+	unsigned	n;
+	char		*numstr;
+	int			len;
 
+	n = 0;
 	len = ft_numlen(nbr);
 	if (!(numstr = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	if (nbr < 0)
 	{
 		numstr[0] = '-';
-		nbr = -nbr;
+		n = (unsigned)-nbr;
 	}
+	else
+		n = nbr;
 	if (nbr == 0)
 			numstr[0] = '0';
 	numstr[len--] = '\0';
-	numstr = ft_getnumstr(numstr, nbr, len);
+	numstr = ft_getnumstr(numstr, n, len);
 	return (numstr);
 }
 
