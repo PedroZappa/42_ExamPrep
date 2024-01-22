@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv)
 {
-	char ascii[256] = { 0 };
+	char ascii[128] = { 0 };
 	char *str1;
 	char *str2;
 	int i;
