@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void	print_n(int n);
+void	ft_putnbr(int n);
 
 int main(void)
 {
@@ -16,19 +16,15 @@ int main(void)
 		else if ((n % 5) == 0)
 			write(1, "buzz ", 5);
 		else
-			print_n(n);
+			ft_putnbr(n);
 		write(1, "\n", 1);
-		n++;
-
+		++n;
 	}
 }
 
-void	print_n(int n)
+void	ft_putnbr(int n)
 {
-	char *digits;
-
-	digits = "0123456789";
 	if (n > 9)
-		print_n(n / 10);
-	write(1, &digits[n % 10], 1);
+		ft_putnbr(n / 10);
+	write(1, &"0123456789"[n % 10], 1);
 }

@@ -11,7 +11,6 @@ void	ft_printlist(t_list *lst);
 int main(int argc, char *argv[])
 {
 	t_list *lst;
-	// char *to_del = "Zedr0";
 	char *to_del = "42";
 	int n = 1;
 
@@ -74,54 +73,3 @@ void ft_printlist(t_list *lst)
         lst = lst->next;
     }
 }
-
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include "ft_list.h"
-//
-// int compare(void *a, void *b) {
-//    return a == b ? 0 : 1;
-// }
-//
-// void print_list(t_list *lst) {
-//    t_list *tmp = lst;
-//    printf("List: ");
-//    while (tmp) {
-//        printf("%d ", *((int *)tmp->data));
-//        tmp = tmp->next;
-//    }
-//    printf("\n");
-// }
-//
-// int main() {
-//    // Create a list
-//    t_list *lst = malloc(sizeof(t_list));
-//    int one = 1;
-//    int two = 2;
-//    int three = 3;
-//    lst->data = &one;
-//    lst->next = malloc(sizeof(t_list));
-//    lst->next->data = &two;
-//    lst->next->next = malloc(sizeof(t_list));
-//    lst->next->next->data = &three;
-//    lst->next->next->next = NULL;
-//
-//    // Print the list before removal
-//    print_list(lst);
-//
-//    // Remove elements equal to 2 from the list
-//    ft_list_remove_if(&lst, &two, compare);
-//
-//    // Print the list after removal
-//    print_list(lst);
-//
-//    // Free the list
-//    while (lst) {
-//        t_list *next = lst->next;
-//        free(lst);
-//        lst = next;
-//    }
-//
-//    return 0;
-// }

@@ -2,13 +2,20 @@
 
 /*	While the next node exists
  *		Compare lst->data with next->data
- *			If lst->data is larger than next do the swap
+ *			If the value in lst->data is greater than 
+ *			the value in next->next->data
+ *				Swap the values
+ *				Set lst to the beginning
+ *			else
+ *				Go to the next node
  *	*/
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 {
 	t_list	*lst_start;
 	int		to_swap;
 
+	if (!lst)
+		return (0);
 	lst_start = lst;
 	while (lst->next)
 	{

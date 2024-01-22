@@ -1,25 +1,34 @@
+int ft_isspace(char c);
+int ft_isdigit(char c);
+
 int ft_atoi(const char *str)
 {
-	int		result;
-	int		neg;
-	int		num;
+	int num;
+	int sign;
 
-	result = 0;
-	neg = 1;
 	num = 0;
-	while (((*str >= 9) && (*str <= 13)) || (*str == ' '))
+	sign = 1;
+	while (ft_isspace(*str))
 		++str;
 	if ((*str == '+') || (*str == '-'))
 	{
 		if (*str == '-')
-			neg = -1;
+			sign = -1;
+		if (*(str + 1) == '-')
+			return (0);
 		++str;
 	}
-	while ((*str >= '0') && (*str <= '9'))
-	{
-		num = *str - '0';
-		result = (result * 10) + num;
-		++str;
-	}
-	return (result * neg);
+	while (ft_isdigit(*str))
+		num = (num * 10) + (*str++ - '0');
+	return (num * sign);
+}
+
+int ft_isspace(char c)
+{
+	return ((c == ' ') || ((c >= 9) && (c <= 13)));
+}
+
+int ft_isdigit(char c)
+{
+	return ((c >= '0') && (c <= '9'));
 }

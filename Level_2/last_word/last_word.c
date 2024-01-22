@@ -16,11 +16,9 @@ int main(int argc, char *argv[])
 		len = ft_strlen(str);
 		if (str)
 		{
-			while (ft_isspace(str[len--]))
-				;
+			while (ft_isspace(str[len--]));
 			word_end = len;
-			while (!ft_isspace(str[len--]))
-				;
+			while (!ft_isspace(str[len--]));
 			word_start = (len + 2);
 		}
 		while (word_start <= word_end)
@@ -44,8 +42,3 @@ int ft_isspace(char c)
 {
 	return ((c == ' ') || (c == '\t'));
 }
-
-// int ft_printable(char c)
-// {
-// 	return (());
-// }

@@ -4,9 +4,11 @@ int ft_isspace(char c);
 
 int main(int argc, char **argv)
 {
+	char *str;
+
 	if (argc == 2)
 	{
-		char *str = argv[1];
+		str = argv[1];
 		while (ft_isspace(*str))
 			++str;
 		while (*str && !ft_isspace(*str))

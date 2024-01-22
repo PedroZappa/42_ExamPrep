@@ -4,13 +4,14 @@ void	ft_putchar(char c);
 
 int main(int argc, char **argv)
 {
+	char *str;
+	
 	if (argc != 2)
 	{
 		ft_putchar('\n');
 		return (1);
 	}
-	char *str = argv[1];
-
+	str = argv[1];
 	while (*str)
 	{
 		if ((*str >= 'a' && *str <= 'y') || (*str >= 'A' && *str <= 'Y'))
@@ -22,6 +23,7 @@ int main(int argc, char **argv)
 		++str;
 	}
 	ft_putchar('\n');
+	return (0);
 }
 
 void	ft_putchar(char c)

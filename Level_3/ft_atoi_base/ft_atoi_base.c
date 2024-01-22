@@ -15,51 +15,49 @@ int	ft_atoi_base(const char *str, int str_base)
 {
 	int digit;
 	int num;
-	int neg;
+	int sign;
 
-	neg = 1;
+	sign = 1;
 	num = 0;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-		{
-			neg = -1;
-			++str;
-		}
-		else
-			++str;
+			sign = -1;
+		++str;
 	}
 	while ((digit = get_digit(to_lower(*str++), str_base)) >= 0)
-		num = ((num * str_base) + (digit * neg));
+		num = ((num * str_base) + (digit * sign));
 	return (num);
 }
 
 /*	Gets digit from character
  *
+ *  Set 'base_ascii'
  *	if 'base_len' smaller or equal to 10:
- *		set 'n_digit' to (base_len + '0')
+ *		set 'base_ascii' to (base_len + '0')
  *	else
- *		set 'n_digit' to ((base_len - 10) + 'a')
+ *		set 'base_ascii' to ((base_len - 10) + 'a')
  *
- *	if 'c' is a digit AND smaller than 'n_digit':
+ *  Check if 'c' is digit or letter
+ *	if 'c' is a digit AND smaller than 'base_ascii':
  *		return (c - '0')
- *	else if 'c' is a letter AND smaller than 'n_digit':
+ *	else if 'c' is a letter AND smaller than 'base_ascii':
  *		return ((c + 10) - 'a')
  *	else
  *		return (-1)
  *	*/
 int get_digit(char c, int base_len)
 {
-	int n_digit;
+	int base_ascii;
 
 	if (base_len <= 10)
-		n_digit = base_len + '0';
+		base_ascii = (base_len + '0');
 	else
-		n_digit = (base_len - 10) + 'a';
+		base_ascii = ((base_len - 10) + 'a');
 
-	if (is_digit(c) && (c <= n_digit))
+	if (is_digit(c) && (c <= base_ascii))
 		return (c - '0');
-	else if (is_alpha(c) && (c <= n_digit))
+	else if (is_alpha(c) && (c <= base_ascii))
 		return ((c + 10) - 'a');
 	else
 		return (-1);

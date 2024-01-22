@@ -1,7 +1,5 @@
 #include <unistd.h>
 
-char *ft_strchr(const char *str, char c);
-
 int main(int argc, char **argv)
 {
 	char	ascii[256] = { 0 }; 
@@ -32,16 +30,5 @@ int main(int argc, char **argv)
 		}
 	}
 	write(1, "\n", 1);
-	return (0);
-}
-
-char *ft_strchr(const char *str, char c)
-{
-	while (*str)
-	{
-		if (*str == c)
-			return ((char *)str);
-		++str;
-	}
 	return (0);
 }

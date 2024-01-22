@@ -17,15 +17,15 @@ int main(int argc, char **argv)
 		n2 = atoi(argv[3]);
 
 		if (op == '+')
-			result = n1 + n2;
+			result = (n1 + n2);
 		else if (op == '-')
-			result = n1 - n2;
+			result = (n1 - n2);
 		else if (op == '*')
-			result = n1 * n2;
+			result = (n1 * n2);
 		else if (op == '/')
-			result = n1 / n2;
+			result = (n1 / n2);
 		else if (op == '%')
-			result = n1 % n2;
+			result = (n1 % n2);
 		
 		return (printf("%d\n", result));
 	}

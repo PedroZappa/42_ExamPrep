@@ -13,9 +13,9 @@ int main(int argc, char **argv)
 		while (*str)
 		{
 			if (ft_islower(*str))
-				*str = 'z' - *str + 'a';
+				*str = ('z' - *str + 'a');
 			else if (ft_isupper(*str))
-				*str = 'Z' - *str + 'A';
+				*str = ('Z' - *str + 'A');
 			write(1, str++, 1);
 		}
 	}

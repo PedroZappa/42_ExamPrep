@@ -5,7 +5,8 @@ int pgcd(int a, int b);
 
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int a; 
+	int b;
 
 	if (argc == 3)
 	{
@@ -13,7 +14,7 @@ int main(int argc, char *argv[])
 		b = atoi(argv[2]);
 		printf("%d\n", pgcd(a, b));
 	}
-	return 0;
+	return (0);
 }
 
 /*	Takes two integers and displays their greatest common divisor.
@@ -28,8 +29,14 @@ int main(int argc, char *argv[])
  *	*/
 int pgcd(int a, int b)
 {
+<<<<<<< HEAD
 	if (a % b == 0)
 		return b;
 	else
 		return pgcd(b, (a % b));
+=======
+	if ((a % b) == 0)
+		return (b);
+	return (pgcd(b, (a % b)));
+>>>>>>> 1f4b4c7a0e5c6ecebd36455f6d0406abb7e41f5a
 }

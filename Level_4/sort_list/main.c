@@ -1,54 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
-#include "sort_list.c"
+// #include "sort_list.c"
+#include "sort_list2.c"
 
 int ascending(int a, int b);
 int descending(int a, int b);
 void ft_printlist(t_list *lst);
 t_list	*create_list(int *data);
 t_list	*add_node(t_list *list, int data);
-
-// Main function to test sort_list
-// int main()
-// {
-//    // Create a list
-//    t_list *lst = malloc(sizeof(t_list));
-//    lst->data = 5;
-//    lst->next = malloc(sizeof(t_list));
-//    lst->next->data = 1;
-//    lst->next->next = malloc(sizeof(t_list));
-//    lst->next->next->data = 3;
-//    lst->next->next->next = malloc(sizeof(t_list));
-//    lst->next->next->next->data = 2;
-//    lst->next->next->next->next = NULL;
-//
-//    // Print original list
-//    printf("Original List: ");
-//    printList(lst);
-//
-//    // Sort list in ascending order
-//    lst = sort_list(lst, ascending);
-//
-//    // Print sorted list
-//    printf("Sorted List (asc): ");
-//    printList(lst);
-//
-//    // Sort list in descending order
-//    lst = sort_list(lst, descending);
-//
-//    // Print sorted list
-//    printf("Sorted List (desc): ");
-//    printList(lst);
-//
-//    // Free the list
-//    free(lst->next->next->next);
-//    free(lst->next->next);
-//    free(lst->next);
-//    free(lst);
-//
-//    return 0;
-// }
 
 int main(int argc, char *argv[])
 {
@@ -58,17 +18,19 @@ int main(int argc, char *argv[])
 
 	printf("Creating List!\n");
 	lst = create_list(&data);
+
 	n = 1;
 	while (n < argc)
 		lst = add_node(lst, atoi(argv[n++]));
 	printf("List Created!\n");
 	ft_printlist(lst);
 
-	printf("Ordering List in ascending!\n");
+	printf("Ordering List in ascending order!\n");
 	sort_list(lst, ascending);
 	printf("List Sorted!\n");
 	ft_printlist(lst);
-	printf("Ordering List in descending!\n");
+
+	printf("Ordering List in descending order!\n");
 	sort_list(lst, descending);
 	printf("List Sorted!\n");
 	ft_printlist(lst);
@@ -113,7 +75,7 @@ int descending(int a, int b)
 // Utility function to print the list
 void ft_printlist(t_list *lst)
 {
-   while (lst != NULL)
+   while (lst)
    {
        printf("%d ", (int)lst->data);
        lst = lst->next;

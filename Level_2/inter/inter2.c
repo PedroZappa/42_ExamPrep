@@ -2,7 +2,7 @@
 
 int		ft_strchr(const char *str, char c);
 
-/*	SEGVing when riding pointers instead of using indexed.
+/*	SEGVing when riding pointers instead of using indexes.
  *	Needs DEBUG!!
  *	*/
 int main(int argc, char **argv)
@@ -32,15 +32,3 @@ int main(int argc, char **argv)
 	}
 	write(1, "\n", 1);
 }
-
-int		ft_strchr(const char *str, char c)
-{
-	while (*str)
-	{
-		if (*str == c)
-			return (1);
-		++str;
-	}
-	return (0);
-}
-

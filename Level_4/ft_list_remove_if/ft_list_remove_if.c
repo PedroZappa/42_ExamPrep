@@ -4,9 +4,9 @@
 /* Store begin_list in curr;
  * While the current element is not NULL
  *		Compare next->data with data_ref
- *			Save the address of next node in 'to_del'
+ *			Save the address of next node in 'to_free'
  *			Get address of curr->next->next node and override curr->next
- *			free 'to_del'
+ *			free 'to_free'
  * // Handle the case where begin_list is equal to data_ref
  * Reset curr to begin_list
  * If the current element exists and it's value equals data_ref
