@@ -24,7 +24,7 @@ int main(void)
 
 void	ft_putnbr(int n)
 {
-	if (n > 9)
+	if (n >= 10)
 		ft_putnbr(n / 10);
 	write(1, &"0123456789"[n % 10], 1);
 }
