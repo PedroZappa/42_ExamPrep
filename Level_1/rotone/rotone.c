@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	str = argv[1];
 	while (*str)
 	{
-		if ((*str >= 'a' && *str <= 'y') || (*str >= 'A' && *str <= 'Y'))
+		if (((*str >= 'a') && (*str <= 'y')) || ((*str >= 'A') && (*str <= 'Y')))
 			ft_putchar(*str + 1);
 		else if ((*str == 'z') || (*str == 'Z'))
 			ft_putchar(*str - 25);
