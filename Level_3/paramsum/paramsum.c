@@ -23,9 +23,7 @@ void ft_putchar(char c)
 void ft_putnbr(int nb)
 {
 	if (nb == INT_MIN)
-	{
 		write(1, "-2147483648", 11);
-	}
 	if (nb < 0)
 	{
 		ft_putchar('-');
