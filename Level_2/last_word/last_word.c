@@ -5,7 +5,7 @@ int ft_isspace(char c);
 
 int main(int argc, char *argv[])
 {
-	char	*str = NULL;
+	char	*str;
 	int		len;
 	int		word_start;
 	int		word_end;
@@ -14,13 +14,12 @@ int main(int argc, char *argv[])
 	{
 		str = argv[1];
 		len = ft_strlen(str);
-		if (str)
-		{
-			while (ft_isspace(str[len--]));
-			word_end = len;
-			while (!ft_isspace(str[len--]));
-			word_start = (len + 2);
-		}
+		while (!str[len] || ft_isspace(str[len]))
+			--len;
+		word_end = len;
+		while (!ft_isspace(str[len]))
+			--len;
+		word_start = (len + 1);
 		while (word_start <= word_end)
 			write(1, &str[word_start++], 1);
 	}
@@ -40,5 +39,5 @@ int ft_strlen(char *str)
 
 int ft_isspace(char c)
 {
-	return ((c == ' ') || (c == '\t'));
+	return ((c == ' ') || ((c >= 9) && (c <= 13)));
 }

@@ -58,3 +58,6 @@ dkms.conf
 
 # gdb
 gdb.txt
+*/gdb.txt
+*/*/gdb.txt
+*/*/*/gdb.txt

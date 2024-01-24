@@ -14,6 +14,6 @@ end
 # Start
 set logging on
 break 13
-start "Zedro 42 Root"
+start "Zedro 42 Root  "
 main
 next
