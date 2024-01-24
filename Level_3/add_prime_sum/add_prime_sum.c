@@ -75,7 +75,7 @@ void	ft_putnbr(int nb)
 		write(1, "-", 1);
 		nb *= -1;
 	}
-	if (nb > 9)
+	if (nb >= 10)
 		ft_putnbr(nb / 10);
 	write(1, &"0123456789"[nb % 10], 1);
 }
