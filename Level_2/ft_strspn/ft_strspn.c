@@ -4,16 +4,16 @@ char *ft_strchr(const char *str, char c);
 
 size_t ft_strspn(const char *s, const char *accept) 
 {
-	int i;
+	int len;
 	
-	i = 0;
-	while (s[i])
+	len = 0;
+	while (s[len])
 	{
-		if (ft_strchr(accept, s[i]) == 0)
+		if (ft_strchr(accept, s[len]) == 0)
 			break;
-		++i;
+		++len;
 	}
-	return (i);
+	return (len);
 }
 
 char *ft_strchr(const char *str, char c)
