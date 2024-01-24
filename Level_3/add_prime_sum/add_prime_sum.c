@@ -1,6 +1,8 @@
 #include <unistd.h>
 
 int		ft_atoi(char *str);
+int		ft_isspace(char c);
+int		ft_isdigit(char c);
 void	ft_putnbr(int nb);
 int		is_prime(int nb);
 
@@ -45,25 +47,25 @@ int main(int argc, char *argv[])
 
 int	ft_atoi(char *str)
 {
-	int nb;
-	int neg;
-	int i;
+	int nb = 0;
+	int sign = 1;
+	int i = 0;
 
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
+	while (ft_isspace(*str))
 		++str;
-	neg = 1;
 	if (*str == '-')
-		neg = -1;
-	while (*str == '-' || *str == '+')
-		++str;
-	nb = 0;
-	i = 0;
-	while (str[i] >= '0' && str[i] <= '9')
+		sign = -1;
+	if (*str == '-' || *str == '+')
 	{
-		nb = (nb * 10) + (str[i] - '0');
-		++i;
+		if (*str == '-')
+			sign = -1;
+		if (*(str + 1) == '-' || *(str + 1) == '+')
+			return (0);
+		++str;
 	}
-	return (nb * neg);
+	while (ft_isdigit(str[i]))
+		nb = (nb * 10) + (str[i++] - '0');
+	return (nb * sign);
 }
 
 void	ft_putnbr(int nb)
@@ -99,8 +101,17 @@ int	is_prime(int nb)
 	{
 		if ((nb % i) == 0)
 			return (0);
-		i++;
+		++i;
 	}
 	return (1);
 }
 
+int ft_isspace(char c)
+{
+	return (c == ' ' || (c >= 9 && c <= 13));
+}
+
+int ft_isdigit(char c)
+{
+	return (c >= '0' && c <= '9');
+}
