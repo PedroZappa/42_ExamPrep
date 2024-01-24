@@ -73,7 +73,7 @@ void ft_putnbr(int nb)
 		write(1, "-", 1);
 		nb *= -1;
 	}
-	else if (nb > 9)
+	else if (nb >= 10)
 	{
 		ft_putnbr(nb / 10);
 		ft_putchar((nb % 10) + '0');
