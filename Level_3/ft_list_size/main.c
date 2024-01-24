@@ -4,6 +4,7 @@ t_list	*ft_lstnew(void *data);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 int		ft_atoi(char *str);
 int		ft_isspace(int c);
+int		ft_isdigit(int c);
 
 int main(int argc, char **argv)
 {
@@ -76,7 +77,7 @@ int ft_atoi(char *str)
 		++str;
 	}
 	num = 0;
-	while ((*str >= '0') && (*str <= '9'))
+	while (ft_isdigit(*str))
 	{
 		num = ((num * 10) + (*str - '0'));
 		++str;
@@ -88,4 +89,9 @@ int ft_atoi(char *str)
 int ft_isspace(int c)
 {
 	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r');
+}
+
+int ft_isdigit(int c)
+{
+	return ((c >= '0') && (c <= '9'));
 }
