@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
 		while (*str)
 		{
 			if (ft_islower(*str))
-				*str = (*str - 'a' + 13) % 26 + 'a';
+				*str = ((*str - 'a') + 13) % 26 + 'a';
 			else if (ft_isupper(*str))
-				*str = (*str - 'A' + 13) % 26 + 'A';
+				*str = ((*str - 'A') + 13) % 26 + 'A';
 			write(1, str++, 1);
 		}
 	}
