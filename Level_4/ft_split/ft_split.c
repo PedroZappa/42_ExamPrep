@@ -38,8 +38,7 @@ char    **ft_split(char *str)
 		while (str[i] && !ft_isspace(str[i]))
 			++i;
 	}
-	strtab = malloc(sizeof(char *) * (str_count + 1));
-	if (!strtab)
+	if (!(strtab = malloc(sizeof(char *) * (str_count + 1))))
 		return (NULL);
 	i = 0;
 	strlen = 0;
@@ -55,8 +54,7 @@ char    **ft_split(char *str)
 		if (i > word_start)
 		{
 			strlen = (i - word_start);
-			strtab[str_count] = malloc(sizeof(char) * (strlen + 1));
-			if (!strtab[str_count])
+			if (!(strtab[str_count] = malloc(sizeof(char) * (strlen + 1))))
 				return (NULL);
 			ft_strncpy(strtab[str_count++], &str[word_start], strlen);
 		}
