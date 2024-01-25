@@ -1,7 +1,6 @@
 #include <unistd.h>
 
 int ft_isspace(char c);
-//int ft_strlen(char *str);
 
 /*	Displays a string with exactly one space between each word, 
  *	without leading or trailing blanks.
