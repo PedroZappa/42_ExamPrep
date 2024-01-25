@@ -8,7 +8,7 @@ int abs(int n);
  *	Allocate memory for 'arr':
  *		If alloc fails return NULL
  *	Loop through 'arr' from the end to the start
- *		Set arr[len] to:
+ *		Set arr[range] to:
  *			if 'end' is greater than 'start'
  *				Increment 'start'
  *			else
@@ -18,13 +18,13 @@ int abs(int n);
 int *ft_rrange(int start, int end)
 {
 	int *arr;
-	int len;
+	int range;
 
-	len = abs(end - start) + 1;
-	if (!(arr = malloc(sizeof(int) * len)))
+	range = abs(end - start) + 1;
+	if (!(arr = malloc(sizeof(int) * range)))
 		return (NULL);
-	while (len--)
-		arr[len] = ((end >= start) ? start++ : start--);
+	while (range--)
+		arr[range] = ((end >= start) ? start++ : start--);
 	return (arr);
 }
 
