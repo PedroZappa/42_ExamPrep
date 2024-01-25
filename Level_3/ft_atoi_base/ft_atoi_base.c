@@ -1,7 +1,7 @@
 int		get_digit(char c, int base_len);
 char	to_lower(char c);
 int		is_digit(char c);
-int		is_alpha(char c);
+int		is_hexalpha(char c);
 
 /*	ASCII to integer conversion
  *
@@ -57,7 +57,7 @@ int get_digit(char c, int base_len)
 
 	if (is_digit(c) && (c <= base_ascii))
 		return (c - '0');
-	else if (is_alpha(c) && (c <= base_ascii))
+	else if (is_hexalpha(c) && (c <= base_ascii))
 		return ((c + 10) - 'a');
 	else
 		return (-1);
@@ -75,7 +75,7 @@ int		is_digit(char c)
 	return ((c >= '0') && (c <= '9'));
 }
 
-int		is_alpha(char c)
+int		is_hexalpha(char c)
 {
 	return (((c >= 'a') && (c <= 'f')) || ((c >= 'A') && (c <= 'F')));
 }
