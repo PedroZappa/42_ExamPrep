@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 		str = argv[1];
 		len = ft_strlen(str) - 1;
-		word_end = (len);
+		word_end = len;
 		while (str[len] && (len >= 0))
 		{
 			while (!ft_isspace(str[len]) && (len >= 0))
@@ -53,7 +53,7 @@ void	ft_printword(char *str, int word_start, int word_end, int i)
 	word = str + i + 1;
 	while (word_start < word_end)
 	{
-		write(1, (word++), 1);
+		write(1, word++, 1);
 		++word_start;
 	}
 }
