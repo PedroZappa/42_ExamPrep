@@ -49,8 +49,9 @@ set auto-load safe-path /
 Add numbering, configure `tabstop` and `shiftwidth`.
 ```vim
 syntax on
-set mouse=a
+set mouse=a " Enable mouse
 
+set ruler
 set number
 set relativenumber
 
@@ -60,8 +61,7 @@ set shiftwidth=4
 set autoindent
 set smartindent
 
-" Open man pages in Vim
-runtime! ftplugin/man.vim
+runtime! ftplugin/man.vim " Open man pages in Vim
 ```
 
 ## Exam Exercises
