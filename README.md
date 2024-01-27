@@ -74,7 +74,7 @@ ___
 
 #### Level 1
 
-- [first_word](https://github.com/PedroZappa/42ExamPrep/tree/main/Level_1/first_word)
+- [first_word](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_1/first_word)
 - [fizzbuzz](https://github.com/PedroZappa/42ExamPrep/tree/main/Level_1/fizzbuzz)
 - [ft_putstr](https://github.com/PedroZappa/42ExamPrep/tree/main/Level_1/ft_putstr)
 - [ft_strcpy](https://github.com/PedroZappa/42ExamPrep/tree/main/Level_1/ft_strcpy)
