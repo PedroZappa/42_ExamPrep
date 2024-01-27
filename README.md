@@ -154,7 +154,7 @@ ___
 
 ___
 
-I'll be updating this repo with more tips and resources for the other higher ranking exams of 42's curriculum as I progress throught the Coommon Core.
+I'll be updating this repo with more tips and resources as I progress through the Common Core.
 
 Good luck with the exams!
 
