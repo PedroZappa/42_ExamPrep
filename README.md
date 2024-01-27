@@ -75,7 +75,7 @@ Here follow the solutions to all exam exercises (as of January 2024).
 
 I included all the test code and `.gdbinit` files I used to prepare for the exam. 
 
-Good luck with thew exam!
+Good luck with the exam!
 
 ___
 
