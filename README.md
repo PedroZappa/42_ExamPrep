@@ -46,7 +46,7 @@ set auto-load safe-path /
 
 - `.vimrc`
 
-Add numbering, configure `tabstop` and `shiftwidth`.
+A basic vim configuration, edit this to your liking.
 ```vim
 syntax on
 set mouse=a " Enable mouse
