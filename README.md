@@ -60,6 +60,7 @@ set shiftwidth=4
 set autoindent
 set smartindent
 
+" Open man pages in Vim
 runtime! ftplugin/man.vim
 ```
 
