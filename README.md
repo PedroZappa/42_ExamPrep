@@ -26,30 +26,41 @@ Something like:
 
 ## Exam Dev Environment Configuration Example
 
-Point your terminal to your `~/` directory and add the following lines to your `.zshrc`, `.gdbinit` and `.vimrc` files.
+Point a terminal to your `~/` directory and add the following lines to your `.zshrc`, `.gdbinit` and `.vimrc` files.
 
 - `.zshrc`
+
+Add an alias for the `cc -Wall -Wextra -Werror -g` compiler as `ccw` for ease of use.
 ```bash
 alias ccw='cc -Wall -Wextra -Werror -g'
 ```
 
 - `.gdbinit`
+
+This line allows GDB to load a `.gdbinit` file from any working directory in the system.
+ 
+> Check out my [get_next_line](https://github.com/PedroZappa/get_next_line) repo for more info on using `.gdbinit`.
 ```bash
 set auto-load safe-path /
 ```
 
-> [!Note]
->
-> This line allows you to load a `.gdbinit` file from any directory.
-> 
-> Check out my [get_next_line](https://github.com/PedroZappa/get_next_line) repo for more info on using `.gdbinit`.
-
 - `.vimrc`
+
+Add numbering, configure `tabstop` and `shiftwidth`.
 ```vim
+syntax on
+set mouse=a
+
 set number
 set relativenumber
+
 set tabstop=4
 set shiftwidth=4
+
+set autoindent
+set smartindent
+
+runtime! ftplugin/man.vim
 ```
 
 ## Exam Exercises
