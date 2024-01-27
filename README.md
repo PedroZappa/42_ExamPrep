@@ -16,8 +16,7 @@
 
 - Arrive early to the cluster for exams (15/20 minutes) to have time to setup your exam dev environment.
 
-From the moment you are assigned a computer you can login right away with the credentials provided.
-Something like:
+From the moment you are assigned a computer you can login right away with the credentials provided. Expect something like:
 
 > login : exam
 >
@@ -28,12 +27,15 @@ Something like:
 
 Point a terminal to your `~/` directory and add the following lines to your `.zshrc`, `.gdbinit` and `.vimrc` files.
 
+If any of these files does not exist, create it. This should be the case for both `.vimrc` and `.gdbinit`.
+
 - `.zshrc`
 
 Add an alias for the `cc -Wall -Wextra -Werror -g` compiler as `ccw` for ease of use.
 ```bash
 alias ccw='cc -Wall -Wextra -Werror -g'
 ```
+___
 
 - `.gdbinit`
 
@@ -43,6 +45,7 @@ This line allows GDB to load a `.gdbinit` file from any working directory in the
 ```bash
 set auto-load safe-path /
 ```
+___
 
 - `.vimrc`
 
