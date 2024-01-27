@@ -71,7 +71,11 @@ runtime! ftplugin/man.vim " Open man pages in Vim
 
 ### Exam Rank 2
 
-Here follow solutions to all the exam problems (as of January 2024). I included all the test code and `.gdbinit` files I used to prepare for the exam.
+Here follow the solutions to all exam exercises (as of January 2024). 
+
+I included all the test code and `.gdbinit` files I used to prepare for the exam. 
+
+Good luck with thew exam!
 
 ___
 
