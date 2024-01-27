@@ -91,7 +91,6 @@ ___
 - [rotone](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_1/rotone)
 - [search_and_replace](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_1/search_and_replace)
 - [ulstr](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_1/ulstr)
-
 ___
 
 #### Level 2
@@ -116,7 +115,6 @@ ___
 - [swap_bits](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_2/swap_bits)
 - [union](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_2/union)
 - [wdmatch](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Rank_2/Level_2/wdmatch)
-
 ___
 
 #### Level 3
@@ -136,7 +134,6 @@ ___
 - [rstr_capitalizer](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_3/rstr_capitalizer)
 - [str_capitalizer](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_3/str_capitalizer)
 - [tab_mult](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_3/tab_mult)
-
 ___
 
 #### Level 4
@@ -151,7 +148,6 @@ ___
 - [rostring](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_4/rostring)
 - [sort_int_tab](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_4/sort_int_tab)
 - [sort_list](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Level_4/sort_list)
-
 ___
 
 I'll be updating this repo with more tips and resources as I progress through the Common Core.
