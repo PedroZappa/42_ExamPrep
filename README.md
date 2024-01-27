@@ -16,8 +16,8 @@
 
 - Arrive early to the cluster for exams (15/20 minutes) to have time to setup your exam dev environment.
 
-From the moment you are assigned a computer you can login right away with the credentails provided.
-Somethins like:
+From the moment you are assigned a computer you can login right away with the credentials provided.
+Something like:
 
 > login : exam
 >
