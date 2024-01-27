@@ -75,8 +75,6 @@ Here follow the solutions to all exam exercises (as of January 2024).
 
 I included all the test code and `.gdbinit` files I used to prepare for the exam. 
 
-Good luck with the exam!
-
 ___
 
 #### Level 1
@@ -157,6 +155,12 @@ ___
 ___
 
 <div align="center">
+
+
+I'll be updating this repo with more tips and resources for the other higher ranking exams of 42's curriculum as I progress throught the Coommon Core.
+
+Good luck with the exams!
+
 
 ### License :copyright:
 
