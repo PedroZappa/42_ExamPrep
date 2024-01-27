@@ -154,13 +154,11 @@ ___
 
 ___
 
-<div align="center">
-
-
 I'll be updating this repo with more tips and resources for the other higher ranking exams of 42's curriculum as I progress throught the Coommon Core.
 
 Good luck with the exams!
 
+<div align="center">
 
 ### License :copyright:
 
