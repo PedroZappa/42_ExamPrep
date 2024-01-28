@@ -79,11 +79,13 @@ ___
 
 - You can only log into <kbd>examshell</kbd> right on the starting time of the exam. 
 
-- Use your 42 student `login` and `password` credentials to login.
+- Use your 42 student `login` and `password` credentials to get access to <kbd>examshell</kbd>.
 
 - You are randomly assigned an exercise at each level.
 
 - You can only progress to Level 2 after you have completed Level 1, and so on.
+
+- You do NOT need to follow `Norminette`'s syntax rules while solving the exam.
 
 ___
 ## Submitting to the Vogsphere
