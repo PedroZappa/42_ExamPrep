@@ -18,9 +18,9 @@
 
 From the moment you are assigned a computer you can login right away with the credentials provided. Expect something like:
 
-> login : exam
+> <kbd>login</kbd> : exam
 >
-> password : exam
+> <kbd>password</kbd> : exam
 
 
 ## Exam Dev Environment Configuration Example
