@@ -115,13 +115,13 @@ ___
 
 The Rank 2 Exam has four levels, comprised of several exercises each. 
 
-I included all the test code and `.gdbinit` files I used to prepare for the exam. 
-
 > <kbd>Tip</kbd> 
 >
 > `ft_isspace` is a particularly helpful function when solving a lot of the exercises through every level of the exam.
 
 Here follow the solutions to all exam exercises (as of January 2024).
+
+Including all the test code and `.gdbinit` files used to test each exercise. 
 ___
 
 #### Level 1
