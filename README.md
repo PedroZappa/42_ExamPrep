@@ -31,10 +31,12 @@ If any of these files does not exist, create it. This should be the case for bot
 
 - `.zshrc`
 
-Add an alias for the compiler as `ccw` with all required flags for ease of use, and `ga`, `gst`, `gc` to handle basic git operations.
+Add convenient aliases:
 ```bash
+# Compile with warnings & debug symbols
 alias ccw='cc -Wall -Wextra -Werror -g'
 
+# Git
 alias ga='git add'
 alias gst='git status'
 alias gc='git commit -m'
