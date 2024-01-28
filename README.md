@@ -75,11 +75,13 @@ You can only log into Examshell right on the starting time of the exam.
 
 Use your 42 student `login` and `password` credentials to login.
 
+You are randomly assigned an exercise at each level.
+
+You can only progress to Level 2 after you have completed Level 1, and so on.
+
 ## Exam Exercises
 
 ### Exam Rank 2
-
-Here follow the solutions to all exam exercises (as of January 2024).
 
 The Rank 2 Exam has four levels, comprised of several exercises each. 
 
@@ -88,6 +90,8 @@ I included all the test code and `.gdbinit` files I used to prepare for the exam
 > <kbd>Tip</kbd> 
 >
 > `ft_isspace` is a particularly helpful function when solving a lot of the exercises through every level of the exam.
+
+Here follow the solutions to all exam exercises (as of January 2024).
 ___
 
 #### Level 1
