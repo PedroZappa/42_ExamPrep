@@ -104,8 +104,8 @@ ___
 > .gitignore
 > */a.out
 > */main.c
-> */.gdbinit
 > */gdb.txt
+> */.gdbinit
 > ```
 ___
 
