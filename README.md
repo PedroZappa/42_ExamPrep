@@ -31,9 +31,13 @@ If any of these files does not exist, create it. This should be the case for bot
 
 - `.zshrc`
 
-Add an alias for the `cc -Wall -Wextra -Werror -g` compiler as `ccw` for ease of use.
+Add an alias for the compiler as `ccw` with all required flags for ease of use, and `ga`, `gst`, `gc` to handle basic git operations.
 ```bash
 alias ccw='cc -Wall -Wextra -Werror -g'
+
+alias ga='git add'
+alias gst='git status'
+alias gc='git commit -m'
 ```
 ___
 
@@ -71,7 +75,7 @@ ___
 
 ## Logging into Examshell
 
-- You can only log into <kbd>Examshell</kbd> right on the starting time of the exam. 
+- You can only log into <kbd>examshell</kbd> right on the starting time of the exam. 
 
 - Use your 42 student `login` and `password` credentials to login.
 
@@ -80,7 +84,25 @@ ___
 - You can only progress to Level 2 after you have completed Level 1, and so on.
 
 ___
-## Submitting 
+## Submitting to the Vogsphere
+
+- This is where the git aliases we defined in `.zshrc` come in. To validate each exercise, first you need to upload it to the `vogsphere` using git commands.
+
+> <kbd>Tip</kbd> 
+>
+> - Never use `git add .` (or the alias `ga .`) to avoid staging files that are not required by the subject. Always specify the name of the file you want to add to staging.
+>
+> - Always use `git status` (or the alias `gst`) to make sure only files required by the subject are staged.
+>
+> - If you want to be extra careful, setup a `.gitignore` to ignore file at the root of the repository. With contents similar to the following:
+>
+> ```gitignore
+> .gitignore
+> */a.out
+> */main.c
+> */.gdbinit
+> ```
+___
 
 ## Exam Exercises
 
