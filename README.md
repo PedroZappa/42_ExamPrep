@@ -75,7 +75,7 @@ runtime! ftplugin/man.vim " Open man pages in Vim
 ```
 ___
 
-## Logging into Examshell
+## Logging into `Examshell` 🐚
 
 - You can only log into <kbd>examshell</kbd> right on the starting time of the exam. 
 
