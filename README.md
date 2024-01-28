@@ -71,13 +71,16 @@ ___
 
 ## Logging into Examshell
 
-You can only log into Examshell right on the starting time of the exam. 
+- You can only log into Examshell right on the starting time of the exam. 
 
-Use your 42 student `login` and `password` credentials to login.
+- Use your 42 student `login` and `password` credentials to login.
 
-You are randomly assigned an exercise at each level.
+- You are randomly assigned an exercise at each level.
 
-You can only progress to Level 2 after you have completed Level 1, and so on.
+- You can only progress to Level 2 after you have completed Level 1, and so on.
+
+___
+## Submitting 
 
 ## Exam Exercises
 
