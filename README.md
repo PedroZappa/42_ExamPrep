@@ -10,6 +10,7 @@
     <img src="https://img.shields.io/github/last-commit/PedroZappa/42ExamPrep?style=for-the-badge" />
 </p>
 
+## Table o'Contents
 <!-- mtoc-start -->
 
 * [Exam Tips ](#exam-tips-)
