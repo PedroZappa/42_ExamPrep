@@ -1,9 +1,17 @@
 <a name="readme-top"></a>
 <div align="center">
 
+# 42-ExamPrep
+
+> Tips and resources for Exam Preparation
+
+<p>
+    <img src="https://img.shields.io/github/languages/top/PedroZappa/42ExamPrep?style=for-the-badge" />
+    <img src="https://img.shields.io/github/last-commit/PedroZappa/42ExamPrep?style=for-the-badge" />
+</p>
+
 <!-- mtoc-start -->
 
-* [42-ExamPrep](#42-examprep)
 * [Exam Tips ](#exam-tips-)
 * [Setting up the Exam Dev Environment ](#setting-up-the-exam-dev-environment-)
 * [Logging into `Examshell` 🐚](#logging-into-examshell-)
@@ -14,14 +22,6 @@
 
 <!-- mtoc-end -->
 
-# 42-ExamPrep
-
-> Tips and resources for Exam Preparation
-
-<p>
-    <img src="https://img.shields.io/github/languages/top/PedroZappa/42ExamPrep?style=for-the-badge" />
-    <img src="https://img.shields.io/github/last-commit/PedroZappa/42ExamPrep?style=for-the-badge" />
-</p>
 
 </div>
 
