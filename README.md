@@ -88,7 +88,7 @@ ___
 - You do NOT need to follow `Norminette`'s syntax rules while solving the exam.
 
 ___
-## Submitting to the `Vogsphere`
+## Submitting to the `Vogsphere` 󱥔
 
 - This is where the git aliases we defined in `.zshrc` come in. To validate each exercise, first you need to upload it to the <kbd>vogsphere</kbd> using git commands.
 
