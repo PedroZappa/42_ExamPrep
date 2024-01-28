@@ -58,7 +58,7 @@ ___
 A basic vim configuration, edit this to your liking.
 ```vim
 syntax on
-set mouse=a		" Enable mouse
+set mouse=a	" Enable mouse
 set noswapfile	" Disable swap files
 
 set ruler
