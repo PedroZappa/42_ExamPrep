@@ -23,7 +23,7 @@ From the moment you are assigned a computer you can login right away with the cr
 > <kbd>password</kbd> : exam
 
 
-## Exam Dev Environment Configuration Example
+## Setting up the Exam Dev Environment
 
 Point a terminal to your `~/` directory and add the following lines to your `.zshrc`, `.gdbinit` and `.vimrc` files.
 
@@ -52,7 +52,8 @@ ___
 A basic vim configuration, edit this to your liking.
 ```vim
 syntax on
-set mouse=a " Enable mouse
+set mouse=a		" Enable mouse
+set noswapfile	" Disable swap files
 
 set ruler
 set number
@@ -66,12 +67,21 @@ set smartindent
 
 runtime! ftplugin/man.vim " Open man pages in Vim
 ```
+___
+
+## Logging into Examshell
+
+You can only log into Examshell right on the starting time of the exam. 
+
+Use your 42 student `login` and `password` credentials to login.
 
 ## Exam Exercises
 
 ### Exam Rank 2
 
-Here follow the solutions to all exam exercises (as of January 2024). 
+Here follow the solutions to all exam exercises (as of January 2024).
+
+The Rank 2 Exam has four levels, comprised of several exercises each. 
 
 I included all the test code and `.gdbinit` files I used to prepare for the exam. 
 
