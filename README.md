@@ -94,7 +94,7 @@ ___
 
 > <kbd>Tip</kbd> 
 >
-> - Never use `git add .` (or the alias `ga .`) to avoid staging files that are not required by the subject. Always specify the name of the file you want to stage.
+> - Never use `git add .` (or the alias `ga .`) to avoid staging files that are not required by the subject. Always specify the name of the file/files you want to stage.
 >
 > - Always use `git status` (or the alias `gst`) to make sure only files required by the subject are staged.
 >
