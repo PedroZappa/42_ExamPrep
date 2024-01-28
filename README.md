@@ -71,7 +71,7 @@ ___
 
 ## Logging into Examshell
 
-- You can only log into Examshell right on the starting time of the exam. 
+- You can only log into <kbd>Examshell</kbd> right on the starting time of the exam. 
 
 - Use your 42 student `login` and `password` credentials to login.
 
