@@ -101,7 +101,9 @@ ___
 
 - You can only progress to Level 2 after you have completed Level 1, and so on.
 
-- You do NOT need to follow `Norminette`'s syntax rules while solving the exam.
+> [!Note]
+>
+> You do NOT need to follow `Norminette`'s syntax rules while solving the exam.
 
 ___
 ## Submitting to the `Vogsphere`  󱥔
@@ -112,7 +114,7 @@ ___
 >
 > - Never use `git add .` (or the alias `ga .`) to avoid staging files that are not required by the subject. Always specify the name of the file/files you want to stage.
 >
-> - Always use `git status` (or the alias `gst`) to make sure only files required by the subject are staged.
+> - Use and abuse `git status` (or the alias `gst`) to make sure you only commit files required by the subject.
 >
 > - If you want to be extra cautious, setup a `.gitignore` at the root of the exam's submission directory, with contents similar to the following:
 >
