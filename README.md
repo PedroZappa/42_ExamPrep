@@ -105,6 +105,7 @@ ___
 > */a.out
 > */main.c
 > */.gdbinit
+> */gdb.txt
 > ```
 ___
 
