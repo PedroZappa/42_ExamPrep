@@ -94,7 +94,7 @@ ___
 >
 > - Always use `git status` (or the alias `gst`) to make sure only files required by the subject are staged.
 >
-> - If you want to be extra careful, setup a `.gitignore` to ignore file at the root of the repository. With contents similar to the following:
+> - If you want to be extra cautious, setup a `.gitignore` at the root of the exam's submission directory, with contents similar to the following:
 >
 > ```gitignore
 > .gitignore
