@@ -81,7 +81,7 @@ ___
 
 - Use your 42 student `login` and `password` credentials to get access to <kbd>examshell</kbd>.
 
-- You are randomly assigned an exercise at each level.
+- You will be assigned an exercise randomly at each level.
 
 - You can only progress to Level 2 after you have completed Level 1, and so on.
 
@@ -94,7 +94,7 @@ ___
 
 > <kbd>Tip</kbd> 
 >
-> - Never use `git add .` (or the alias `ga .`) to avoid staging files that are not required by the subject. Always specify the name of the file you want to add to staging.
+> - Never use `git add .` (or the alias `ga .`) to avoid staging files that are not required by the subject. Always specify the name of the file you want to stage.
 >
 > - Always use `git status` (or the alias `gst`) to make sure only files required by the subject are staged.
 >
