@@ -1,6 +1,19 @@
 <a name="readme-top"></a>
 <div align="center">
 
+<!-- mtoc-start -->
+
+* [42-ExamPrep](#42-examprep)
+* [Exam Tips ](#exam-tips-)
+* [Setting up the Exam Dev Environment ](#setting-up-the-exam-dev-environment-)
+* [Logging into `Examshell` 🐚](#logging-into-examshell-)
+* [Submitting to the `Vogsphere`  󱥔](#submitting-to-the-vogsphere--)
+* [Exam Exercises 🏋](#exam-exercises-)
+  * [Exam Rank 2](#exam-rank-2)
+  * [License :copyright:](#license-copyright)
+
+<!-- mtoc-end -->
+
 # 42-ExamPrep
 
 > Tips and resources for Exam Preparation
@@ -88,7 +101,7 @@ ___
 - You do NOT need to follow `Norminette`'s syntax rules while solving the exam.
 
 ___
-## Submitting to the `Vogsphere` 󱥔
+## Submitting to the `Vogsphere`  󱥔
 
 - This is where the git aliases we defined in `.zshrc` come in. To validate each exercise, first you need to upload it to the <kbd>vogsphere</kbd> using git commands.
 
@@ -109,7 +122,7 @@ ___
 > ```
 ___
 
-## Exam Exercises
+## Exam Exercises 🏋
 
 ### Exam Rank 2
 
