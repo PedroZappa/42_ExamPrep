@@ -166,13 +166,6 @@ ___
 ___
 
 
-
-
-
-
-
-___
-
 > [!Warning]
 >
 > I'll be updating this repo with more tips and resources as I progress through the Common Core.
