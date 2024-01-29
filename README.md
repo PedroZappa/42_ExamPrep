@@ -16,10 +16,10 @@ ___
 <!-- mtoc-start -->
 
 * [Exam Tips ](#exam-tips-)
-* [Setting up the Exam Dev Environment ](#setting-up-the-exam-dev-environment-)
+* [Setting up the Exam Dev Environment 💻](#setting-up-the-exam-dev-environment-)
 * [Logging into `Examshell` 🐚](#logging-into-examshell-)
-* [Submitting to the `Vogsphere` ](#submitting-to-the-vogsphere-)
-* [Exam Exercises 🏋](#exam-exercises-)
+* [Submitting to the `Vogsphere` 🌐](#submitting-to-the-vogsphere-)
+* [Exam Exercises 🧪](#exam-exercises-)
   * [Exam Rank 2](#exam-rank-2)
   * [License :copyright:](#license-copyright)
 
@@ -39,7 +39,7 @@ From the moment you are assigned a computer you can login right away with the cr
 > <kbd>password</kbd> : exam
 
 
-## Setting up the Exam Dev Environment 
+## Setting up the Exam Dev Environment 💻
 
 Point a terminal to your `~/` directory and add the following lines to your `.zshrc`, `.gdbinit` and `.vimrc` files.
 
@@ -108,7 +108,7 @@ ___
 > You do NOT need to follow `Norminette`'s syntax rules while solving the exam.
 
 ___
-## Submitting to the `Vogsphere` 
+## Submitting to the `Vogsphere` 🌐
 
 - This is where the git aliases we defined in `.zshrc` come in. To validate each exercise, first you need to upload it to the <kbd>vogsphere</kbd> using git commands.
 
@@ -129,7 +129,7 @@ ___
 > ```
 ___
 
-## Exam Exercises 🏋
+## Exam Exercises 🧪
 
 ### Exam Rank 2
 
