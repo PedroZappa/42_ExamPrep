@@ -18,7 +18,7 @@ ___
 * [Exam Tips ](#exam-tips-)
 * [Setting up the Exam Dev Environment ](#setting-up-the-exam-dev-environment-)
 * [Logging into `Examshell` 🐚](#logging-into-examshell-)
-* [Submitting to the `Vogsphere`  󱥔](#submitting-to-the-vogsphere--)
+* [Submitting to the `Vogsphere` ](#submitting-to-the-vogsphere-)
 * [Exam Exercises 🏋](#exam-exercises-)
   * [Exam Rank 2](#exam-rank-2)
   * [License :copyright:](#license-copyright)
@@ -62,7 +62,9 @@ ___
 - `.gdbinit`
 
 This line allows GDB to load a `.gdbinit` file from any working directory in the system.
- 
+
+> [!Note]
+>
 > Check out my [get_next_line](https://github.com/PedroZappa/get_next_line) repo for more info on using `.gdbinit`.
 ```bash
 set auto-load safe-path /
@@ -106,7 +108,7 @@ ___
 > You do NOT need to follow `Norminette`'s syntax rules while solving the exam.
 
 ___
-## Submitting to the `Vogsphere`  󱥔
+## Submitting to the `Vogsphere` 
 
 - This is where the git aliases we defined in `.zshrc` come in. To validate each exercise, first you need to upload it to the <kbd>vogsphere</kbd> using git commands.
 
@@ -171,7 +173,9 @@ ___
 
 ___
 
-I'll be updating this repo with more tips and resources as I progress through the Common Core.
+> [!Note]
+>
+> I'll be updating this repo with more tips and resources as I progress through the Common Core.
 
 Good luck with the exams!
 
