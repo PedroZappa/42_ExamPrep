@@ -71,5 +71,5 @@ void	ft_putnbr(int nbr, int base, int *len)
 	}
 	if (nbr >= base)
 		ft_putnbr((nbr / base), base, len);
-	*len += write(1, &hex[nbr % base], 1);
+	*len += write(1, &hex[(nbr % base)], 1);
 }
