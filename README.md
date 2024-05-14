@@ -10,6 +10,8 @@
     <img src="https://img.shields.io/github/last-commit/PedroZappa/42ExamPrep?style=for-the-badge" />
 </p>
 
+</div>
+
 ___
 ## Table o'Contents
 
