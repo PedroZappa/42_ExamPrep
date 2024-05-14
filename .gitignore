@@ -55,6 +55,7 @@ dkms.conf
 .DS_Store
 */.DS_Store
 .nfs*
+.build/
 
 # gdb
 gdb.txt
