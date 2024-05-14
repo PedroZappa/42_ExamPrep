@@ -113,6 +113,7 @@ test: $(EXEC)		## Test w/ default BUFFER_SIZE
 gdb: $(EXEC) $(TEMP_PATH)			## Debug w/ gdb
 	tmux split-window -h "gdb --tui --args ./$(EXEC) 'files/mini-vulf.txt'"
 	tmux resize-pane -L 5
+	touch gdb.txt
 	@if command -v lnav; then \
 		lnav gdb.txt; \
 	else \
