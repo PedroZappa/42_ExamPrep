@@ -14,7 +14,7 @@
 #include <unistd.h>
 
 void	ft_putstr(char *str, int *len);
-void	ft_putnbr(int nbr, int base, int *len);
+void	ft_putnbr(long nbr, int base, int *len);
 
 /// @brief		Prints a string to the standard output
 /// @param fmt	The string to be printed
@@ -60,7 +60,7 @@ void	ft_putstr(char *str, int *len)
 /// @param nbr	The integer to be printed
 /// @param base	The base of the integer
 /// @param len	The length of the integer (number of characters)
-void	ft_putnbr(int nbr, int base, int *len)
+void	ft_putnbr(long nbr, int base, int *len)
 {
 	char *hex = "0123456789abcdef";
 

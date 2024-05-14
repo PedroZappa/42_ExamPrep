@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
 #include <stddef.h>
 
 int	main(void)
@@ -22,6 +23,8 @@ int	main(void)
 	ft_printf("Print digits:\n");
 	ft_printf("\t%d\n", 42);
 	ft_printf("\t%d\n", -42);
+	ft_printf("\t%d\n", INT_MIN);
+	ft_printf("\t%d\n", INT_MAX);
 
 	ft_printf("Print hex:\n");
 	ft_printf("\t%x\n", 42);
