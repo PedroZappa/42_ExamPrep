@@ -21,6 +21,7 @@ ___
 * [Submitting to the `Vogsphere` 🌐](#submitting-to-the-vogsphere-)
 * [Exam Exercises 🧪](#exam-exercises-)
   * [Exam Rank 2](#exam-rank-2)
+  * [Exam Rank 3](#exam-rank-3)
   * [License :copyright:](#license-copyright)
 
 <!-- mtoc-end -->
@@ -165,6 +166,14 @@ ___
 |          | [wdmatch](https://github.com/PedroZappa/42ExamPrep/tree/main/Rank_2/Rank_2/Level_2/wdmatch) |
 ___
 
+### Exam Rank 3
+
+For Rank 3 Exam you will have to solve a "mini" `ft_printf` or `get_next_line` exercise. 
+
+___
+| `ft_print`       | `get_next_line` |
+| -------       | ------- |
+| [ft_printf](https://github.com/PedroZappa/42_ExamPrep/tree/main/Rank_3/ft_printf) | [get_next_line](https://github.com/PedroZappa/get_next_line) |
 
 > [!Warning]
 >
