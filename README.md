@@ -29,7 +29,6 @@ ___
 ___
 
 </div>
-</div>
 
 # Exam Tips 
 
