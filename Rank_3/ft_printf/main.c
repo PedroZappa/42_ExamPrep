@@ -16,15 +16,19 @@
 int	main(void)
 {
 	ft_printf("Print strings:\n");
-	ft_printf("%s\n", "Hello Whirl!");
-	ft_printf("%s\n", NULL);
+	ft_printf("\t%s\n", "Hello Whirl!");
+	ft_printf("\t%s\n", NULL);
 
 	ft_printf("Print digits:\n");
-	ft_printf("%d\n", 42);
-	ft_printf("%d\n", -42);
+	ft_printf("\t%d\n", 42);
+	ft_printf("\t%d\n", -42);
 
 	ft_printf("Print hex:\n");
-	ft_printf("%x\n", 42);
-	ft_printf("%x\n", -42);
+	ft_printf("\t%x\n", 42);
+	ft_printf("\t%x\n", -42);
+
+	ft_printf("Print mixed:\n");
+	ft_printf("\t%d is %s the answer\n", 42, "NOT");
+	ft_printf("\t%x is %d is %s the answer\n", 42, 42, "NOT");
 	return (0);
 }
