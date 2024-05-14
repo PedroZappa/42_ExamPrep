@@ -106,7 +106,7 @@ ___
 
 > [!Note]
 >
-> You do NOT need to follow `Norminette`'s syntax rules while solving the exam.
+> You do NOT need to conform to `Norminette`'s syntax rules while solving the exam.
 
 ___
 ## Submitting to the `Vogsphere` 🌐
