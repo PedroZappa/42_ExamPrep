@@ -59,7 +59,7 @@ void	ft_putstr(char *str, int *len)
 /// @brief		Prints an integer to the standard output
 /// @param nbr	The integer to be printed
 /// @param base	The base of the integer
-/// @param len	Pointer to the length (number of characters)
+/// @param len	Pointer to the length (number of printed chars)
 void	ft_putnbr(long nbr, int base, int *len)
 {
 	char *hex = "0123456789abcdef";
