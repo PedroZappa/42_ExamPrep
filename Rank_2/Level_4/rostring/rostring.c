@@ -23,10 +23,8 @@ int main(int argc, char *argv[])
 	char *str;
 	int word_start;
 	int word_end;
-	int space_found;
 	int c;
 	
-	space_found = 0;
 	if (argc >= 2)
 	{
 		str = argv[1];
@@ -41,14 +39,14 @@ int main(int argc, char *argv[])
 			++c;
 		while (str[c])
 		{
-			while (ft_isspace(str[c]) && ft_isspace(str[c + 1]))
-				++c;
-			if (ft_isspace(str[c]))
-				space_found = 1;
-			write(1, &str[c++], 1);
+			if (str[c] && !ft_isspace(str[c]) && ft_isspace(str[c - 1]))
+			{
+				while (str[c] && !ft_isspace(str[c]))
+					write(1, &str[c++], 1);
+				write(1, " ", 1);
+			}
+			++c;
 		}
-		if (space_found)
-			write(1, " ", 1);
 		while (word_start < word_end)
 			write(1, &str[word_start++], 1);
 	}
