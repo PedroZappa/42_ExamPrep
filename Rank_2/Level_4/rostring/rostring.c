@@ -10,12 +10,11 @@ int ft_isspace(char c);
  *		Store the beginning of the first word in 'word_start'
  *		Store end of first word in 'word_end'
  *		Loop through the remainder of the string 
- *			while current and next chars are whitespace skip them
- *			if current char is space set 'space_found' to 1
- *			Write non-whitespace char
- *		If 'space_found' 
- *			print whitespace
- *		Print first word
+ *			if current char is not whitespace & the previous char is whitespace
+ *			while current char is NOT space
+ *				Write non-whitespace char
+ *			write whitespace
+ *		write first word
  *	Print newline
  *  */
 int main(int argc, char *argv[])
