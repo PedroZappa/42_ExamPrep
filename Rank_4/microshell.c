@@ -20,7 +20,17 @@ void	ft_exec(char **argv, char **env, int fd, int i);
 
 int main (int argc, char **argv, char **envt)
 {
+	int	fd;
+	int	i;
 
+	(void)argc;
+	i = 0;
+	fd = dup2(STDIN_FILENO, 0);
+	while (argv[i] && argv[i + 1]) // Loop while there are arguments
+	{
+
+	}
+	close(fd);
 	return (0);
 }
 
