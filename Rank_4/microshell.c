@@ -41,7 +41,7 @@ int main (int argc, char **argv, char **envp)
 	status = 0;
 	while (argv[i]) // Loop while there are arguments
 	{
-		argv += (i + 1); // Skip program name
+		++argv; // Skip program name
 		while (argv[i] && strcmp(argv[i], ";") && strcmp(argv[i], "|"))
 			++i;
 		if (i)
@@ -67,7 +67,7 @@ int		ft_exec(char **argv, char **env, int i)
 	{
 		argv[i] = 0; // Set argv[i] to NULL
 		ft_pipe(has_pipe, fd, 1); // Close unused fd (STDOUT)
-		if (!strcmp(argv[i], "cd")) // Execute builtin
+		if (!strcmp(*argv, "cd")) // Execute builtin
 			exit(ft_cd(argv, i));
 		execve(*argv, argv, env); // Execute binary
 		ft_putstr_fd(ERR, *argv, STDERR_FILENO);
