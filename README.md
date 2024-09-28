@@ -77,6 +77,8 @@ ___
 
 A basic vim configuration, edit this to your liking.
 ```vim
+runtime! defaults.vim
+
 syntax on
 set mouse=a	" Enable mouse
 set noswapfile	" Disable swap files
