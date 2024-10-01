@@ -41,13 +41,13 @@ int main (int argc, char **argv, char **envp)
 	status = 0;
 	while (argv[i]) // Loop while there are arguments
 	{
-		++argv; // Skip program name
+		argv += (i + 1);
 		while (argv[i] && strcmp(argv[i], ";") && strcmp(argv[i], "|"))
 			++i;
 		if (i)
-			ft_exec(argv, envp, i);
+			status = ft_exec(argv, envp, i);
 	}
-	return (EXIT_SUCCESS);
+	return (status);
 }
 
 int		ft_exec(char **argv, char **env, int i)
