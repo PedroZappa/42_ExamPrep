@@ -6,7 +6,7 @@
 typedef enum e_exit { SUCCESS, FAILURE } t_exit;
 
 #define ERR "error: fatal"
-#define ERR_CD "error: cd: cannot changedirectory to "
+#define ERR_CD "error: cd: cannot change directory to "
 #define ERR_CD_ARGS "error: cd: bad arguments"
 #define ERR_EXECVE "error: cannot execute"
 
