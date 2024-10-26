@@ -16,9 +16,9 @@
 #include <sys/wait.h>
 
 void	ft_putstr_fd(char *str, char *arg, int fd);
-void	ft_pipe(int has_pipe, int *fd, int i);
-int		ft_cd(char **argv, int i);
 int		ft_exec(char **argv, char **env, int i);
+void	ft_pipe(int has_pipe, int *fd, int end);
+int		ft_cd(char **argv, int i);
 
 typedef enum s_exit
 {
@@ -70,8 +70,7 @@ int		ft_exec(char **argv, char **env, int i)
 		if (!strcmp(*argv, "cd")) // Execute builtin
 			exit(ft_cd(argv, i));
 		execve(*argv, argv, env); // Execute binary
-		ft_putstr_fd(ERR, *argv, STDERR_FILENO);
-		exit(FAILURE);
+		ft_putstr_fd(ERR, *argv, STDERR_FILENO), exit(FAILURE);
 	}
 	waitpid(pid, &status, 0);
 	ft_pipe(has_pipe, fd, 0); // Close unused fd (STDIN)
@@ -91,10 +90,10 @@ void	ft_putstr_fd(char *str, char *arg, int fd)
 int		ft_cd(char **argv, int i)
 {
 	if (chdir(argv[i]) == -1) // If cd fails
-			return (ft_putstr_fd(ERR_CD, argv[i], 2), FAILURE);
+		return (ft_putstr_fd(ERR_CD, argv[i], 2), FAILURE);
 	if (i != 2) // If there are more than 2 args
 		return (ft_putstr_fd(ERR_CD_ARGS, argv[i], 2), FAILURE);
-	return (0);
+	return (SUCCESS);
 
 }
 
