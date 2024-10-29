@@ -26,6 +26,7 @@ int main(int argc, char **argv, char **envp) {
     if (i)
       status = ft_exec(argv, envp, i);
   }
+  return (status);
 }
 
 int ft_exec(char **argv, char **envp, int i) {
@@ -68,9 +69,9 @@ void ft_putstr(char *str, char *arg, int fd) {
       write(fd, arg++, 1);
   write(fd, "\n", 1);
 }
-void ft_pipe(int has_pipe, int *fd, int end)
-{
-	if (has_pipe &&
-	 (dup2(fd[end], end) == -1 || close(fd[0]) == -1 || close(fd[1]) == -1))
-	 ft_putstr(ERR, NULL, 2);
+
+void ft_pipe(int has_pipe, int *fd, int end) {
+  if (has_pipe &&
+      (dup2(fd[end], end) == -1 || close(fd[0]) == -1 || close(fd[1]) == -1))
+    ft_putstr(ERR, NULL, 2);
 }
