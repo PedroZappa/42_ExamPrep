@@ -21,6 +21,7 @@ int main(int argc, char **argv, char **envp) {
   (void)argc;
   while (argv[i]) {
     argv += (i + 1);
+    i = 0;
     while (argv[i] && (strcmp(argv[i], ";")) && (strcmp(argv[i], "|")))
       ++i;
     if (i)
@@ -51,30 +52,30 @@ int ft_exec(char **argv, char **envp, int i) {
     ft_putstr_fd(ERR, *argv, STDERR_FILENO), exit(FAILURE);
   }
   waitpid(pid, &status, 0); // waitpid
-  ft_pipe(has_pipe, fd, 0);//  pipe
-	return (WIFEXITED(status) && WEXITSTATUS(status));
+  ft_pipe(has_pipe, fd, 0); //  pipe
+  return (WIFEXITED(status) && WEXITSTATUS(status));
   //  //ret
 }
 
 void ft_putstr_fd(char *str, char *arg, int fd) {
-	while (*str)
-		write(fd, str++, 1);
-	if (arg)
-		while (*arg)
-			write(fd, arg++, 1);
-	write(fd, "\n", fd);
+  while (*str)
+    write(fd, str++, 1);
+  if (arg)
+    while (*arg)
+      write(fd, arg++, 1);
+  write(fd, "\n", fd);
 }
 
 int ft_cd(char **argv, int i) {
-	if (chdir(argv[i]) == -1)
-		return ft_putstr_fd(ERR_CD, NULL, 2), FAILURE;
-	if (i != 2)
-		return ft_putstr_fd(ERR_CD_ARGS, NULL, 2), FAILURE;
-	return (0);
+  if (chdir(argv[i]) == -1)
+    return ft_putstr_fd(ERR_CD, NULL, 2), FAILURE;
+  if (i != 2)
+    return ft_putstr_fd(ERR_CD_ARGS, NULL, 2), FAILURE;
+  return (0);
 }
 
 void ft_pipe(int has_pipe, int *fd, int end) {
-	if (has_pipe &&
-	 (dup2(fd[end], end) == -1 || close(fd[0]) == -1 || close(fd[1]) == -1))
-		ft_putstr_fd(ERR, NULL, STDERR_FILENO), exit(FAILURE);
+  if (has_pipe &&
+      (dup2(fd[end], end) == -1 || close(fd[0]) == -1 || close(fd[1]) == -1))
+    ft_putstr_fd(ERR, NULL, STDERR_FILENO), exit(FAILURE);
 }

@@ -42,6 +42,7 @@ int main (int argc, char **argv, char **envp)
 	while (argv[i]) // Loop while there are arguments
 	{
 		argv += (i + 1);
+		i = 0;
 		while (argv[i] && strcmp(argv[i], ";") && strcmp(argv[i], "|"))
 			++i;
 		if (i)
@@ -70,7 +71,7 @@ int		ft_exec(char **argv, char **env, int i)
 		if (!strcmp(*argv, "cd")) // Execute builtin
 			exit(ft_cd(argv, i));
 		execve(*argv, argv, env); // Execute binary
-		ft_putstr_fd(ERR, *argv, STDERR_FILENO), exit(FAILURE);
+		ft_putstr_fd(ERR_EXECVE, *argv, STDERR_FILENO), exit(FAILURE);
 	}
 	waitpid(pid, &status, 0);
 	ft_pipe(has_pipe, fd, 0); // Close unused fd (STDIN)

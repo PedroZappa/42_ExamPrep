@@ -21,6 +21,7 @@ int main(int argc, char **argv, char **envp) {
   (void)argc;
   while (argv[i]) {
     argv += (i + 1);
+    i = 0;
     while (argv[i] && (strcmp(argv[i], ";")) && (strcmp(argv[i], "|")))
       ++i;
     if (i)
