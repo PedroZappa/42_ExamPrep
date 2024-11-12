@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 09:13:32 by passunca          #+#    #+#             */
-/*   Updated: 2024/09/23 09:42:23 by passunca         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:57:23 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,9 +91,9 @@ void	ft_putstr_fd(char *str, char *arg, int fd)
 int		ft_cd(char **argv, int i)
 {
 	if (chdir(argv[i]) == -1) // If cd fails
-		return (ft_putstr_fd(ERR_CD, argv[i], 2), FAILURE);
+		ft_putstr_fd(ERR_CD, argv[i], 2);
 	if (i != 2) // If there are more than 2 args
-		return (ft_putstr_fd(ERR_CD_ARGS, argv[i], 2), FAILURE);
+		ft_putstr_fd(ERR_CD_ARGS, argv[i], 2);
 	return (SUCCESS);
 
 }
