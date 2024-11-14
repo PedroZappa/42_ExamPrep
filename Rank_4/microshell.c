@@ -15,27 +15,21 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-void ft_putstr_fd(char *str, char *arg, int fd);
-int ft_exec(char **argv, char **env, int i);
-void ft_pipe(int has_pipe, int *fd, int end);
-int ft_cd(char **argv, int i);
-
-typedef enum s_exit { SUCCESS = 0, FAILURE = 1 } t_exit;
-
 #define ERR "error: fatal"
 #define ERR_CD "error: cd: cannot change directory to "
 #define ERR_CD_ARGS "error: cd: bad arguments"
 #define ERR_EXECVE "error: cannot execute "
 
+int ft_exec(char **argv, char **envp, int i);
+int ft_cd(char **argv, int i);
+void ft_pipe(int has_pipe, int *fd, int end);
+void ft_putstr_fd(char *str, char *arg, int fd);
+
 int main(int argc, char **argv, char **envp) {
-	int status;
-	int i;
+	int status, i = 0;
 
 	(void)argc;
-	i = 0;
-	status = 0;
-	while (argv[i]) // Loop while there are arguments
-	{
+	while (argv[i]) { // Loop while there are arguments
 		argv += (i + 1);
 		i = 0;
 		while (argv[i] && strcmp(argv[i], ";") && strcmp(argv[i], "|"))
@@ -46,51 +40,49 @@ int main(int argc, char **argv, char **envp) {
 	return (status);
 }
 
-int ft_exec(char **argv, char **env, int i) {
+int ft_exec(char **argv, char **envp, int i) {
 	int has_pipe = (argv[i] && !strcmp(argv[i], "|")); // Check for a pipe
-	int fd[2];
-	int pid;
-	int status;
+	int fd[2], status, pid;
 
-	if (!strcmp(*argv, "cd") && !has_pipe) // Handle cd command
+	if (!has_pipe && !strcmp(*argv, "cd")) // Check for a pipe
 		return (ft_cd(argv, i));
-	if (has_pipe && pipe(fd) == -1) // Handle pipe fail
-		ft_putstr_fd(ERR, NULL, STDERR_FILENO), exit(FAILURE);
-	if ((pid = fork()) == -1) // Handle Fork Fail
-		ft_putstr_fd(ERR, NULL, STDERR_FILENO), exit(FAILURE);
-	if (!pid) // Child Process
-	{
-		argv[i] = 0;              // Set argv[i] to NULL
-		ft_pipe(has_pipe, fd, 1); // Close unused fd (STDOUT)
-		if (!strcmp(*argv, "cd")) // Execute builtin
+	if (has_pipe && pipe(fd) == -1) // Get pipe
+		ft_putstr_fd(ERR, NULL, 2), exit(1);
+	if ((pid = fork()) == -1) // Fork
+		ft_putstr_fd(ERR, NULL, 2), exit(1);
+	if (!pid) { // Child
+		argv[i] = 0;
+		ft_pipe(has_pipe, fd, 1); // Check for a pipe
+		if (!strcmp(*argv, "cd")) // Execute builtin (STDOUT)
 			exit(ft_cd(argv, i));
-		execve(*argv, argv, env); // Execute binary
-		ft_putstr_fd(ERR_EXECVE, *argv, STDERR_FILENO), exit(FAILURE);
+		execve(*argv, argv, envp);// Execute binary
+		ft_putstr_fd(ERR_EXECVE, *argv, 2);
 	}
-	waitpid(pid, &status, 0);
-	ft_pipe(has_pipe, fd, 0); // Close unused fd (STDIN)
-	return (WIFEXITED(status) && WEXITSTATUS(status)); // Return child status
-}
-
-void ft_putstr_fd(char *str, char *arg, int fd) {
-	while (*str)
-		write(fd, str++, 1);
-	if (arg)
-		while (*arg)
-			write(fd, arg++, 1);
-	write(fd, "\n", 1);
+	waitpid(pid, &status, 0); // Wait for child to finish
+	ft_pipe(has_pipe, fd, 0); // Execute builtin (STDIN)
+	return (WIFEXITED(status) && WEXITSTATUS(status));
 }
 
 int ft_cd(char **argv, int i) {
-	if (chdir(argv[i]) == -1)
+	if (chdir(argv[1]) == -1)
 		return (ft_putstr_fd(ERR_CD, argv[i], 2), 1);
 	if (i != 2)
-		return (ft_putstr_fd(ERR_CD_ARGS, argv[i], 2), 1);
+		return (ft_putstr_fd(ERR_CD_ARGS, NULL, 2), 1);
 	return (0);
 }
 
 void ft_pipe(int has_pipe, int *fd, int end) {
 	if (has_pipe &&
 		(dup2(fd[end], end) == -1 || close(fd[0]) == -1 || close(fd[1]) == -1))
-		ft_putstr_fd(ERR, NULL, STDERR_FILENO), exit(FAILURE);
+		ft_putstr_fd(ERR, NULL, 2), exit(1);
+}
+
+void ft_putstr_fd(char *str, char *arg, int fd)
+{
+	while (*str)
+		write(fd, str++, 1);
+	if (arg)
+		while (*arg)
+			write(fd, arg++, 1);
+	write(fd, "\n", 1);
 }
