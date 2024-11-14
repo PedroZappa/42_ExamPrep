@@ -15,15 +15,15 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-int ft_exec(char **argv, char **envp, int i);
-int ft_cd(char **argv, int i);
-void ft_pipe(int has_pipe, int *fd, int end);
-void ft_putstr_fd(char *str, char *arg, int fd);
-
 #define ERR "error: fatal"
 #define ERR_CD "error: cd: cannot change directory to "
 #define ERR_CD_ARGS "error: cd: bad arguments"
 #define ERR_EXECVE "error: cannot execute "
+
+int ft_exec(char **argv, char **envp, int i);
+int ft_cd(char **argv, int i);
+void ft_pipe(int has_pipe, int *fd, int end);
+void ft_putstr_fd(char *str, char *arg, int fd);
 
 int main(int argc, char **argv, char **envp) {
 	int status, i = 0;
@@ -43,39 +43,40 @@ int main(int argc, char **argv, char **envp) {
 int ft_exec(char **argv, char **envp, int i) {
 	int has_pipe = (argv[i] && !strcmp(argv[i], "|"));
 	int fd[2];
-	int pid, status;
+	int status;
+	int pid;
 
 	if (!has_pipe && !strcmp(*argv, "cd"))
 		return (ft_cd(argv, i));
 	if (has_pipe && pipe(fd) == -1)
-		ft_putstr_fd(ERR, NULL, STDERR_FILENO), exit(1);
+		ft_putstr_fd(ERR, NULL, 2), exit(1);
 	if ((pid = fork()) == -1)
-		ft_putstr_fd(ERR, NULL, STDERR_FILENO), exit(1);
+		ft_putstr_fd(ERR, NULL, 2), exit(1);
 	if (!pid) {
 		argv[i] = 0;
 		ft_pipe(has_pipe, fd, 1);
 		if (!strcmp(*argv, "cd"))
 			exit(ft_cd(argv, i));
 		execve(*argv, argv, envp);
-		ft_putstr_fd(ERR, *argv, STDERR_FILENO), exit(1);
+		ft_putstr_fd(ERR_EXECVE, *argv, 2);
 	}
 	waitpid(pid, &status, 0);
 	ft_pipe(has_pipe, fd, 0);
-	return (WEXITSTATUS(status) && WIFEXITED(status));
+	return (WIFEXITED(status) && WEXITSTATUS(status));
 }
 
 int ft_cd(char **argv, int i) {
 	if (chdir(argv[i]) == -1)
-		ft_putstr_fd(ERR_CD, argv[i], STDERR_FILENO);
+		return (ft_putstr_fd(ERR_CD, argv[i], 2), 1);
 	if (i != 2)
-		ft_putstr_fd(ERR_CD_ARGS, argv[i], STDERR_FILENO);
+		return (ft_putstr_fd(ERR_CD_ARGS, argv[i], 2), 1);
 	return (0);
 }
 
 void ft_pipe(int has_pipe, int *fd, int end) {
 	if (has_pipe &&
 		(dup2(fd[end], end) == -1 || close(fd[0]) == -1 || close(fd[1]) == -1))
-		ft_putstr_fd(ERR, NULL, STDERR_FILENO), exit(1);
+		ft_putstr_fd(ERR, NULL, 2), exit(1);
 }
 
 void ft_putstr_fd(char *str, char *arg, int fd) {
@@ -83,6 +84,6 @@ void ft_putstr_fd(char *str, char *arg, int fd) {
 		write(fd, str++, 1);
 	if (arg)
 		while (*arg)
-			write(fd, str++, 1);
+			write(fd, arg++, 1);
 	write(fd, "\n", 1);
 }
