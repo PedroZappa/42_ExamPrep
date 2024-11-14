@@ -31,11 +31,11 @@ int main(int argc, char **argv, char **envp) {
 	(void)argc;
 	while (argv[i]) { // Loop while there are arguments
 		argv += (i + 1);
-		i = 0;
+		i = 0; // Mark the start of a command
 		while (argv[i] && strcmp(argv[i], ";") && strcmp(argv[i], "|"))
-			++i;
+			++i; // Parse Command tokens
 		if (i)
-			status = ft_exec(argv, envp, i);
+			status = ft_exec(argv, envp, i); // Execute command
 	}
 	return (status);
 }
@@ -44,7 +44,7 @@ int ft_exec(char **argv, char **envp, int i) {
 	int has_pipe = (argv[i] && !strcmp(argv[i], "|")); // Check for a pipe
 	int fd[2], status, pid;
 
-	if (!has_pipe && !strcmp(*argv, "cd")) // Check for a pipe
+	if (!has_pipe && !strcmp(*argv, "cd")) // Execute builtin
 		return (ft_cd(argv, i));
 	if (has_pipe && pipe(fd) == -1) // Get pipe
 		ft_putstr_fd(ERR, NULL, 2), exit(1);
