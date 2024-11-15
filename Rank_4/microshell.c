@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 09:13:32 by passunca          #+#    #+#             */
-/*   Updated: 2024/11/12 13:57:23 by passunca         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:51:47 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int ft_exec(char **argv, char **envp, int i) {
 		if (!strcmp(*argv, "cd")) // Execute builtin (STDOUT)
 			exit(ft_cd(argv, i));
 		execve(*argv, argv, envp);// Execute binary
-		ft_putstr_fd(ERR_EXECVE, *argv, 2);
+		ft_putstr_fd(ERR_EXECVE, *argv, 2), exit(1);
 	}
 	waitpid(pid, &status, 0); // Wait for child to finish
 	ft_pipe(has_pipe, fd, 0); // Execute builtin (STDIN)
@@ -64,10 +64,10 @@ int ft_exec(char **argv, char **envp, int i) {
 }
 
 int ft_cd(char **argv, int i) {
-	if (chdir(argv[1]) == -1)
-		return (ft_putstr_fd(ERR_CD, argv[i], 2), 1);
 	if (i != 2)
 		return (ft_putstr_fd(ERR_CD_ARGS, NULL, 2), 1);
+	if (chdir(argv[1]) == -1)
+		return (ft_putstr_fd(ERR_CD, argv[1], 2), 1);
 	return (0);
 }
 
