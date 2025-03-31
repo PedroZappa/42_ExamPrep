@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 10:39:57 by passunca          #+#    #+#             */
-/*   Updated: 2025/03/31 10:45:52 by passunca         ###   ########.fr       */
+/*   Updated: 2025/03/31 15:34:23 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ class Warlock {
   private:
 	std::string _name;
 	std::string _title;
+	std::map<std::string, ASpell*> _spells;
 
 	Warlock(Warlock const &);
 	Warlock &operator=(Warlock const &);

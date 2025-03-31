@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 08:55:23 by passunca          #+#    #+#             */
-/*   Updated: 2025/03/31 10:40:39 by passunca         ###   ########.fr       */
+/*   Updated: 2025/03/31 15:41:26 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,22 @@ void Warlock::introduce() const {
 			  << "!" << std::endl;
 }
 
+void Warlock::learnSpell(ASpell *spell) {
+	std::map<std::string, ASpell *>::iterator it = _spells.find(spell->getName());
+	if (it == _spells.end())
+		_spells[spell->getName()] = spell->clone();
+}
+
+void Warlock::forgetSpell(std::string spell) {
+	std::map<std::string, ASpell *>::iterator it = _spells.find(spell);
+	if (it != _spells.end()) {
+		delete it->second;
+		_spells.erase(it);
+	}
+}
+
+void Warlock::launchSpell(std::string spell, ATarget const &target) {
+	std::map<std::string, ASpell *>::iterator it = _spells.find(spell);
+	if (it != _spells.end())
+		it->second->launch(target);
+}
