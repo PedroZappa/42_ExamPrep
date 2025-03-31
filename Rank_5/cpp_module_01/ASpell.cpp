@@ -29,7 +29,7 @@ ASpell::ASpell(ASpell const &ref) {
 ASpell &ASpell::operator=(ASpell const &ref) {
 	if (this != &ref) {
 		_name = ref.getName();
-		_effects = ref._effects;
+		_effects = ref.getEffects();
 	}
 	return (*this);
 }

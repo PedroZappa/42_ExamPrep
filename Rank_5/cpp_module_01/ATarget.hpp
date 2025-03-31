@@ -20,7 +20,7 @@ class ASpell;
 class ATarget {
   public:
 	ATarget();
-	ATarget(const std::string &);
+	ATarget(const std::string &type);
 	virtual ~ATarget();
 
 	ATarget(ATarget const &);

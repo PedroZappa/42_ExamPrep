@@ -12,7 +12,7 @@
 
 #include "Fwoosh.hpp"
 
-Fwoosh::Fwoosh() {
+Fwoosh::Fwoosh() : ASpell("Fwoosh", "fwooshed") {
 }
 
 Fwoosh::~Fwoosh() {

@@ -13,21 +13,21 @@
 #ifndef WARLOCK_HPP
 #define WARLOCK_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
 
 class Warlock {
   public:
 	// Constructors
-	Warlock(const std::string &name, const std::string &title);
+	Warlock(std::string const &name, std::string const &title);
 	~Warlock();
 
 	// Getters
 	const std::string &getName() const;
 	const std::string &getTitle() const;
-	
+
 	// Setter
-	void setTitle(const std::string &);
+	void setTitle(std::string const &title);
 
 	// Public Methods
 	void introduce() const;
