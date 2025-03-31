@@ -1,5 +1,9 @@
 
 #include "Warlock.hpp"
+#include "Polymorph.hpp"
+#include "Fireball.hpp"
+#include "TargetGenerator.hpp"
+#include "BrickWall.hpp"
 
 int main()
 {
