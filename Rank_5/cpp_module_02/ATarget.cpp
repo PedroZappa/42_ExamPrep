@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
 #include "ATarget.hpp"
+#include <iostream>
 
 ATarget::ATarget() {
 }
 
-ATarget::ATarget(const std::string &type) {
+ATarget::ATarget(std::string const &type) : _targetType(type) {
 }
 
 ATarget::~ATarget() {
@@ -28,7 +27,7 @@ ATarget::ATarget(ATarget const &ref) {
 }
 
 ATarget &ATarget::operator=(ATarget const &ref) {
-	if (this != &ref) 
+	if (this != &ref)
 		_targetType = ref.getType();
 	return (*this);
 }
@@ -39,5 +38,6 @@ const std::string &ATarget::getType() const {
 }
 // Public Methods
 void ATarget::getHitBySpell(ASpell const &spell) const {
-	std::cout << _targetType << " has been " << spell.getEffects() << "!" << std::endl;
+	std::cout << _targetType << " has been " << spell.getEffects() << "!"
+			  << std::endl;
 }

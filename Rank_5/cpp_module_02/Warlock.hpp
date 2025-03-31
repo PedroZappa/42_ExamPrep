@@ -18,6 +18,7 @@
 
 #include "ASpell.hpp"
 #include "ATarget.hpp"
+#include "SpellBook.hpp"
 
 class Warlock {
   public:
@@ -42,7 +43,7 @@ class Warlock {
   private:
 	std::string _name;
 	std::string _title;
-	std::map<std::string, ASpell*> _spells;
+	SpellBook _spells;
 
 	Warlock(Warlock const &);
 	Warlock &operator=(Warlock const &);

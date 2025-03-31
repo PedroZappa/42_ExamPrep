@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "Polymorph.hpp"
+#include "ASpell.hpp"
 
-Polymorph::Polymorph() {
+Polymorph::Polymorph() : ASpell("Polymorph", "turned into a critter") {
 }
 
 Polymorph::~Polymorph() {

@@ -19,13 +19,13 @@
 class TargetGenerator {
 public:
 	TargetGenerator();
-	TargetGenerator(TargetGenerator const &);
-	TargetGenerator &operator=(TargetGenerator const &);
+	TargetGenerator(const TargetGenerator &ref);
+	TargetGenerator &operator=(const TargetGenerator &ref);
 	~TargetGenerator();
 
-	void learnTargetType(ATarget*);
-	void forgetTargetType(std::string const &)
-	ATarget *createTarget(std::string const &)
+	void learnTargetType(ATarget *target);
+	void forgetTargetType(const std::string &type);
+	ATarget *createTarget(const std::string &spellName);
 
 private:
 	std::map<std::string, ATarget *> _targetBook;

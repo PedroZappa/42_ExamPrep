@@ -16,17 +16,17 @@
 #include <map>
 
 class SpellBook {
-public:
-  SpellBook();
-  ~SpellBook();
+  public:
+	SpellBook();
+	~SpellBook();
 
-  void learnSpell(ASpell *);
-  void forgetSpell(const std::string &);
-  ASpell *createSpell(std::string const &);
+	void learnSpell(ASpell *);
+	void forgetSpell(std::string const &);
+	ASpell *createSpell(std::string const &);
 
-private:
-  std::map<std::string, ASpell *> _spellBook;
+  private:
+	std::map<std::string, ASpell *> _spellBook;
 
-  SpellBook(SpellBook const &);
-  SpellBook &operator=(SpellBook const &);
+	SpellBook(SpellBook const &ref);
+	SpellBook &operator=(SpellBook const &ref);
 };

@@ -15,7 +15,7 @@
 ASpell::ASpell() {
 }
 
-ASpell::ASpell(const std::string &name, const std::string &effects)
+ASpell::ASpell(std::string const &name, std::string const &effects)
 	: _name(name), _effects(effects) {
 }
 
@@ -29,7 +29,7 @@ ASpell::ASpell(ASpell const &ref) {
 ASpell &ASpell::operator=(ASpell const &ref) {
 	if (this != &ref) {
 		_name = ref.getName();
-		_effects = ref._effects;
+		_effects = ref.getEffects();
 	}
 	return (*this);
 }

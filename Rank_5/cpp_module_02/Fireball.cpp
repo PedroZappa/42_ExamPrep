@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "Fireball.hpp"
+#include "ASpell.hpp"
 
-Fireball::Fireball() {
+Fireball::Fireball() : ASpell("Fireball", "burnt to a crisp") {
 }
 
 Fireball::~Fireball() {
