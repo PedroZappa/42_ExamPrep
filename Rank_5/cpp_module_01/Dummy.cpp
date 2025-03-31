@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dummy.hpp                                          :+:      :+:    :+:   */
+/*   Dummy.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/31 15:17:30 by passunca          #+#    #+#             */
-/*   Updated: 2025/03/31 15:20:32 by passunca         ###   ########.fr       */
+/*   Created: 2025/03/31 15:20:53 by passunca          #+#    #+#             */
+/*   Updated: 2025/03/31 15:22:17 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Dummy.hpp"
 
-#include "ATarget.hpp"
+Dummy::Dummy() {
+}
 
-class Dummy : public ATarget {
-  public:
-	Dummy();
-	~Dummy();
+Dummy::~Dummy() {
+}
 
-	ATarget *clone() const;
-};
+ATarget *Dummy::clone() const {
+return (new Dummy());
+}

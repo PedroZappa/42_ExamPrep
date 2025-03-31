@@ -1,5 +1,7 @@
 
 #include "Warlock.hpp"
+#include "Dummy.hpp"
+#include "Fwoosh.hpp"
 
 int main() {
 	Warlock richard("Zedro", "the Passunca");
