@@ -20,6 +20,16 @@ SpellBook::SpellBook(SpellBook const &ref) {
 }
 
 SpellBook &SpellBook::operator=(SpellBook const &ref) {
+	if (this != &ref) {
+		std::map<std::string, ASpell *>::iterator it; // Clean
+		for (it = _spellBook.begin(); it != _spellBook.end(); ++it)
+			delete it->second;
+		_spellBook.clear();
+		
+		std::map<std::string, ASpell *>::const_iterator cit; // Deep copy
+		for (cit = ref._spellBook.begin(); it != ref._spellBook.end(); ++cit)
+			_spellBook[cit->first] = cit->second->clone();
+	}
 	return (*this);
 }
 

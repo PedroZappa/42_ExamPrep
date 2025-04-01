@@ -16,6 +16,7 @@ TargetGenerator::TargetGenerator() {
 }
 
 TargetGenerator::TargetGenerator(TargetGenerator const &ref) {
+	*this = ref;
 }
 
 TargetGenerator &TargetGenerator::operator=(TargetGenerator const &ref) {
