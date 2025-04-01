@@ -43,7 +43,7 @@ void Warlock::learnSpell(ASpell *spell) {
 	_spells.learnSpell(spell);
 }
 
-void Warlock::forgetSpell(std::string spell) {
+void Warlock::forgetSpell(const std::string spell) {
 	_spells.forgetSpell(spell);
 }
 
@@ -54,4 +54,3 @@ void Warlock::launchSpell(std::string spell, ATarget const &target) {
 		delete newSpell;
 	}
 }
-

@@ -47,6 +47,7 @@ void TargetGenerator::learnTargetType(ATarget *target) {
 	if (it == _targetBook.end())
 		_targetBook[target->getType()] = target->clone();
 }
+
 void TargetGenerator::forgetTargetType(const std::string &type) {
 	std::map<std::string, ATarget *>::iterator it =
 		_targetBook.find(type);

@@ -37,7 +37,7 @@ class Warlock {
 	void introduce() const;
 	
 	void learnSpell(ASpell *);
-	void forgetSpell(std::string);
+	void forgetSpell(const std::string);
 	void launchSpell(std::string, ATarget const &);
 
   private:
