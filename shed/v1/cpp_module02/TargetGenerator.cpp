@@ -1,0 +1,66 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   TargetGenerator.cpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/02 16:30:18 by passunca          #+#    #+#             */
+/*   Updated: 2025/04/02 16:30:22 by passunca         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "TargetGenerator.hpp"
+
+TargetGenerator::TargetGenerator() {
+}
+
+TargetGenerator::TargetGenerator(TargetGenerator const &ref) {
+	*this = ref;
+}
+
+TargetGenerator &TargetGenerator::operator=(TargetGenerator const &ref) {
+	if (this != &ref) {
+		std::map<std::string, ATarget *>::iterator it;
+
+		for (it = _targetBook.begin(); it != _targetBook.end(); ++it)
+			delete it->second;
+		_targetBook.clear();
+
+		std::map<std::string, ATarget *>::const_iterator cit;
+		for (cit = ref._targetBook.begin(); it != ref._targetBook.end(); ++cit)
+			_targetBook[cit->first] = cit->second->clone();
+	}
+	return (*this);
+}
+
+TargetGenerator::~TargetGenerator() {
+	std::map<std::string, ATarget *>::iterator it;
+
+	for (it = _targetBook.begin(); it != _targetBook.end(); ++it)
+		delete it->second;
+	_targetBook.clear();
+}
+
+void TargetGenerator::learnTargetType(ATarget *target) {
+	std::map<std::string, ATarget *>::iterator it =
+		_targetBook.find(target->getType());
+
+	if (it == _targetBook.end())
+		_targetBook[target->getType()] = target->clone();
+}
+
+void TargetGenerator::forgetTargetType(std::string const &type) {
+	std::map<std::string, ATarget *>::iterator it =
+		_targetBook.find(type);
+
+	if (it != _targetBook.end()) {
+		delete it->second;
+		_targetBook.erase(it);
+	}
+}
+
+void TargetGenerator::createTarget(std::string const &type) {
+	std::map<std::string, ATarget *>::iterator it =
+		_targetBook.find(type);
+}
