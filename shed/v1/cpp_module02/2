@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:30:18 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/09 16:02:56 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/09 10:14:20 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,11 @@ void TargetGenerator::forgetTargetType(std::string const &type) {
 }
 
 ATarget *TargetGenerator::createTarget(std::string const &type) {
-	//std::map<std::string, ATarget *>::iterator it =
-	//	_targetBook.find(type);
-	ATarget *target = _targetBook[type];
+	std::map<std::string, ATarget *>::iterator it =
+		_targetBook.find(type);
+	ATarget *target = NULL;
 
-	if (target != NULL)
-		return (target->clone());
-	// if (it != _targetBook.end())
-	// 	target = it->second->clone();
+	if (it == _targetBook.end())
+		target = it->second->clone();
 	return (target);
 }

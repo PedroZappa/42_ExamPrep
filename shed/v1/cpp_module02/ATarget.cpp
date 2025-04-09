@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 10:58:49 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/02 11:00:52 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/09 15:58:40 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ ATarget::ATarget() {
 ATarget::ATarget(std::string const &targetType) : _targetType(targetType) {
 }
 
-ATarget::~ATarget() {}
+ATarget::~ATarget() {
+}
 
 ATarget::ATarget(ATarget const &ref) {
 	*this = ref;
@@ -37,4 +38,5 @@ std::string const &ATarget::getType() const {
 void ATarget::getHitBySpell(ASpell const &spell) const {
 	std::cout << _targetType << " has been " << spell.getEffects()
 			  << "!" << std::endl;
+	(void)spell;
 }

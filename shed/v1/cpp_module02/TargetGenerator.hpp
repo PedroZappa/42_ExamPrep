@@ -24,7 +24,7 @@ class TargetGenerator {
 
 	void learnTargetType(ATarget *target);
 	void forgetTargetType(std::string const &type);
-	void createTarget(std::string const &spellName);
+	ATarget *createTarget(std::string const &spellName);
 
   private:
 	std::map<std::string, ATarget *> _targetBook;

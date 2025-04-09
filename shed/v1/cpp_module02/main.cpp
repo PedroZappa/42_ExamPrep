@@ -1,5 +1,4 @@
 #include "Warlock.hpp"
-#include "Dummy.hpp"
 #include "BrickWall.hpp"
 #include "Fireball.hpp"
 #include "Polymorph.hpp"
@@ -26,4 +25,10 @@ int main()
   richard.introduce();
   richard.launchSpell("Polymorph", *wall);
   richard.launchSpell("Fireball", *wall);
+
+	delete fireball;
+	delete polymorph;
+	delete wall;
+
+	return (0);
 }
