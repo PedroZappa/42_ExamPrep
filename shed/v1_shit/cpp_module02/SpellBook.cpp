@@ -40,7 +40,7 @@ SpellBook &SpellBook::operator=(SpellBook const &ref) {
 }
 
 void SpellBook::learnSpell(ASpell *spell) {
-	std::map<std::string, ASpell *>::iterator it;
+	std::map<std::string, ASpell *>::iterator it = _spellBook.find(spell->getName());
 
 	if (it == _spellBook.end())
 		_spellBook[spell->getName()] = spell->clone();

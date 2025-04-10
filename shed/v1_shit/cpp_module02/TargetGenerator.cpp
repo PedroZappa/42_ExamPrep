@@ -42,16 +42,15 @@ TargetGenerator::~TargetGenerator() {
 }
 
 void TargetGenerator::learnTargetType(ATarget *target) {
-	std::map<std::string, ATarget *>::iterator it =
-		_targetBook.find(target->getType());
+	// std::map<std::string, ATarget *>::iterator it =
+	// 	_targetBook.find(target->getType());
 
-	if (it == _targetBook.end())
+	// if (it == _targetBook.end())
 		_targetBook[target->getType()] = target->clone();
 }
 
 void TargetGenerator::forgetTargetType(std::string const &type) {
-	std::map<std::string, ATarget *>::iterator it =
-		_targetBook.find(type);
+	std::map<std::string, ATarget *>::iterator it = _targetBook.find(type);
 
 	if (it != _targetBook.end()) {
 		delete it->second;
@@ -60,13 +59,10 @@ void TargetGenerator::forgetTargetType(std::string const &type) {
 }
 
 ATarget *TargetGenerator::createTarget(std::string const &type) {
-	//std::map<std::string, ATarget *>::iterator it =
-	//	_targetBook.find(type);
-	ATarget *target = _targetBook[type];
+	std::map<std::string, ATarget *>::iterator it = _targetBook.find(type);
+	ATarget *target = NULL;
 
-	if (target != NULL)
-		return (target->clone());
-	// if (it != _targetBook.end())
-	// 	target = it->second->clone();
+	if (it != _targetBook.end())
+		target = it->second->clone();
 	return (target);
 }
