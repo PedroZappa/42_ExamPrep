@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ASpell.hpp                                         :+:      :+:    :+:   */
+/*   ATarget.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 10:06:04 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/10 10:10:20 by passunca         ###   ########.fr       */
+/*   Created: 2025/04/10 10:21:25 by passunca          #+#    #+#             */
+/*   Updated: 2025/04/10 10:26:38 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ATarget.hpp"
 #include <iostream>
 #include <string>
+#include "ASpell.hpp"
 
-class ATarget;
+class ASpell;
 
-class ASpell {
+class ATarget {
   public:
-	ASpell(std::string const &name, std::string const &effects);
-	ASpell(ASpell const &ref);
-	ASpell &operator=(ASpell const &ref);
-	~ASpell();
+	ATarget(std::string const &type);
+	ATarget(ATarget const &ref);
+	ATarget &operator=(ATarget const &ref);
+	~ATarget();
 
-	std::string getName() const;
-	std::string getEffects() const;
+	std::string getType() const;
 
-	virtual ASpell *clone() const = 0;
+	virtual ATarget *clone() const = 0;
 
-	void launch(ATarget const &target) const;
+	void getHitBySpell(ASpell const &spell);
 
   private:
-	std::string _name;
-	std::string _effects;
+	std::string _targetType;
 };
