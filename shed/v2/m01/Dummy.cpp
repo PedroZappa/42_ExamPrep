@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.hpp                                         :+:      :+:    :+:   */
+/*   Dummy.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 09:27:59 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 09:42:02 by passunca         ###   ########.fr       */
+/*   Created: 2025/04/15 09:39:08 by passunca          #+#    #+#             */
+/*   Updated: 2025/04/15 09:40:17 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Dummy.hpp"
 
-#include "ASpell.hpp"
-#include <iostream>
-#include <string>
+Dummy::Dummy(): ATarget("Target Practice Dummy") {}
 
-class Fwoosh : public ASpell {
-  public:
-	Fwoosh();
-	~Fwoosh();
+Dummy::~Dummy() {}
 
-	ASpell *clone() const;
-};
+ATarget *Dummy::clone() const {
+	return (new Dummy());
+}

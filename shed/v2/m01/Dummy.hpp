@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.hpp                                         :+:      :+:    :+:   */
+/*   Dummy.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 09:27:59 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 09:42:02 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/15 09:41:42 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ASpell.hpp"
+#include "ATarget.hpp"
 #include <iostream>
 #include <string>
 
-class Fwoosh : public ASpell {
+class Dummy : public ATarget {
   public:
-	Fwoosh();
-	~Fwoosh();
+	Dummy();
+	~Dummy();
 
-	ASpell *clone() const;
+	ATarget *clone() const;
 };
