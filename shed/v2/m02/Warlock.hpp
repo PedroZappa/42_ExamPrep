@@ -12,10 +12,11 @@
 
 #pragma once
 
-#include <iostream>
-#include <string>
-#include <map>
 #include "ASpell.hpp"
+#include "SpellBook.hpp"
+#include <iostream>
+#include <map>
+#include <string>
 
 class Warlock {
   public:
@@ -35,7 +36,7 @@ class Warlock {
   private:
 	std::string _name;
 	std::string _title;
-	std::map<std::string, ASpell *> _spellBook;
+	SpellBook _spellBook;
 
 	Warlock(Warlock const &ref);
 	Warlock &operator=(Warlock const &ref);

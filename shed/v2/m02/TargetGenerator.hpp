@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fireball.hpp                                       :+:      :+:    :+:   */
+/*   TargetGenerator.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 10:04:37 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 12:58:59 by passunca         ###   ########.fr       */
+/*   Created: 2025/04/15 12:10:22 by passunca          #+#    #+#             */
+/*   Updated: 2025/04/15 12:51:05 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ASpell.hpp"
 #include <iostream>
+#include <map>
 #include <string>
+#include "ATarget.hpp"
 
-class Fireball : public ASpell {
+class TargetGenerator {
   public:
-	Fireball();
-	~Fireball();
+	TargetGenerator();
+	~TargetGenerator();
 
-	ASpell *clone() const;
+	void learnTargetType(ATarget *target);
+	void forgetTargetType(std::string const &target);
+	ATarget *createTarget(std::string const &target);
+
+  private:
+	std::map<std::string, ATarget *> _targetBook;
+
+	TargetGenerator(TargetGenerator const &ref);
+	TargetGenerator &operator=(TargetGenerator const &ref);
 };
