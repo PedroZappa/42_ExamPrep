@@ -29,8 +29,8 @@ class ATarget {
 
 	virtual ATarget *clone() const = 0;
 
-	void getHitBySpell(ASpell const &spell);
+	void getHitBySpell(ASpell const &spell) const;
 
-  private:
+  protected:
 	std::string _targetType;
 };

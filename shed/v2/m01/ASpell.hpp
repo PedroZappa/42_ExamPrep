@@ -32,7 +32,7 @@ class ASpell {
 
 	void launch(ATarget const &target) const;
 
-  private:
+  protected:
 	std::string _name;
 	std::string _effects;
 };
