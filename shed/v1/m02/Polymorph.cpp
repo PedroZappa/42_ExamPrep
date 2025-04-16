@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fireball.cpp                                       :+:      :+:    :+:   */
+/*   Polymorph.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 11:47:13 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/16 11:49:09 by passunca         ###   ########.fr       */
+/*   Created: 2025/04/16 11:50:21 by passunca          #+#    #+#             */
+/*   Updated: 2025/04/16 11:50:47 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fireball.hpp"
+#include "Polymorph.hpp"
 
-Fireball::Fireball() : ASpell("Fireball", "burnt to a crisp") {
+Polymorph::Polymorph() : ASpell("Polymorph", "turned into a critter") {
 }
 
-Fireball::~Fireball() {
+Polymorph::~Polymorph() {
 }
 
-ASpell *Fireball::clone() const {
-	return (new Fireball());
+ASpell *Polymorph::clone() const {
+	return (new Polymorph());
 }
+
