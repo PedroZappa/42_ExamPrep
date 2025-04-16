@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 09:03:44 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/16 10:48:13 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/16 11:31:32 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 ASpell::ASpell(std::string const &name, std::string const &effects)
 	: _name(name), _effects(effects) {
+}
+
+ASpell::~ASpell() {
+
 }
 
 ASpell::ASpell(ASpell const &ref) {
