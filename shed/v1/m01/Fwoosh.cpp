@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ATarget.hpp                                        :+:      :+:    :+:   */
+/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 09:31:31 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/16 11:07:13 by passunca         ###   ########.fr       */
+/*   Created: 2025/04/16 10:52:36 by passunca          #+#    #+#             */
+/*   Updated: 2025/04/16 10:56:06 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Fwoosh.hpp"
 
-#include "ASpell.hpp"
-#include <iostream>
-#include <string>
+Fwoosh::Fwoosh() : ASpell("Fwoosh", "fwooshed") {
+}
 
-class ASpell;
+Fwoosh::~Fwoosh() {
+}
 
-class ATarget {
-  public:
-	ATarget(std::string const &target);
-	ATarget(ATarget const &ref);
-	ATarget &operator=(ATarget const &ref);
-	~ATarget();
-
-	std::string getType() const;
-
-	void getHitBySpell(ASpell const &ref) const;
-
-  protected:
-	std::string _targetType;
-};
+ASpell *Fwoosh::clone() const {
+	return (new Fwoosh());
+}
