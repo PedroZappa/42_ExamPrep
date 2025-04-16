@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 13:22:05 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/16 11:31:55 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/16 11:34:01 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void Warlock::setTitle(std::string const &title) {
 }
 
 void Warlock::introduce() const {
-	std::cout << getName() << ": this is " << getName() << ", " << getTitle()
+	std::cout << getName() << ": I am " << getName() << ", " << getTitle()
 			  << std::endl;
 }
 
