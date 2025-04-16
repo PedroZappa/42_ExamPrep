@@ -5,33 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 16:40:41 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 18:17:28 by passunca         ###   ########.fr       */
+/*   Created: 2025/04/16 09:05:21 by passunca          #+#    #+#             */
+/*   Updated: 2025/04/16 09:29:24 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ATarget.hpp"
 #include <iostream>
 #include <string>
-
-class ATarget;
 
 class ASpell {
   public:
 	ASpell(std::string const &name, std::string const &effects);
+	ASpell(ASpell const &ref);
+	ASpell &operator=(ASpell const &ref);
 	virtual ~ASpell();
 
-	ASpell(ASpell const &);
-	ASpell &operator=(ASpell const &ref);
-
-	std::string const &getName() const;
-	std::string const &getEffects() const;
+	std::string getName() const;
+	std::string getEffects() const;
 
 	virtual ASpell *clone() const = 0;
-
-	void launch(ATarget const &target) const;
 
   private:
 	std::string _name;
