@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 13:22:05 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/16 11:34:01 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/16 12:16:54 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,7 @@ void Warlock::introduce() const {
 }
 
 void Warlock::learnSpell(ASpell *spell) {
-	std::map<std::string, ASpell *>::iterator it =
-		_spellBook.find(spell->getName());
-	if (it == _spellBook.end())
-		_spellBook[spell->getName()] = spell->clone();
+	_spellBook.learnSpell(spell);
 }
 
 void Warlock::forgetSpell(std::string const &name) {
