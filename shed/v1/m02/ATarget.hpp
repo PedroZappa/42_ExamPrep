@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 09:31:31 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/16 11:07:13 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:47:21 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class ATarget {
 	~ATarget();
 
 	std::string getType() const;
+
+	virtual ASpell *clone() const = 0;
 
 	void getHitBySpell(ASpell const &ref) const;
 
