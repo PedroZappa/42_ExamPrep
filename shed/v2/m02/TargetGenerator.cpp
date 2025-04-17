@@ -40,11 +40,9 @@ void TargetGenerator::forgetTargetType(std::string const &spell) {
 }
 
 ATarget *TargetGenerator::createTarget(std::string const &spell) {
-	ATarget *ret = NULL;
 	std::map<std::string, ATarget *>::iterator it =
 		_targetBook.find(spell);
 	if (it != _targetBook.end())
-		ret = it->second->clone();
-	return (ret);
+		return (it->second->clone());
+	return (NULL);
 }
-
