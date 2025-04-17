@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 09:31:42 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/17 09:39:42 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/17 09:52:51 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 #include <iostream>
 #include <string>
+#include "ATarget.hpp"
+
+class ATarget;
 
 class ASpell {
   public:

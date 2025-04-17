@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 09:42:22 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/17 09:50:46 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/17 09:52:16 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ std::string ATarget::getType() const {
 }
 
 void ATarget::getHitBySpell(ASpell const &ref) const {
-	std::cout << _targetType << " has been " << ref.getEffects() << "!"
+	std::cout << getType() << " has been " << ref.getEffects() << "!"
 			  << std::endl;
 }
