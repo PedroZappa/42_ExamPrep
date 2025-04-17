@@ -23,11 +23,11 @@ class ATarget {
 	ATarget(std::string const &target);
 	ATarget(ATarget const &ref);
 	ATarget &operator=(ATarget const &ref);
-	~ATarget();
+	virtual ~ATarget();
 
 	std::string getType() const;
 
-	virtual ASpell *clone() const = 0;
+	virtual ATarget *clone() const = 0;
 
 	void getHitBySpell(ASpell const &ref) const;
 

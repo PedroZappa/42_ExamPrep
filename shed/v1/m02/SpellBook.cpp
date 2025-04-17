@@ -33,7 +33,7 @@ void SpellBook::learnSpell(ASpell *spell) {
 void SpellBook::forgetSpell(std::string const &name) {
 	std::map<std::string, ASpell *>::iterator it =
 		_spellBook.find(name);
-	if (it == _spellBook.end()){
+	if (it != _spellBook.end()){
 		delete it->second;
 		_spellBook.erase(it);
 	}
@@ -43,7 +43,7 @@ ASpell *SpellBook::createSpell(std::string const &name) {
 	ASpell *ret = NULL;
 	std::map<std::string, ASpell *>::iterator it =
 		_spellBook.find(name);
-	if (it == _spellBook.end())
+	if (it != _spellBook.end())
 		ret = it->second->clone();
 	return (ret);
 }
