@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SpellBook.hpp                                      :+:      :+:    :+:   */
+/*   TargetGenerator.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:07:21 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/17 11:31:28 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/17 11:37:36 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #pragma once
 
+#include "ATarget.hpp"
 #include <iostream>
-#include <string>
 #include <map>
-#include "ASpell.hpp"
+#include <string>
 
-class ASpell;
+class ATarget;
 
-class SpellBook {
+class TargetGenerator {
   public:
-	SpellBook();
-	~SpellBook();
+	TargetGenerator();
+	~TargetGenerator();
 
-	void learnSpell(ASpell *spell);
-	void forgetSpell(std::string const &spell);
-	ASpell *createSpell(std::string const &spell);
+	void learnTargetType(ATarget *spell);
+	void forgetTargetType(std::string const &spell);
+	ATarget *createTarget(std::string const &spell);
 
   private:
-	std::map<std::string, ASpell *> _spellBook;
+	std::map<std::string, ATarget *> _targetBook;
 
-	SpellBook(SpellBook const &ref);
-	SpellBook &operator=(SpellBook const &ref);
+	TargetGenerator(TargetGenerator const &ref);
+	TargetGenerator &operator=(TargetGenerator const &ref);
 };
-

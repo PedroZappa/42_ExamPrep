@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:07:25 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/17 11:16:45 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/17 11:31:46 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void SpellBook::forgetSpell(std::string const &spell) {
 	}
 }
 
-ASpell *SpellBook::createSpell(std::string const &spell, ATarget &target) {
+ASpell *SpellBook::createSpell(std::string const &spell) {
 	ASpell *ret = NULL;
 	std::map<std::string, ASpell *>::iterator it =
 		_spellBook.find(spell);
