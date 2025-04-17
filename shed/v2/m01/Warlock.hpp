@@ -14,6 +14,8 @@
 
 #include <iostream>
 #include <string>
+#include <map>
+#include "ASpell.hpp"
 
 class Warlock {
   public:
@@ -29,9 +31,16 @@ class Warlock {
 
 	void introduce() const;
 
+	void learnSpell(ASpell *spell);
+	void forgetSpell(std::string const &spell);
+	void launchSpell(std::string const &spell,ATarget &target);
+
+
   private:
 	std::string _name;
 	std::string _title;
+	std::map<std::string, ASpell *> _spellBook;
+
 
 	Warlock(Warlock const &ref);
 	Warlock &operator=(Warlock const &ref);

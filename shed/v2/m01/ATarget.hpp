@@ -22,7 +22,7 @@ class ATarget {
   public:
 	ATarget();
 	ATarget(std::string const &type);
-	~ATarget();
+	virtual ~ATarget();
 
 	ATarget(ATarget const &ref);
 	ATarget &operator=(ATarget const &ref);

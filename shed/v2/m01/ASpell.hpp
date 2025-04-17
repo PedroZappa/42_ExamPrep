@@ -22,7 +22,7 @@ class ASpell {
   public:
 	ASpell();
 	ASpell(std::string const &name, std::string const &effects);
-	~ASpell();
+	virtual ~ASpell();
 
 	ASpell(ASpell const &ref);
 	ASpell &operator=(ASpell const &ref);

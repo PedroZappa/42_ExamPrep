@@ -26,6 +26,7 @@ ASpell &ASpell::operator=(ASpell const &ref) {
 	if (this != &ref) {
 		_name = ref.getName();
 	}
+	return (*this);
 }
 
 std::string ASpell::getName() const {
