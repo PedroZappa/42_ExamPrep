@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:17:26 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/21 11:49:32 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/21 12:42:03 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class ATarget;
 class ASpell {
   public:
 	ASpell();
-	ASpell(std::string const &name, std::string const &title);
-	~ASpell();
+	ASpell(std::string const &name, std::string const &effects);
+	virtual ~ASpell();
 
 	ASpell(ASpell const &ref);
 	ASpell &operator=(ASpell const &ref);
@@ -30,7 +30,7 @@ class ASpell {
 	std::string getName() const;
 	std::string getEffects() const;
 
-	virtual ASpell *clone() const  = 0;
+	virtual ASpell *clone() const = 0;
 
 	void launch(ATarget const &target) const;
 

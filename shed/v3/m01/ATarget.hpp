@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:17:26 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/21 11:43:17 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/21 12:41:58 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@ class ATarget {
   public:
 	ATarget();
 	ATarget(std::string const &type);
-	~ATarget();
+	virtual ~ATarget();
 
 	ATarget(ATarget const &ref);
 	ATarget &operator=(ATarget const &ref);
 
 	std::string getType() const;
 
-	virtual ATarget *clone() const  = 0;
+	virtual ATarget *clone() const = 0;
 
-	void getHitBySpell(ATarget const &spell) const;
+	void getHitBySpell(ASpell const &spell) const;
 
   protected:
 	std::string _targetType;

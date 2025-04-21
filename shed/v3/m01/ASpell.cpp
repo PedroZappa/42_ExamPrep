@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:19:49 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/21 09:33:44 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/21 12:33:34 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ ASpell &ASpell::operator=(ASpell const &ref) {
 		_name = ref.getName();
 		_effects = ref.getEffects();
 	}
+	return (*this);
 }
 
 std::string ASpell::getName() const {
