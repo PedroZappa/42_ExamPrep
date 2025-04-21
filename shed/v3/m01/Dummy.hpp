@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ASpell.hpp                                         :+:      :+:    :+:   */
+/*   Dummy.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 09:17:26 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/21 11:49:32 by passunca         ###   ########.fr       */
+/*   Created: 2025/04/21 11:50:18 by passunca          #+#    #+#             */
+/*   Updated: 2025/04/21 11:53:48 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,10 @@
 #include <string>
 #include "ATarget.hpp"
 
-class ATarget;
-
-class ASpell {
+class Dummy : public ATarget {
   public:
-	ASpell();
-	ASpell(std::string const &name, std::string const &title);
-	~ASpell();
+	Dummy();
+	~Dummy();
 
-	ASpell(ASpell const &ref);
-	ASpell &operator=(ASpell const &ref);
-
-	std::string getName() const;
-	std::string getEffects() const;
-
-	virtual ASpell *clone() const  = 0;
-
-	void launch(ATarget const &target) const;
-
-  protected:
-	std::string _name;
-	std::string _effects;
+	ATarget *clone() const;
 };
