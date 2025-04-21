@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:27:03 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/21 09:32:13 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/21 09:42:21 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ ATarget::ATarget(std::string const &type) : _targetType(type) {
 ATarget::~ATarget() {
 }
 
-ATarget::ATarget(ATarget const &ref){ *this = ref}
+ATarget::ATarget(ATarget const &ref) {
+	*this = ref;
+}
 
 ATarget &ATarget::operator=(ATarget const &ref) {
 	if (this != &ref) {

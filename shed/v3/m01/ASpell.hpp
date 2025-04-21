@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:17:26 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/21 09:33:42 by passunca         ###   ########.fr       */
+/*   Updated: 2025/04/21 11:43:30 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class ASpell {
 	std::string getName() const;
 	std::string getEffects() const;
 
-	virtual ASpell *clone() = 0;
+	virtual ATarget *clone() const  = 0;
 
 	void launch(ATarget const &target) const;
 
