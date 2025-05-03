@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 10:00:29 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/03 10:00:52 by passunca         ###   ########.fr       */
+/*   Updated: 2025/05/03 10:11:10 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <string>
 
 class Dummy : public ATarget {
+  public:
 	Dummy();
 	~Dummy();
 
