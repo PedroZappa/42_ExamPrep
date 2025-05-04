@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 10:57:47 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/04 11:01:39 by passunca         ###   ########.fr       */
+/*   Updated: 2025/05/04 11:41:32 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 #include <iostream>
 #include <string>
+#include <map>
+#include "ASpell.hpp"
 
 class Warlock {
   public:
@@ -27,9 +29,14 @@ class Warlock {
 	void setTitle(std::string const &title);
 	void introduce() const;
 
+	void learnSpell(ASpell *spell);
+	void forgetSpell(std::string const &spell);
+	void launchSpell(std::string const &spell, ATarget const &target);
+
   private:
 	std::string _name;
 	std::string _title;
+	std::map<std::string, ASpell *> _spellBook;
 
 	Warlock(Warlock const &ref);
 	Warlock &operator=(Warlock const &ref);

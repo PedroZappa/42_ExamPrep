@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ATarget.hpp                                        :+:      :+:    :+:   */
+/*   Dummy.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/04 11:18:39 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/04 11:45:24 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/04 11:37:38 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/04 11:37:53 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #pragma once
 
 #include <iostream>
 #include <string>
-#include "ASpell.hpp"
+#include "ATarget.hpp"
 
-class ASpell;
-
-class ATarget {
+class Dummy : public ATarget {
   public:
-	ATarget();
-	ATarget(std::string const &type);
-	virtual ~ATarget();
+	Dummy();
+	~Dummy();
 
-	ATarget(ATarget const &ref);
-	ATarget &operator=(ATarget const &ref);
-
-	std::string getType() const;
-
-	virtual ATarget *clone() const = 0;
-
-	void getHitBySpell(ASpell const &ref) const;
-
-  protected:
-	std::string _type;
+	ATarget *clone() const;
 };
 
 
