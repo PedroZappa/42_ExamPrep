@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Warlock.hpp                                        :+:      :+:    :+:   */
+/*   SpellBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/05 07:24:40 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/05 08:29:01 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/05 08:22:11 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/05 08:32:14 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,23 @@
 #include <string>
 #include <map>
 #include "ASpell.hpp"
-#include "SpellBook.hpp"
 
 class ASpell;
 
-class Warlock {
+class SpellBook {
   public:
-	Warlock();
-	Warlock(std::string const &name, std::string const &title);
-	~Warlock();
-
-	std::string getName() const;
-	std::string getTitle() const;
-
-	void setTitle(std::string const &title);
-	void introduce() const;
+	SpellBook();
+	~SpellBook();
 
 	void learnSpell(ASpell *spell);
 	void forgetSpell(std::string const &spell);
-	void launchSpell(std::string const &spell, ATarget const &target);
+	ASpell *createSpell(std::string const &spell);
 
   private:
-	std::string _name;
-	std::string _title;
-	SpellBook _spellBook;
+	std::map<std::string, ASpell *> _spellBook;
 
-	Warlock(Warlock const &ref);
-	Warlock &operator=(Warlock const &ref);
+	SpellBook(SpellBook const &ref);
+	SpellBook &operator=(SpellBook const &ref);
 };
+
+
