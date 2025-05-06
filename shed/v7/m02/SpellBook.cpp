@@ -6,11 +6,12 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:24:43 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/06 09:31:41 by passunca         ###   ########.fr       */
+/*   Updated: 2025/05/06 09:37:05 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "SpellBook.hpp"
+
 SpellBook::SpellBook() {
 }
 SpellBook::~SpellBook() {
