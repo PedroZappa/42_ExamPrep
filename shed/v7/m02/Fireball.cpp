@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dummy.hpp                                          :+:      :+:    :+:   */
+/*   Fireball.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 08:42:15 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/06 09:20:22 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 09:15:40 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 09:16:37 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ATarget.hpp"
+#include "Fireball.hpp"
 
-class Dummy : public ATarget {
-  public:
-	Dummy();
-	~Dummy();
+Fireball::Fireball() : ASpell("Fireball", "burnt to a crisp") {
+}
+Fireball::~Fireball() {
+}
 
-	ATarget *clone() const;
-};
+ASpell *Fireball::clone() const {
+	return (new Fireball());
+}
 

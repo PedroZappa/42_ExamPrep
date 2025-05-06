@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 08:08:45 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/06 08:44:15 by passunca         ###   ########.fr       */
+/*   Updated: 2025/05/06 09:28:51 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 #include <map>
 #include "ASpell.hpp"
+#include "SpellBook.hpp"
 
 class ASpell;
 
@@ -38,7 +39,7 @@ class Warlock {
   private:
 	std::string _name;
 	std::string _title;
-	std::map<std::string, ASpell *> _spellBook;
+	SpellBook _spellBook;
 
 	Warlock(Warlock const &ref);
 	Warlock &operator=(Warlock const &ref);

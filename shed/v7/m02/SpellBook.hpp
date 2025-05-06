@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dummy.hpp                                          :+:      :+:    :+:   */
+/*   SpellBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 08:42:15 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/06 09:20:22 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 09:23:38 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 09:31:27 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ATarget.hpp"
+#pragma once
 
-class Dummy : public ATarget {
+#include <iostream>
+#include <string>
+#include <map>
+#include "ASpell.hpp"
+
+class ASpell;
+
+class SpellBook {
   public:
-	Dummy();
-	~Dummy();
+	SpellBook();
+	~SpellBook();
 
-	ATarget *clone() const;
+	void learnSpell(ASpell *spell);
+	void forgetSpell(std::string const &spell);
+	ASpell *createSpell(std::string const &spell);
+
+  private:
+	std::map<std::string, ASpell *> _spellBook;
+
+	SpellBook(SpellBook const &ref);
+	SpellBook &operator=(SpellBook const &ref);
 };
 

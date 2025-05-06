@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dummy.hpp                                          :+:      :+:    :+:   */
+/*   Polymorph.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 08:42:15 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/06 09:20:22 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 09:16:09 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 09:17:40 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ATarget.hpp"
+#include "ASpell.hpp"
 
-class Dummy : public ATarget {
+class Polymorph : public ASpell {
   public:
-	Dummy();
-	~Dummy();
+	Polymorph();
+	~Polymorph();
 
-	ATarget *clone() const;
+	ASpell *clone() const;
 };
+
 
