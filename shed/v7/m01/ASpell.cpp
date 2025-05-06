@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 08:23:30 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/06 08:27:10 by passunca         ###   ########.fr       */
+/*   Updated: 2025/05/06 08:50:35 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ std::string ASpell::getEffects() const {
 	return (_effects);
 }
 
-// void ASpell::launch(ATarget const &target) const {
-// target.getHitBySpell(*this);
-// }
+void ASpell::launch(ATarget const &target) const {
+	target.getHitBySpell(*this);
+}

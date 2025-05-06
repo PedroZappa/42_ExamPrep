@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 08:30:07 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/06 08:35:29 by passunca         ###   ########.fr       */
+/*   Updated: 2025/05/06 08:49:10 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ ATarget::~ATarget() {
 }
 
 ATarget::ATarget(ATarget const &ref) {
-	_type = ref._type;
+	*this = ref;
 }
 ATarget &ATarget::operator=(ATarget const &ref) {
 	if (this != &ref) {
-		_type = ref._type;
+		_type = ref.getType();
 	}
 	return (*this);
 }

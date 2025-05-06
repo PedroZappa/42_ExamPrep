@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 08:08:48 by passunca          #+#    #+#             */
-/*   Updated: 2025/05/06 08:20:13 by passunca         ###   ########.fr       */
+/*   Updated: 2025/05/06 08:48:01 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,23 @@ void Warlock::setTitle(std::string const &title) {
 void Warlock::introduce() const {
 	std::cout << getName() << ": I am " << getName() << ", " << getTitle()
 			  << "!\n";
+}
+
+void Warlock::learnSpell(ASpell *spell) {
+	std::map<std::string, ASpell *>::iterator it =
+		_spellBook.find(spell->getName());
+	if (it == _spellBook.end())
+		_spellBook[spell->getName()] = spell->clone();
+}
+void Warlock::forgetSpell(std::string const &spell) {
+	std::map<std::string, ASpell *>::iterator it = _spellBook.find(spell);
+	if (it != _spellBook.end()) {
+		delete it->second;
+		_spellBook.erase(it);
+	}
+}
+void Warlock::launchSpell(std::string const &spell, ATarget const &target) {
+	std::map<std::string, ASpell *>::iterator it = _spellBook.find(spell);
+	if (it != _spellBook.end())
+		it->second->launch(target);
 }
