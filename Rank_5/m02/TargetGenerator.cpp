@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 12:40:12 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 12:57:02 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 09:34:23 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 09:37:01 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 TargetGenerator::TargetGenerator() {
 }
-
 TargetGenerator::~TargetGenerator() {
+	std::map<std::string, ATarget *>::iterator it;
+	for (it = _targetBook.begin(); it != _targetBook.end(); it++)
+		delete it->second;
+	_targetBook.clear();
 }
 
 void TargetGenerator::learnTargetType(ATarget *target) {
@@ -24,19 +27,15 @@ void TargetGenerator::learnTargetType(ATarget *target) {
 	if (it == _targetBook.end())
 		_targetBook[target->getType()] = target->clone();
 }
-
 void TargetGenerator::forgetTargetType(std::string const &target) {
-	std::map<std::string, ATarget *>::iterator it =
-		_targetBook.find(target);
+	std::map<std::string, ATarget *>::iterator it = _targetBook.find(target);
 	if (it != _targetBook.end()) {
 		delete it->second;
 		_targetBook.erase(it);
 	}
 }
-
 ATarget *TargetGenerator::createTarget(std::string const &target) {
-	std::map<std::string, ATarget *>::iterator it =
-		_targetBook.find(target);
+	std::map<std::string, ATarget *>::iterator it = _targetBook.find(target);
 	if (it != _targetBook.end())
 		return (it->second->clone());
 	return (NULL);

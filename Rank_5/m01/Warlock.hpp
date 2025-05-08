@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 09:09:08 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 09:59:32 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 08:08:45 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 08:44:15 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@
 #include <map>
 #include "ASpell.hpp"
 
+class ASpell;
+
 class Warlock {
   public:
+	Warlock();
 	Warlock(std::string const &name, std::string const &title);
 	~Warlock();
 
@@ -29,8 +32,8 @@ class Warlock {
 	void introduce() const;
 
 	void learnSpell(ASpell *spell);
-	void forgetSpell(std::string const &spell);
-	void launchSpell(std::string const &spell, ATarget const &target);
+	void forgetSpell(std::string const &name);
+	void launchSpell(std::string const &name, ATarget const &target);
 
   private:
 	std::string _name;

@@ -5,17 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 12:10:22 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 12:51:05 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 09:32:57 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 09:36:26 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <map>
 #include <string>
+#include <map>
 #include "ATarget.hpp"
+
+class ATarget;
 
 class TargetGenerator {
   public:
@@ -32,3 +34,5 @@ class TargetGenerator {
 	TargetGenerator(TargetGenerator const &ref);
 	TargetGenerator &operator=(TargetGenerator const &ref);
 };
+
+

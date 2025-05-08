@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 09:09:08 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/10 09:31:18 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 08:08:45 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 08:19:02 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 class Warlock {
   public:
+	Warlock();
 	Warlock(std::string const &name, std::string const &title);
 	~Warlock();
 

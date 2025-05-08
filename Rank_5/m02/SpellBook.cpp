@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 10:25:13 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 10:39:45 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 09:24:43 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 09:37:05 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 SpellBook::SpellBook() {
 }
-
 SpellBook::~SpellBook() {
 	std::map<std::string, ASpell *>::iterator it;
-	for (it = _spellBook.begin(); it != _spellBook.end(); ++it)
+	for (it = _spellBook.begin(); it != _spellBook.end(); it++)
 		delete it->second;
 	_spellBook.clear();
 }
@@ -28,7 +27,6 @@ void SpellBook::learnSpell(ASpell *spell) {
 	if (it == _spellBook.end())
 		_spellBook[spell->getName()] = spell->clone();
 }
-
 void SpellBook::forgetSpell(std::string const &spell) {
 	std::map<std::string, ASpell *>::iterator it = _spellBook.find(spell);
 	if (it != _spellBook.end()) {
@@ -36,11 +34,9 @@ void SpellBook::forgetSpell(std::string const &spell) {
 		_spellBook.erase(it);
 	}
 }
-
 ASpell *SpellBook::createSpell(std::string const &spell) {
-	ASpell *ret = NULL;
 	std::map<std::string, ASpell *>::iterator it = _spellBook.find(spell);
 	if (it != _spellBook.end())
-		ret = it->second->clone();
-	return (ret);
+		return (it->second->clone());
+	return (NULL);
 }

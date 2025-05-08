@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 10:20:50 by passunca          #+#    #+#             */
-/*   Updated: 2025/04/15 10:36:54 by passunca         ###   ########.fr       */
+/*   Created: 2025/05/06 09:23:38 by passunca          #+#    #+#             */
+/*   Updated: 2025/05/06 09:31:27 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,4 @@ class SpellBook {
 	SpellBook(SpellBook const &ref);
 	SpellBook &operator=(SpellBook const &ref);
 };
+
