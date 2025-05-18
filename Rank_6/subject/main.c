@@ -85,6 +85,7 @@ int main() {
 		printf("cannot listen\n"); 
 		exit(0); 
 	}
+
 	len = sizeof(cli);
 	connfd = accept(sockfd, (struct sockaddr *)&cli, &len);
 	if (connfd < 0) { 
