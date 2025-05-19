@@ -58,6 +58,7 @@ dkms.conf
 .nfs*
 .build/
 .temp/
+*.log
 
 # gdb
 gdb.txt
