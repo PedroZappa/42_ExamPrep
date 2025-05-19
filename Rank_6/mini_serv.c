@@ -46,6 +46,7 @@ int main(int argc, char **argv) {
 
   t_client cls[CSIZE];
   fd_set active_fds, read_fds, write_fds;
+
   FD_ZERO(&active_fds);
   FD_SET(sockfd, &active_fds);
 
@@ -125,9 +126,9 @@ void fatal(void) {
 }
 
 void broadcast(int client_fd, int max_fd, fd_set write_fds, char *m) {
-  for (int broadcast_fd = 0; broadcast_fd <= max_fd; ++broadcast_fd) {
-    if (FD_ISSET(broadcast_fd, &write_fds) && (broadcast_fd != client_fd)) {
-      send(broadcast_fd, m, strlen(m), 0);
+  for (int b_fd = 0; b_fd <= max_fd; ++b_fd) {
+    if (FD_ISSET(b_fd, &write_fds) && (b_fd != client_fd)) {
+      send(b_fd, m, strlen(m), 0);
     }
   }
 }
