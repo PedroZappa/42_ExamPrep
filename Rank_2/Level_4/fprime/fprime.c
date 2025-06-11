@@ -3,7 +3,7 @@
 
 /*	Display prime factors of a number.
  *
- *	If 'n' is one print 1.
+ *	If 'nbr' is one print 1.
  *	Loop from n = 2 to 'nbr' while 'n' is smaller than 'nbr' 
  *		If 'nbr' is divisible by 'n' 
  *			Print 'n'.
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 					break;
 				printf("*");
 				nbr /= n;
-				n = 2;
+				n = 1;
 			}
 			++n;
 		}
